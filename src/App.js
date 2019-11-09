@@ -5,29 +5,37 @@ import { Logo, Dunno, Cheese } from './Components';
 import './App.css';
 
 function App() {
+    const preSlug = '/wosp-london-site';
+
     return (
         <Router>
             <div className="App">
                 <header className="App-header">
                     <Switch>
-                        <Route exact path="/" component={Logo} />
-                        <Route exact path="/dunno" component={Dunno} />
-                        <Route exact path="/cheese" component={Cheese} />
+                        <Route exact path={`${preSlug}/`} component={Logo} />
+                        <Route path={`${preSlug}/dunno`} component={Dunno} />
+                        <Route path={`${preSlug}/cheese`} component={Cheese} />
                     </Switch>
                     <p>
                         <ul>
                             <li>
-                                <Link className="App-link" to="/">
+                                <Link className="App-link" to={`${preSlug}/`}>
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link className="App-link" to="/dunno">
+                                <Link
+                                    className="App-link"
+                                    to={`${preSlug}/dunno`}
+                                >
                                     Dunno
                                 </Link>
                             </li>
                             <li>
-                                <Link className="App-link" to="/cheese">
+                                <Link
+                                    className="App-link"
+                                    to={`${preSlug}/cheese`}
+                                >
                                     Cheese
                                 </Link>
                             </li>
