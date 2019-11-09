@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wosp-london-site/static/css/main.b100e6da.chunk.css",
+    "main.js": "/wosp-london-site/static/js/main.8cc0328e.chunk.js",
+    "main.js.map": "/wosp-london-site/static/js/main.8cc0328e.chunk.js.map",
+    "runtime-main.js": "/wosp-london-site/static/js/runtime-main.1eac863b.js",
+    "runtime-main.js.map": "/wosp-london-site/static/js/runtime-main.1eac863b.js.map",
+    "static/js/2.30a9258f.chunk.js": "/wosp-london-site/static/js/2.30a9258f.chunk.js",
+    "static/js/2.30a9258f.chunk.js.map": "/wosp-london-site/static/js/2.30a9258f.chunk.js.map",
+    "index.html": "/wosp-london-site/index.html",
+    "precache-manifest.01d6b38f211e169baa14fd3dfe5d2a61.js": "/wosp-london-site/precache-manifest.01d6b38f211e169baa14fd3dfe5d2a61.js",
+    "service-worker.js": "/wosp-london-site/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/wosp-london-site/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/wosp-london-site/static/media/logo.25bf045c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1eac863b.js",
+    "static/js/2.30a9258f.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.8cc0328e.chunk.js"
+  ]
+}
