@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58622d7fbc2a2ec43a65c83516049dc0",
+    "revision": "d339111a382d7c4a75a4f49872c9e67c",
     "url": "/wosp-london-site/index.html"
   },
   {
-    "revision": "8b00cfd83620a49dc304",
+    "revision": "2dc574bbc20b6ec029bd",
     "url": "/wosp-london-site/static/css/main.d7dbc7cc.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wosp-london-site/static/js/2.cdff27fc.chunk.js"
   },
   {
-    "revision": "8b00cfd83620a49dc304",
-    "url": "/wosp-london-site/static/js/main.20da5866.chunk.js"
+    "revision": "2dc574bbc20b6ec029bd",
+    "url": "/wosp-london-site/static/js/main.cef3a424.chunk.js"
   },
   {
     "revision": "11cb092971e0815f7ede",
