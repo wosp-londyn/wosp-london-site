@@ -12,17 +12,17 @@ const theme = {
     media: {
         above: {
             xl: '@media (min-width: 1200px)',
-            l: '@media (min-width: 992px)',
-            m: '@media (min-width: 768px)',
-            s: '@media (min-width: 480px)',
+            lg: '@media (min-width: 992px)',
+            md: '@media (min-width: 768px)',
+            sm: '@media (min-width: 576px)',
             xs: '@media (min-width: 320px)',
         },
 
         below: {
             xl: '@media (min-width: 1200px)',
-            l: '@media (min-width: 992px)',
-            m: '@media (min-width: 768px)',
-            s: '@media (min-width: 480px)',
+            lg: '@media (min-width: 992px)',
+            md: '@media (min-width: 768px)',
+            sm: '@media (min-width: 576px)',
             xs: '@media (min-width: 320px)',
         },
     },

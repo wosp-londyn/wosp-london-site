@@ -18,31 +18,45 @@ const Menu = () => {
     }
 
     return (
-        <Nav>
-            <Link className="App-link" to={`${preSlug}/`}>
-                Home
-            </Link>
+        <>
+            <NavDesktop>
+                <Link className="App-link" to={`${preSlug}/`}>
+                    Home
+                </Link>
 
-            <Link className="App-link" to={`${preSlug}/dunno`}>
-                Dunno
-            </Link>
+                <Link className="App-link" to={`${preSlug}/dunno`}>
+                    Dunno
+                </Link>
 
-            <Link className="App-link" to={`${preSlug}/cheese`}>
-                Cheese
-            </Link>
+                <Link className="App-link" to={`${preSlug}/cheese`}>
+                    Cheese
+                </Link>
 
-            <Link className="App-link" to={`${preSlug}/bootstrap-test`}>
-                Bootstrap-test
-            </Link>
-        </Nav>
+                <Link className="App-link" to={`${preSlug}/bootstrap-test`}>
+                    Bootstrap-test
+                </Link>
+            </NavDesktop>
+            <NavMobile>hamburger</NavMobile>
+        </>
     );
 };
 
-const Nav = styled.nav`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+const NavDesktop = styled.nav`
+    display: none;
+
+    ${({ theme }) => theme.media.above.sm} {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+`;
+
+const NavMobile = styled.nav`
+    color: white;
+    ${({ theme }) => theme.media.above.sm} {
+        display: none;
+    }
 `;
 
 export default Menu;

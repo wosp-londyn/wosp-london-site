@@ -8,10 +8,13 @@ const Header = () => {
         <Wrapper>
             <Container>
                 <Row>
-                    <Col sm={2} style={{ color: 'white' }}>
+                    <Col xs sm={2} style={{ color: 'white' }}>
                         LOGO
                     </Col>
-                    <Col sm={{ span: 8, offset: 2 }}>
+                    <Col
+                        xs={{ span: 2, offset: 8 }}
+                        sm={{ span: 8, offset: 2 }}
+                    >
                         <Menu />
                     </Col>
                 </Row>
