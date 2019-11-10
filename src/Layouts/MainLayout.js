@@ -6,22 +6,27 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../Assets/Styles/GlobalStyle';
 import theme from '../Assets/Styles/theme';
-// import { Header, Footer, Menu } from 'components';
+import { Header, Footer } from '../Components';
 
 const MainLayout = ({ children }) => (
     <>
         <ThemeProvider theme={theme}>
             <>
                 <GlobalStyle />
+                <Header />
                 <StyledMain>{children}</StyledMain>
+                <Footer />
             </>
         </ThemeProvider>
     </>
 );
 
 const StyledMain = styled.main`
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
     text-align: center;
+    background: #313857;
 `;
 
 export default MainLayout;
