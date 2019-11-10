@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import MainLayout from './Layouts/MainLayout';
+
 import { Logo, Dunno, Cheese } from './Components';
 
 import './App.css';
@@ -9,7 +11,7 @@ function App() {
 
     return (
         <Router>
-            <div className="App">
+            <MainLayout>
                 <header className="App-header">
                     <Switch>
                         <Route exact path={`${preSlug}/`} component={Logo} />
@@ -50,7 +52,7 @@ function App() {
                         Learn React
                     </a>
                 </header>
-            </div>
+            </MainLayout>
         </Router>
     );
 }
