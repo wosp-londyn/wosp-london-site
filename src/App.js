@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import MainLayout from './Layouts/MainLayout';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Logo, Dunno, Cheese, BootstrapTest } from './Components';
 
