@@ -2,12 +2,24 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import MainLayout from './Layouts/MainLayout';
 
-import { Logo, Dunno, Cheese } from './Components';
+import { Logo, Dunno, Cheese, BootstrapTest } from './Components';
 
 import './App.css';
 
 function App() {
-    const preSlug = '/wosp-london-site';
+    let preSlug = '';
+    if (
+        // If localhost - dont use prefix
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1'
+    ) {
+        preSlug = '';
+    } else if (
+        // Prefix if hosted on github
+        window.location.hostname === 'neology92.github.io'
+    ) {
+        preSlug = '/wosp-london-site';
+    }
 
     return (
         <Router>
@@ -17,6 +29,10 @@ function App() {
                         <Route exact path={`${preSlug}/`} component={Logo} />
                         <Route path={`${preSlug}/dunno`} component={Dunno} />
                         <Route path={`${preSlug}/cheese`} component={Cheese} />
+                        <Route
+                            path={`${preSlug}/bootstrap-test`}
+                            component={BootstrapTest}
+                        />
                     </Switch>
                     <p>
                         <ul>
@@ -39,6 +55,14 @@ function App() {
                                     to={`${preSlug}/cheese`}
                                 >
                                     Cheese
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="App-link"
+                                    to={`${preSlug}/bootstrap-test`}
+                                >
+                                    Bootstrap-test
                                 </Link>
                             </li>
                         </ul>
