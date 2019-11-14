@@ -9,28 +9,70 @@ class Menu extends Component {
         super();
 
         this.state = {
-            showMenu: false,
+            newsMenu: false,
+            infoMenu: false,
+            supportMenu: false,
         };
 
-        this.closeMenu = this.closeMenu.bind(this);
+        this.closeInfoMenu = this.closeInfoMenu.bind(this);
+        this.closeNewsMenu = this.closeNewsMenu.bind(this);
+        this.closeSupportMenu = this.closeSupportMenu.bind(this);
     }
 
-    showMenu(event) {
+    showNewsMenu(event) {
         event.preventDefault();
 
         this.setState(
             {
-                showMenu: true,
+                newsMenu: true,
             },
             () => {
-                document.addEventListener('click', this.closeMenu);
+                document.addEventListener('click', this.closeNewsMenu);
             }
         );
     }
 
-    closeMenu() {
-        this.setState({ showMenu: false }, () => {
-            document.removeEventListener('click', this.closeMenu);
+    closeNewsMenu() {
+        this.setState({ newsMenu: false }, () => {
+            document.removeEventListener('click', this.closeNewsMenu);
+        });
+    }
+
+    showInfoMenu(event) {
+        event.preventDefault();
+
+        this.setState(
+            {
+                infoMenu: true,
+            },
+            () => {
+                document.addEventListener('click', this.closeInfoMenu);
+            }
+        );
+    }
+
+    closeInfoMenu() {
+        this.setState({ infoMenu: false }, () => {
+            document.removeEventListener('click', this.closeInfoMenu);
+        });
+    }
+
+    showSupportMenu(event) {
+        event.preventDefault();
+
+        this.setState(
+            {
+                supportMenu: true,
+            },
+            () => {
+                document.addEventListener('click', this.closeSupportMenu);
+            }
+        );
+    }
+
+    closeSupportMenu() {
+        this.setState({ supportMenu: false }, () => {
+            document.removeEventListener('click', this.closeSupportMenu);
         });
     }
 
@@ -49,7 +91,7 @@ class Menu extends Component {
             preSlug = '/wosp-london-site';
         }
 
-        const { showMenu } = this.state;
+        const { infoMenu, newsMenu, supportMenu } = this.state;
 
         const newsDropdown = [
             { name: 'Artykuły', slug: '/artykuly' },
@@ -57,16 +99,16 @@ class Menu extends Component {
             { name: 'Podcasty', slug: '/podcasty' },
         ];
 
-        // const infoDropdown = [
-        //     { name: 'Program', slug: '/program' },
-        //     { name: 'Gwiazdy', slug: '/gwiazdy' },
-        // ];
+        const infoDropdown = [
+            { name: 'Program', slug: '/program' },
+            { name: 'Gwiazdy', slug: '/gwiazdy' },
+        ];
 
-        // const supportDropdown = [
-        //     { name: 'Sponsorzy', slug: '/sponsorzy' },
-        //     { name: 'Partnerzy', slug: '/partnerzy' },
-        //     { name: 'Media', slug: '/media' },
-        // ];
+        const supportDropdown = [
+            { name: 'Sponsorzy', slug: '/sponsorzy' },
+            { name: 'Partnerzy', slug: '/partnerzy' },
+            { name: 'Media', slug: '/media' },
+        ];
 
         return (
             <>
@@ -76,19 +118,49 @@ class Menu extends Component {
                     </Link>
                     <DropdownHeader
                         className="App-link"
-                        onClick={this.showMenu.bind(this)}
+                        onClick={this.showNewsMenu.bind(this)}
                     >
                         Aktualności
+                        {newsMenu ? (
+                            <DropdownMenu>
+                                {newsDropdown.map(item => (
+                                    <Link key={item.name} to={item.slug}>
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </DropdownMenu>
+                        ) : null}
                     </DropdownHeader>
-                    {showMenu ? (
-                        <DropdownMenu>
-                            {newsDropdown.map(item => (
-                                <Link key={item.name} to={item.slug}>
-                                    {item.name}
-                                </Link>
-                            ))}
-                        </DropdownMenu>
-                    ) : null}
+                    <DropdownHeader
+                        className="App-link"
+                        onClick={this.showInfoMenu.bind(this)}
+                    >
+                        Informacje
+                        {infoMenu ? (
+                            <DropdownMenu>
+                                {infoDropdown.map(item => (
+                                    <Link key={item.name} to={item.slug}>
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </DropdownMenu>
+                        ) : null}
+                    </DropdownHeader>
+                    <DropdownHeader
+                        className="App-link"
+                        onClick={this.showSupportMenu.bind(this)}
+                    >
+                        Wspierają nas
+                        {supportMenu ? (
+                            <DropdownMenu>
+                                {supportDropdown.map(item => (
+                                    <Link key={item.name} to={item.slug}>
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </DropdownMenu>
+                        ) : null}
+                    </DropdownHeader>
 
                     <Link className="App-link" to={`${preSlug}/kontakt`}>
                         Kontakt
