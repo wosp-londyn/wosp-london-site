@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Auctions = () => {
-    return <div />;
+    return <div>Aukcje</div>;
 };
 
 export default Auctions;

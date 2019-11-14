@@ -1,7 +1,12 @@
 import React from 'react';
+import { Logo } from '../Components';
 
 const Home = () => {
-    return <div />;
+    return (
+        <div>
+            <Logo />
+        </div>
+    );
 };
 
 export default Home;

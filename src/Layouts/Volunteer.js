@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Volunteer = () => {
-    return <div />;
+    return <div>Zostań Wolontariuszem</div>;
 };
 
 export default Volunteer;

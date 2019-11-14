@@ -22,14 +22,9 @@ class Menu extends Component {
     showNewsMenu(event) {
         event.preventDefault();
 
-        this.setState(
-            {
-                newsMenu: true,
-            },
-            () => {
-                document.addEventListener('click', this.closeNewsMenu);
-            }
-        );
+        this.setState({ newsMenu: true }, () => {
+            document.addEventListener('click', this.closeNewsMenu);
+        });
     }
 
     closeNewsMenu() {
@@ -41,14 +36,9 @@ class Menu extends Component {
     showInfoMenu(event) {
         event.preventDefault();
 
-        this.setState(
-            {
-                infoMenu: true,
-            },
-            () => {
-                document.addEventListener('click', this.closeInfoMenu);
-            }
-        );
+        this.setState({ infoMenu: true }, () => {
+            document.addEventListener('click', this.closeInfoMenu);
+        });
     }
 
     closeInfoMenu() {
@@ -60,14 +50,9 @@ class Menu extends Component {
     showSupportMenu(event) {
         event.preventDefault();
 
-        this.setState(
-            {
-                supportMenu: true,
-            },
-            () => {
-                document.addEventListener('click', this.closeSupportMenu);
-            }
-        );
+        this.setState({ supportMenu: true }, () => {
+            document.addEventListener('click', this.closeSupportMenu);
+        });
     }
 
     closeSupportMenu() {
@@ -102,12 +87,12 @@ class Menu extends Component {
         const infoDropdown = [
             { name: 'Program', slug: '/program' },
             { name: 'Gwiazdy', slug: '/gwiazdy' },
+            { name: 'Partnerzy', slug: '/partnerzy' },
         ];
 
         const supportDropdown = [
-            { name: 'Sponsorzy', slug: '/sponsorzy' },
-            { name: 'Partnerzy', slug: '/partnerzy' },
-            { name: 'Media', slug: '/media' },
+            { name: 'Zostań Wolontariuszem', slug: '/zostan-wolontariuszem' },
+            { name: 'Wpłać na WOŚP', slug: '/wplac-na-wosp' },
         ];
 
         return (
@@ -150,7 +135,7 @@ class Menu extends Component {
                         className="App-link"
                         onClick={this.showSupportMenu.bind(this)}
                     >
-                        Wspierają nas
+                        Wesprzyj nas
                         {supportMenu ? (
                             <DropdownMenu>
                                 {supportDropdown.map(item => (

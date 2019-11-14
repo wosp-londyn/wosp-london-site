@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MainLayout from './Layouts/MainLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Logo, Dunno, Cheese, BootstrapTest } from './Components';
+import * as views from './Layouts';
 
 import './style.css';
 
@@ -26,12 +26,47 @@ function App() {
         <Router>
             <MainLayout>
                 <Switch>
-                    <Route exact path={`${preSlug}/`} component={Logo} />
-                    <Route path={`${preSlug}/dunno`} component={Dunno} />
-                    <Route path={`${preSlug}/cheese`} component={Cheese} />
+                    <Route exact path={`${preSlug}/`} component={views.Home} />
                     <Route
-                        path={`${preSlug}/bootstrap-test`}
-                        component={BootstrapTest}
+                        path={`${preSlug}/artykuly`}
+                        component={views.Posts}
+                    />
+                    <Route
+                        path={`${preSlug}/aukcje`}
+                        component={views.Auctions}
+                    />
+                    <Route
+                        path={`${preSlug}/podcasty`}
+                        component={views.Podcasts}
+                    />
+                    <Route
+                        path={`${preSlug}/program`}
+                        component={views.Program}
+                    />
+                    <Route
+                        path={`${preSlug}/gwiazdy`}
+                        component={views.Stars}
+                    />
+                    <Route
+                        path={`${preSlug}/partnerzy`}
+                        component={views.Partners}
+                    />
+                    <Route path={`${preSlug}/live`} component={views.Live} />
+                    <Route
+                        path={`${preSlug}/zostan-wolontariuszem`}
+                        component={views.Volunteer}
+                    />
+                    <Route
+                        path={`${preSlug}/wplac-na-wosp`}
+                        component={views.Support}
+                    />
+                    <Route
+                        path={`${preSlug}/galeria`}
+                        component={views.Gallery}
+                    />
+                    <Route
+                        path={`${preSlug}/kontakt`}
+                        component={views.Contact}
                     />
                 </Switch>
             </MainLayout>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Stars = () => {
-    return <div />;
+    return <div>Gwiazdy</div>;
 };
 
 export default Stars;
