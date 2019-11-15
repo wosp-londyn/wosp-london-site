@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DropdownMenu from './DropdownMenu';
 import DropdownHeader from './DropdownHeader';
 
@@ -118,7 +120,7 @@ class Menu extends Component {
             <>
                 <NavDesktop>
                     <Link className="App-link" to={`${preSlug}/`}>
-                        Home
+                        <FontAwesomeIcon icon="home" size="lg" />
                     </Link>
                     <DropdownHeader
                         className="App-link"

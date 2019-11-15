@@ -1,11 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import MainLayout from './Layouts/MainLayout';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
 
+import MainLayout from './Layouts/MainLayout';
 import * as views from './Layouts';
 
-import './style.css';
+library.add(faHome);
 
 function App() {
     let preSlug = '';
