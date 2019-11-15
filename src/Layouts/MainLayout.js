@@ -23,7 +23,7 @@ const MainLayout = ({ children }) => (
 
 const StyledMain = styled.main`
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px;
     text-align: center;
     background: #313857;

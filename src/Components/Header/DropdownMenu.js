@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const DropdownMenu = styled.div`
     position: absolute;
     top: 30px;
+    z-index: 999;
 
     width: 90px;
     background: #222;
