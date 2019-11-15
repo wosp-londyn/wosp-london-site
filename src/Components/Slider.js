@@ -7,20 +7,20 @@ const Slider = () => {
         <StyledCarousel>
             <Carousel.Item>
                 <img
-                    src="https://picsum.photos/seed/1/1000/400"
+                    src="https://picsum.photos/seed/276/1150/450?grayscale"
                     alt="First slide"
                 />
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    src="https://picsum.photos/seed/2/1000/400"
-                    alt="First slide"
+                    src="https://picsum.photos/seed/666/1150/450?grayscale"
+                    alt="Second slide"
                 />
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    src="https://picsum.photos/seed/4/1000/400"
-                    alt="First slide"
+                    src="https://picsum.photos/seed/432/1150/450?grayscale"
+                    alt="Thrid slide"
                 />
             </Carousel.Item>
         </StyledCarousel>
