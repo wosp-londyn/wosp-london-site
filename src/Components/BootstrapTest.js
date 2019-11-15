@@ -30,6 +30,7 @@ const BootstrapTest = () => {
                     </SCol>
                     <SCol sm={3}>22</SCol>
                 </SRow>
+                <MyComponent />
             </StyledContainer>
         </>
     );
@@ -55,6 +56,12 @@ const SCol = styled(Col)`
 
 const SRow = styled(Row)`
     margin: 0 0 10px;
+`;
+
+const MyComponent = styled.div`
+    width: 100px;
+    height: 100px;
+    background: red;
 `;
 
 export default BootstrapTest;
