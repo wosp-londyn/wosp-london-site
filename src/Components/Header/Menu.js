@@ -4,6 +4,25 @@ import styled from 'styled-components';
 import DropdownMenu from './DropdownMenu';
 import DropdownHeader from './DropdownHeader';
 
+const NavDesktop = styled.nav`
+    display: none;
+
+    ${({ theme }) => theme.media.above.sm} {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        /* text-transform: uppercase; */
+    }
+`;
+
+const NavMobile = styled.nav`
+    color: white;
+    ${({ theme }) => theme.media.above.sm} {
+        display: none;
+    }
+`;
+
 class Menu extends Component {
     constructor() {
         super();
@@ -156,23 +175,5 @@ class Menu extends Component {
         );
     }
 }
-
-const NavDesktop = styled.nav`
-    display: none;
-
-    ${({ theme }) => theme.media.above.sm} {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-`;
-
-const NavMobile = styled.nav`
-    color: white;
-    ${({ theme }) => theme.media.above.sm} {
-        display: none;
-    }
-`;
 
 export default Menu;

@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-size: 1.4rem;
+
     }
 
     html {
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         margin:0; 
         padding:0;
         scroll-behavior: smooth;
+        background: #313857;
     }
     
     body {
