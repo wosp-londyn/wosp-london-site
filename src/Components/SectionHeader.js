@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 const SectionHeader = styled.h2`
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+
     width: 100%;
     height: 100px;
     background: ${({ color }) => color};
+    color: ${({ theme }) => theme.color.white};
 `;
 
 export default SectionHeader;

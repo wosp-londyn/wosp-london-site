@@ -30,7 +30,9 @@ const PostCardGrid = () => {
 
     return (
         <>
-            <SectionHeader>Artykuły</SectionHeader>
+            <SectionHeader color={({ theme }) => theme.color.red}>
+                Artykuły
+            </SectionHeader>
 
             <StyledCardDeck>
                 {posts.map(post => (
