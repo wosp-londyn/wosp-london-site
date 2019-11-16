@@ -1,50 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Container, Navbar, Nav } from 'react-bootstrap';
+
 import Menu from './Menu';
 import SocialBar from '../SocialBar';
-import Logo from '../Logo';
 
 const Header = () => {
     return (
         <Wrapper>
             <Container>
                 <SocialBar />
-                <Bar>
-                    <Row>
-                        <Col xs sm={2}>
-                            <Logo />
-                        </Col>
-                        <Col
-                            xs={{ span: 2, offset: 8 }}
-                            sm={{ span: 8, offset: 2 }}
-                        >
-                            <Menu />
-                        </Col>
-                    </Row>
-                </Bar>
+                <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+                    <Navbar.Brand as={Link} to="/">
+                        WOŚP
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto" />
+                        <Menu />
+                    </Navbar.Collapse>
+                </Navbar>
             </Container>
         </Wrapper>
     );
 };
 
-const Bar = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    height: 70px;
-    background: #222;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-`;
-
 const Wrapper = styled.header`
-    background: ${({ theme }) => theme.color.bg};
+    background: ${({ theme }) => theme.color.bg1};
 `;
 
 export default Header;

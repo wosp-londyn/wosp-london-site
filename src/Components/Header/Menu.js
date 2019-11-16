@@ -1,181 +1,73 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavDropdown, Nav } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DropdownMenu from './DropdownMenu';
-import DropdownHeader from './DropdownHeader';
 
-const NavDesktop = styled.nav`
-    display: none;
-
-    ${({ theme }) => theme.media.above.sm} {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        /* text-transform: uppercase; */
-    }
-`;
-
-const NavMobile = styled.nav`
-    color: white;
-    ${({ theme }) => theme.media.above.sm} {
-        display: none;
-    }
-`;
-
-class Menu extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            newsMenu: false,
-            infoMenu: false,
-            supportMenu: false,
-        };
-
-        this.closeInfoMenu = this.closeInfoMenu.bind(this);
-        this.closeNewsMenu = this.closeNewsMenu.bind(this);
-        this.closeSupportMenu = this.closeSupportMenu.bind(this);
+const Menu = () => {
+    let preSlug = '';
+    if (
+        // If localhost - dont use prefix
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1'
+    ) {
+        preSlug = '';
+    } else if (
+        // Prefix if hosted on github
+        window.location.hostname === 'neology92.github.io'
+    ) {
+        preSlug = '/wosp-london-site';
     }
 
-    showNewsMenu(event) {
-        event.preventDefault();
+    const newsDropdown = [
+        { name: 'Artykuły', slug: '/artykuly' },
+        { name: 'Aukcje', slug: '/aukcje' },
+        { name: 'Podcasty', slug: '/podcasty' },
+    ];
 
-        this.setState({ newsMenu: true }, () => {
-            document.addEventListener('click', this.closeNewsMenu);
-        });
-    }
+    const infoDropdown = [
+        { name: 'Program', slug: '/program' },
+        { name: 'Gwiazdy', slug: '/gwiazdy' },
+        { name: 'Partnerzy', slug: '/partnerzy' },
+    ];
 
-    closeNewsMenu() {
-        this.setState({ newsMenu: false }, () => {
-            document.removeEventListener('click', this.closeNewsMenu);
-        });
-    }
+    const supportDropdown = [
+        { name: 'Zostań Wolontariuszem', slug: '/zostan-wolontariuszem' },
+        { name: 'Wpłać na WOŚP', slug: '/wplac-na-wosp' },
+    ];
 
-    showInfoMenu(event) {
-        event.preventDefault();
+    return (
+        <Nav className="navbar-nav navbar-right">
+            <Nav.Link as={Link} to={`${preSlug}/`}>
+                <FontAwesomeIcon icon="home" size="lg" />
+            </Nav.Link>
+            <NavDropdown title="Aktualności" id="basic-nav-dropdown">
+                {newsDropdown.map(item => (
+                    <NavDropdown.Item key={item.name} as={Link} to={item.slug}>
+                        {item.name}
+                    </NavDropdown.Item>
+                ))}
+            </NavDropdown>
+            <NavDropdown title="Informacje" id="basic-nav-dropdown">
+                {infoDropdown.map(item => (
+                    <NavDropdown.Item key={item.name} as={Link} to={item.slug}>
+                        {item.name}
+                    </NavDropdown.Item>
+                ))}
+            </NavDropdown>
+            <NavDropdown title="Wesprzyj nas" id="basic-nav-dropdown">
+                {supportDropdown.map(item => (
+                    <NavDropdown.Item key={item.name} as={Link} to={item.slug}>
+                        {item.name}
+                    </NavDropdown.Item>
+                ))}
+            </NavDropdown>
 
-        this.setState({ infoMenu: true }, () => {
-            document.addEventListener('click', this.closeInfoMenu);
-        });
-    }
-
-    closeInfoMenu() {
-        this.setState({ infoMenu: false }, () => {
-            document.removeEventListener('click', this.closeInfoMenu);
-        });
-    }
-
-    showSupportMenu(event) {
-        event.preventDefault();
-
-        this.setState({ supportMenu: true }, () => {
-            document.addEventListener('click', this.closeSupportMenu);
-        });
-    }
-
-    closeSupportMenu() {
-        this.setState({ supportMenu: false }, () => {
-            document.removeEventListener('click', this.closeSupportMenu);
-        });
-    }
-
-    render() {
-        let preSlug = '';
-        if (
-            // If localhost - dont use prefix
-            window.location.hostname === 'localhost' ||
-            window.location.hostname === '127.0.0.1'
-        ) {
-            preSlug = '';
-        } else if (
-            // Prefix if hosted on github
-            window.location.hostname === 'neology92.github.io'
-        ) {
-            preSlug = '/wosp-london-site';
-        }
-
-        const { infoMenu, newsMenu, supportMenu } = this.state;
-
-        const newsDropdown = [
-            { name: 'Artykuły', slug: '/artykuly' },
-            { name: 'Aukcje', slug: '/aukcje' },
-            { name: 'Podcasty', slug: '/podcasty' },
-        ];
-
-        const infoDropdown = [
-            { name: 'Program', slug: '/program' },
-            { name: 'Gwiazdy', slug: '/gwiazdy' },
-            { name: 'Partnerzy', slug: '/partnerzy' },
-        ];
-
-        const supportDropdown = [
-            { name: 'Zostań Wolontariuszem', slug: '/zostan-wolontariuszem' },
-            { name: 'Wpłać na WOŚP', slug: '/wplac-na-wosp' },
-        ];
-
-        return (
-            <>
-                <NavDesktop>
-                    <Link className="App-link" to={`${preSlug}/`}>
-                        <FontAwesomeIcon icon="home" size="lg" />
-                    </Link>
-                    <DropdownHeader
-                        className="App-link"
-                        onClick={this.showNewsMenu.bind(this)}
-                    >
-                        Aktualności
-                        {newsMenu ? (
-                            <DropdownMenu>
-                                {newsDropdown.map(item => (
-                                    <Link key={item.name} to={item.slug}>
-                                        {item.name}
-                                    </Link>
-                                ))}
-                            </DropdownMenu>
-                        ) : null}
-                    </DropdownHeader>
-                    <DropdownHeader
-                        className="App-link"
-                        onClick={this.showInfoMenu.bind(this)}
-                    >
-                        Informacje
-                        {infoMenu ? (
-                            <DropdownMenu>
-                                {infoDropdown.map(item => (
-                                    <Link key={item.name} to={item.slug}>
-                                        {item.name}
-                                    </Link>
-                                ))}
-                            </DropdownMenu>
-                        ) : null}
-                    </DropdownHeader>
-                    <DropdownHeader
-                        className="App-link"
-                        onClick={this.showSupportMenu.bind(this)}
-                    >
-                        Wesprzyj nas
-                        {supportMenu ? (
-                            <DropdownMenu>
-                                {supportDropdown.map(item => (
-                                    <Link key={item.name} to={item.slug}>
-                                        {item.name}
-                                    </Link>
-                                ))}
-                            </DropdownMenu>
-                        ) : null}
-                    </DropdownHeader>
-
-                    <Link className="App-link" to={`${preSlug}/kontakt`}>
-                        Kontakt
-                    </Link>
-                </NavDesktop>
-                <NavMobile>hamburger</NavMobile>
-            </>
-        );
-    }
-}
+            <Nav.Link as={Link} to={`${preSlug}/kontakt`}>
+                Kontakt
+            </Nav.Link>
+        </Nav>
+    );
+};
 
 export default Menu;

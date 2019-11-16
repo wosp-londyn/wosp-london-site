@@ -5,5 +5,15 @@ import Header from './Header/Header';
 import Footer from './Footer';
 import Slider from './Slider';
 import ButtonsToolbar from './ButtonsToolbar';
+import PostCardGrid from './PostCardGrid';
 
-export { Logo, Cheese, Dunno, Footer, Header, Slider, ButtonsToolbar };
+export {
+    Logo,
+    Cheese,
+    Dunno,
+    Footer,
+    Header,
+    Slider,
+    ButtonsToolbar,
+    PostCardGrid,
+};

@@ -34,7 +34,6 @@ const StyledButtonGroup = styled(ButtonGroup)`
         flex-direction: column;
         justify-content: center;
 
-        font-size: 1.6rem;
         border-radius: 0;
     }
 `;
