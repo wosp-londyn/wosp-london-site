@@ -20,12 +20,27 @@ const PostCard = ({ title, text }) => {
 
 const StyledCard = styled(Card)`
     display: flex !important;
-    flex-direction: row !important;
-    margin-top: 20px;
+    flex-direction: column !important;
 
     img {
-        width: 50%;
+        width: 100%;
+        height: auto;
         padding: 15px;
+    }
+
+    ${({ theme }) => theme.media.above.md} {
+        flex-direction: row !important;
+        margin-top: 20px;
+
+        img {
+            height: 100%;
+            width: auto;
+            padding: 15px;
+        }
+
+        .card-body {
+            width: 70%;
+        }
     }
 `;
 
