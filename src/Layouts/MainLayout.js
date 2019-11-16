@@ -26,7 +26,7 @@ const StyledMain = styled.main`
     min-height: 100vh;
     padding: 10px;
     text-align: center;
-    background: #313857;
+    background: ${({ theme }) => theme.color.bg2};
 `;
 
 export default MainLayout;
