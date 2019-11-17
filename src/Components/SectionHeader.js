@@ -6,7 +6,8 @@ const SectionHeader = styled.h2`
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    width: calc(100% + 2px);
+    margin-left: -1px;
     height: 100px;
     background: ${({ color }) => color};
     color: ${({ theme }) => theme.color.white};

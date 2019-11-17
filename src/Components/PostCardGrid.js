@@ -28,9 +28,9 @@ const PostCardGrid = () => {
     ];
 
     return (
-        <>
-            <SectionHeader color={({ theme }) => theme.color.red}>
-                Artykuły
+        <Wrapper>
+            <SectionHeader color={({ theme }) => theme.color.blue}>
+                Aktualności
             </SectionHeader>
 
             <StyledCardDeck>
@@ -43,9 +43,14 @@ const PostCardGrid = () => {
                     />
                 ))}
             </StyledCardDeck>
-        </>
+        </Wrapper>
     );
 };
+
+const Wrapper = styled.article`
+    border: 1px solid ${({ theme }) => theme.color.blue};
+    height: 1175px;
+`;
 
 const StyledCardDeck = styled(CardDeck)`
     flex-direction: column;

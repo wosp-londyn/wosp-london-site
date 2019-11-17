@@ -40,8 +40,8 @@ const FacebookCardGrid = () => {
     );
 };
 
-const Wrapper = styled.div`
-    border: 2px solid ${({ theme }) => theme.color.facebook};
+const Wrapper = styled.article`
+    border: 1px solid ${({ theme }) => theme.color.facebook};
     height: 1175px;
 `;
 
