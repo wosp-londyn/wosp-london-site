@@ -15,7 +15,8 @@ const StyledCard = styled(Card)`
     padding: 0;
     margin: 0;
 
-    margin-top: 20px;
+    border: none;
+    margin-top: 5px;
 `;
 
 export default FacebookCard;

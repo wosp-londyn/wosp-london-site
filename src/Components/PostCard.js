@@ -20,6 +20,8 @@ const StyledCard = styled(Card)`
     display: flex !important;
     flex-direction: column !important;
 
+    border: none;
+
     img {
         width: 100%;
         height: auto;
@@ -28,7 +30,7 @@ const StyledCard = styled(Card)`
 
     ${({ theme }) => theme.media.above.md} {
         flex-direction: row !important;
-        margin-top: 20px;
+        margin-top: 5px;
 
         img {
             height: 100%;
