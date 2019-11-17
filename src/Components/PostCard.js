@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { Card, Button } from 'react-bootstrap';
 
 const PostCard = ({ title, text, img }) => {
-    console.log(img);
-
     return (
         <StyledCard>
             <Card.Img variant="top" src={img} />

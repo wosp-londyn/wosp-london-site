@@ -10,6 +10,7 @@ const theme = {
         red: '#E30613',
         orange: '#EE7003',
         navyBlue: '#212851',
+        facebook: '#3b5998',
 
         rgb: {
             white: '255,255,255',

@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Slider from './Slider';
 import ButtonsToolbar from './ButtonsToolbar';
 import PostCardGrid from './PostCardGrid';
+import FacebookCardGrid from './FacebookCardGrid';
 
 export {
     Logo,
@@ -16,4 +17,5 @@ export {
     Slider,
     ButtonsToolbar,
     PostCardGrid,
+    FacebookCardGrid,
 };

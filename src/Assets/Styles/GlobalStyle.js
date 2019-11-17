@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-    *, *::before, *::after{
+    *, *::before, *::after,h1,h2,h3,h4,h5,h6{
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         padding:0;
