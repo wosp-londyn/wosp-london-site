@@ -6,7 +6,10 @@ const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         padding:0;
         margin: 0;
+        font-family: ${({ theme }) => theme.font.family.lato} !important;
+        font-weight: 400;
     }
+    
 
     html {
         /* font-size: 62.5%; */
@@ -14,11 +17,18 @@ const GlobalStyle = createGlobalStyle`
         padding:0;
         scroll-behavior: smooth;
         background: ${({ theme }) => theme.color.bg1};
+        
+        
     }
     
     body {
         margin: 0;
         padding: 0;
+        
+        #root{
+            background: ${({ theme }) => theme.color.bg1};
+            
+        }
     }
     
 `;
