@@ -2,11 +2,30 @@ const theme = {
     color: {
         white: '#FFFFFF',
         black: '#000000',
-        bg: '#313857',
+        bg1: '#F5F5F5',
+        bg2: '#EEE',
+        yellow: '#FAB400',
+        blue: '#009FE3',
+        green: '#96C11F',
+        red: '#E30613',
+        orange: '#EE7003',
+        navyBlue: '#212851',
+        facebook: '#3b5998',
 
         rgb: {
             white: '255,255,255',
             black: '0,0,0',
+        },
+    },
+
+    font: {
+        family: {
+            lato: '"Lato", sans-serif',
+            raleway: '"Roboto", sans-serif',
+        },
+        weight: {
+            700: '700',
+            400: '400',
         },
     },
 
