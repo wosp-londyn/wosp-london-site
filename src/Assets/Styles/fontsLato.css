@@ -1,0 +1,15 @@
+/* Lato-regular */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Lato-400.ttf') format('truetype');
+}
+
+/* Lato-700  */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Lato-700.ttf') format('truetype');
+}

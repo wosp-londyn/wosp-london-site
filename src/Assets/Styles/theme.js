@@ -17,6 +17,17 @@ const theme = {
         },
     },
 
+    font: {
+        family: {
+            lato: '"Lato", sans-serif',
+            raleway: '"Roboto", sans-serif',
+        },
+        weight: {
+            700: '700',
+            400: '400',
+        },
+    },
+
     media: {
         above: {
             xl: '@media (min-width: 1200px)',
