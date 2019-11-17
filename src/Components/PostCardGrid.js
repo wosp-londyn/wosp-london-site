@@ -6,7 +6,6 @@ import PostCard from './PostCard';
 import SectionHeader from './SectionHeader';
 
 import cheese from '../Assets/Images/cheese.png';
-import dunno from '../Assets/Images/dunno.png';
 
 const PostCardGrid = () => {
     const posts = [
@@ -14,17 +13,17 @@ const PostCardGrid = () => {
             title: 'Title1',
             text:
                 "Some quick example text to build on the card title and make up the bulk of the card's content.",
-            img: { cheese },
+            img: cheese,
         },
         {
             title: 'Title2',
             text: "Some e card's content.",
-            img: { dunno },
+            img: cheese,
         },
         {
             title: 'Title3',
             text: "Some e card's sdfds.",
-            img: { cheese },
+            img: cheese,
         },
     ];
 
@@ -39,6 +38,7 @@ const PostCardGrid = () => {
                     <PostCard
                         title={post.title}
                         text={post.text}
+                        img={post.img}
                         key={post.title}
                     />
                 ))}
