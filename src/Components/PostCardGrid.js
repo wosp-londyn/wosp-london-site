@@ -1,4 +1,5 @@
 import React from 'react';
+import slugify from 'slugify';
 import styled from 'styled-components';
 import { CardDeck } from 'react-bootstrap';
 
@@ -7,7 +8,11 @@ import SectionHeader from './SectionHeader';
 
 import cheese from '../Assets/Images/cheese.png';
 
+// Deals with wrapping PostCards components
+// Fetches API and generates posts previews based on incoming data
+
 const PostCardGrid = () => {
+    // Symulacja danych z API
     const posts = [
         {
             title: 'Title1',
@@ -39,6 +44,8 @@ const PostCardGrid = () => {
                         title={post.title}
                         text={post.text}
                         img={post.img}
+                        // slugify allows to create slug on base of title
+                        slug={slugify(post.title)}
                         key={post.title}
                     />
                 ))}
