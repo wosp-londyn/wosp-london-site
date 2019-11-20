@@ -4,7 +4,11 @@ import { CardDeck } from 'react-bootstrap';
 import SectionHeader from './SectionHeader';
 import FacebookCard from './FacebookCard';
 
+// Pobiera dane z API
+// Określa style  sekcji postów z fb
+
 const FacebookCardGrid = () => {
+    // Symulacja danych  z API
     const posts = [
         {
             name: 'Name1',

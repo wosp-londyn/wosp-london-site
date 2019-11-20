@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-bootstrap';
 
+// Slider is based on bootstrap-component: Carousel
+
 const Slider = () => {
     return (
         <StyledCarousel>

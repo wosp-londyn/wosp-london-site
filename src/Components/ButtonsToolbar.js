@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Button, Row, Col } from 'react-bootstrap';
 
+// Buttons under slider - homepage
+
 const ButtonsToolbar = () => {
     return (
         <>

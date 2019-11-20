@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// Headers in HomePage sections - e.g. Facebook, Aktualności
+
 const SectionHeader = styled.h2`
     display: flex;
     flex-direction: row;

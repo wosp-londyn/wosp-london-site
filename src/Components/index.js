@@ -8,6 +8,8 @@ import ButtonsToolbar from './ButtonsToolbar';
 import PostCardGrid from './PostCardGrid';
 import FacebookCardGrid from './FacebookCardGrid';
 
+// Place where you can export component to use on page
+
 export {
     Logo,
     Cheese,

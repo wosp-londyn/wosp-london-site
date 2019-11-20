@@ -2,6 +2,8 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
 
+// Komponent wyświetlający treść facebookowego posta
+
 const FacebookCard = ({ name, text }) => {
     return (
         <StyledCard>
