@@ -8,23 +8,6 @@ import FacebookCard from './FacebookCard';
 // Określa style  sekcji postów z fb
 
 const FacebookCardGrid = () => {
-    // Symulacja danych  z API
-    const posts = [
-        {
-            name: 'Name1',
-            text:
-                "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        },
-        {
-            name: 'WCHUj',
-            text: "Some e card's content.",
-        },
-        {
-            name: 'John Doe',
-            text: "Some e card's sdfds.",
-        },
-    ];
-
     return (
         <Wrapper>
             <SectionHeader color={({ theme }) => theme.color.facebook}>
@@ -32,13 +15,9 @@ const FacebookCardGrid = () => {
             </SectionHeader>
 
             <StyledCardDeck>
-                {posts.map(post => (
-                    <FacebookCard
-                        name={post.name}
-                        text={post.text}
-                        key={post.name}
-                    />
-                ))}
+                <FacebookCard />
+                <FacebookCard />
+                <FacebookCard />
             </StyledCardDeck>
         </Wrapper>
     );
