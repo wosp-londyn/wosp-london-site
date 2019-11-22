@@ -45,15 +45,14 @@ const FacebookCardGrid = () => {
 };
 
 const Wrapper = styled.article`
-    border: 1px solid ${({ theme }) => theme.color.facebook};
+    border: 1px solid #a2a2a2;
     height: 1175px;
 `;
 
 const StyledCardDeck = styled(CardDeck)`
-    padding: 0;
+    padding: 9px;
     margin-top: 30px;
     flex-direction: column;
-    /* border: 1px solid ${({ theme }) => theme.color.facebook}; */
 
     ${({ theme }) => theme.media.above.md} {
         margin-top: 0;
