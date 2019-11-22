@@ -19,7 +19,7 @@ const PostCard = ({ post }) => {
             />
             <Card.Body>
                 <Card.Title>{post.title.rendered}</Card.Title>
-                <Date>{post.date}</Date>q
+                <Date>{post.date}</Date>
                 <Card.Text>
                     <div
                         dangerouslySetInnerHTML={createMarkup(
