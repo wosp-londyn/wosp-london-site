@@ -8,25 +8,25 @@ const Brand = () => {
     return (
         <>
             <MainRow>
-                <Col xs={4} sm={4} md={5}>
+                <Col xs={5} sm={6} md={6}>
                     <Img src={heart} />
                 </Col>
                 <RightCol
                     xs={{ offset: 3, span: 4 }}
-                    sm={{ offset: 0, span: 8 }}
-                    md={7}
+                    sm={{ offset: 0, span: 6 }}
+                    md={6}
                 >
                     <Row>
                         <Col
                             xs={7}
-                            sm={{ offset: 2, span: 6 }}
+                            sm={{ offset: 0, span: 5 }}
                             md={{ offset: 0, span: 12 }}
                         >
                             WOŚP
                         </Col>
                         <Col
                             xs={7}
-                            sm={{ offset: 1, span: 3 }}
+                            sm={{ offset: 4, span: 3 }}
                             md={{ offset: 0, span: 12 }}
                         >
                             LONDYN
@@ -62,6 +62,8 @@ const RightCol = styled(Col)`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    border-left: 1px white solid;
 
     font-size: 21px;
     ${({ theme }) => theme.media.above.sm} {
