@@ -13,12 +13,12 @@ const SocialBar = () => {
 };
 
 const Icon = styled(Link)`
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background: ${({ theme }) => theme.color.black};
     color: rgba(${({ theme }) => theme.color.rgb.white}, 0.7);
 
-    border-radius: 5px;
+    border-radius: 10px;
 
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-content: center;
 
-    margin: 20px 0 20px auto;
+    margin: 15px 0 15px auto;
 `;
 
 export default SocialBar;

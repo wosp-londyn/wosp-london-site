@@ -39,11 +39,11 @@ const theme = {
         },
 
         below: {
-            xl: '@media (min-width: 1200px)',
-            lg: '@media (min-width: 992px)',
-            md: '@media (min-width: 768px)',
-            sm: '@media (min-width: 576px)',
-            xs: '@media (min-width: 320px)',
+            xl: '@media (max-width: 1200px)',
+            lg: '@media (max-width: 992px)',
+            md: '@media (max-width: 768px)',
+            sm: '@media (max-width: 576px)',
+            xs: '@media (max-width: 320px)',
         },
     },
 };
