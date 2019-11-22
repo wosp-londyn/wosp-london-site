@@ -1,27 +1,28 @@
 {
   "files": {
     "main.css": "/wosp-london-site/static/css/main.d7a2b5f8.chunk.css",
-    "main.js": "/wosp-london-site/static/js/main.d5d1b1fc.chunk.js",
-    "main.js.map": "/wosp-london-site/static/js/main.d5d1b1fc.chunk.js.map",
+    "main.js": "/wosp-london-site/static/js/main.c3ea0393.chunk.js",
+    "main.js.map": "/wosp-london-site/static/js/main.c3ea0393.chunk.js.map",
     "runtime-main.js": "/wosp-london-site/static/js/runtime-main.1eac863b.js",
     "runtime-main.js.map": "/wosp-london-site/static/js/runtime-main.1eac863b.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/wosp-london-site/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.a7b0b27e.chunk.js": "/wosp-london-site/static/js/2.a7b0b27e.chunk.js",
-    "static/js/2.a7b0b27e.chunk.js.map": "/wosp-london-site/static/js/2.a7b0b27e.chunk.js.map",
+    "static/js/2.31e1f3bc.chunk.js": "/wosp-london-site/static/js/2.31e1f3bc.chunk.js",
+    "static/js/2.31e1f3bc.chunk.js.map": "/wosp-london-site/static/js/2.31e1f3bc.chunk.js.map",
     "index.html": "/wosp-london-site/index.html",
-    "precache-manifest.534a282916bfb6de866dd739c4f33c20.js": "/wosp-london-site/precache-manifest.534a282916bfb6de866dd739c4f33c20.js",
+    "precache-manifest.8ef35270aba9c2b0359055da01065985.js": "/wosp-london-site/precache-manifest.8ef35270aba9c2b0359055da01065985.js",
     "service-worker.js": "/wosp-london-site/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/wosp-london-site/static/css/2.b0bb7f2c.chunk.css.map",
     "static/css/main.d7a2b5f8.chunk.css.map": "/wosp-london-site/static/css/main.d7a2b5f8.chunk.css.map",
     "static/media/cheese.png": "/wosp-london-site/static/media/cheese.22cb1356.png",
     "static/media/dunno.png": "/wosp-london-site/static/media/dunno.a6a28b1a.png",
-    "static/media/logo.svg": "/wosp-london-site/static/media/logo.25bf045c.svg"
+    "static/media/logo.svg": "/wosp-london-site/static/media/logo.25bf045c.svg",
+    "static/media/logo131.png": "/wosp-london-site/static/media/logo131.dee09e07.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1eac863b.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.a7b0b27e.chunk.js",
+    "static/js/2.31e1f3bc.chunk.js",
     "static/css/main.d7a2b5f8.chunk.css",
-    "static/js/main.d5d1b1fc.chunk.js"
+    "static/js/main.c3ea0393.chunk.js"
   ]
 }
