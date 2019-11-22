@@ -26,6 +26,12 @@ const FacebookCardGrid = () => {
 const Wrapper = styled.article`
     border: 1px solid #a2a2a2;
     height: 1175px;
+
+    display: none;
+
+    ${({ theme }) => theme.media.above.xl} {
+        display: block;
+    }
 `;
 
 const StyledCardDeck = styled(CardDeck)`
