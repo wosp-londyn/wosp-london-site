@@ -12,7 +12,7 @@ const SectionHeader = styled.h2`
     margin-left: -1px;
     height: 100px;
     background: ${({ color }) => color};
-    color: ${({ theme }) => theme.color.white};
+    color: white;
 `;
 
 export default SectionHeader;
