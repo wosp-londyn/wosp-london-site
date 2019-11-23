@@ -6,9 +6,11 @@ const theme = {
         red: '#E30613',
         orange: '#EE7003',
         navyBlue: '#212851',
+        pink: '#e4007f',
 
         facebook: '#3b5998',
         cyan: '#0D5065',
+
 
         rgb: {
             white: '255,255,255',
