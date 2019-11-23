@@ -48,29 +48,37 @@ const Wrapper = styled(Container)`
 
 const BottomRow = styled(Row)`
     background-color: ${({ theme }) => theme.color.navyBlue};
-    height: 90px;
-    font-size: 12px;
-    font-weight: bold;
+    min-height: 90px;
+    font-weight: 400;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    ${Navbar.selector} {
+    & > div > nav {
         background-color: ${({ theme }) => theme.color.navyBlue};
+        padding: 8px 16px;
+
+        ${({ theme }) => theme.media.above.sm} {
+            padding: 8px 0;
+        }
     }
 
+    font-size: 16px;
+    text-align: center;
+
     ${({ theme }) => theme.media.above.sm} {
-        height: 111px;
-        font-size: 14px;
+        min-height: 111px;
+        font-size: 18px;
+        text-align: left;
     }
 
     ${({ theme }) => theme.media.above.lg} {
         font-size: 16px;
     }
     ${({ theme }) => theme.media.above.xl} {
-        height: 144px;
-        font-size: 20px;
+        min-height: 144px;
+        font-size: 17px;
     }
 `;
 
