@@ -15,8 +15,8 @@ const SocialBar = () => {
 const Icon = styled(Link)`
     width: 30px;
     height: 30px;
-    background: ${({ theme }) => theme.color.black};
-    color: rgba(${({ theme }) => theme.color.rgb.white}, 0.7);
+    background: #000;
+    color: rgba(255, 255, 255, 0.7);
 
     border-radius: 10px;
 
@@ -25,23 +25,27 @@ const Icon = styled(Link)`
     text-align: center;
     line-height: 160%;
 
-    border: solid 1px rgba(${({ theme }) => theme.color.rgb.white}, 0.7);
+    border: solid 1px rgba(255, 255, 255, 0.7);
 
     :hover {
-        color: rgba(${({ theme }) => theme.color.rgb.white}, 1);
+        color: rgba(255, 255, 255, 1);
         text-decoration: none;
     }
 `;
 
 const Wrapper = styled.div`
-    width: 100px;
+    display: none;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
+    ${({ theme }) => theme.media.above.md} {
+        width: 100px;
 
-    margin: 15px 0 15px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+
+        margin: 15px 0 15px auto;
+    }
 `;
 
 export default SocialBar;
