@@ -1,11 +1,10 @@
 import React from 'react';
-
-import useCurrentPath from '../Utils/useCurrentPath';
+import { useLocation } from 'react-router-dom';
 
 const Breadcrumbs = () => {
-    const path = useCurrentPath();
+    const location = useLocation();
 
-    return <div>{path}</div>;
+    return <div>{location.pathname}</div>;
 };
 
 export default Breadcrumbs;
