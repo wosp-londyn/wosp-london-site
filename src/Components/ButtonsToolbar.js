@@ -90,6 +90,9 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.pink};
 
         height: 70px;
+        ${({ theme }) => theme.media.above.sm} {
+            height: 100px;
+        }
         ${({ theme }) => theme.media.above.md} {
             height: 45px;
         }
