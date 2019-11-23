@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Row, Container } from 'react-bootstrap';
+import wh from '../Assets/Images/wh.jpg';
+
 import {
     Slider,
     ButtonsToolbar,
@@ -45,10 +47,12 @@ const Home = () => {
 };
 
 const StyledContainer = styled.div`
-    background: pink;
+    background: url(${wh});
     width: 100%;
-    margin: 0;
+    margin: '0';
     padding-top: 50px;
+    background-position: left bottom;
+    background-size: cover;
 `;
 
 const Wrapper = styled.div`
