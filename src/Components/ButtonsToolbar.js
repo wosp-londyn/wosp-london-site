@@ -57,6 +57,7 @@ const StyledRow = styled(Row)`
 
         border-radius: 0;
 
+        font-weight: 700;
         text-transform: uppercase;
 
         ${({ theme }) => theme.media.above.sm} {

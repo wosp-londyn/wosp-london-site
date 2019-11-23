@@ -58,6 +58,7 @@ const BottomRow = styled(Row)`
 
     ${({ theme }) => theme.media.above.sm} {
         height: 111px;
+        font-size: 14px;
     }
 
     ${({ theme }) => theme.media.above.lg} {

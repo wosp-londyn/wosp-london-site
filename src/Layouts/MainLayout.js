@@ -2,8 +2,8 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 
-// import 'assets/styles/fontsLato.css';
-// import 'assets/styles/fontsRaleway.css';
+import '../Assets/Styles/fontsLato.css';
+import '../Assets/Styles/fontsRaleway.css';
 
 import GlobalStyle from '../Assets/Styles/GlobalStyle';
 import theme from '../Assets/Styles/theme';
