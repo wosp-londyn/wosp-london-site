@@ -7,6 +7,7 @@ import Slider from './Slider';
 import ButtonsToolbar from './ButtonsToolbar';
 import PostCardGrid from './PostCardGrid';
 import FacebookCardGrid from './FacebookCardGrid';
+import Breadcrumbs from './Breadcrumbs';
 
 // Place where you can export component to use on page
 
@@ -20,4 +21,5 @@ export {
     ButtonsToolbar,
     PostCardGrid,
     FacebookCardGrid,
+    Breadcrumbs,
 };

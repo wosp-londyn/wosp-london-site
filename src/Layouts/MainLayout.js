@@ -6,7 +6,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../Assets/Styles/GlobalStyle';
 import theme from '../Assets/Styles/theme';
-import { Header, Footer } from '../Components';
+import { Header, Footer, Breadcrumbs } from '../Components';
 
 const MainLayout = ({ children }) => (
     <>
@@ -14,6 +14,7 @@ const MainLayout = ({ children }) => (
             <>
                 <GlobalStyle />
                 <Header />
+                <Breadcrumbs />
                 <StyledMain>{children}</StyledMain>
                 <Footer />
             </>
