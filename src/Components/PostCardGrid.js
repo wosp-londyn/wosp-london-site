@@ -31,7 +31,7 @@ class PostCardGrid extends Component {
     }
 
     render() {
-        const {data} = this.state;
+        const { data } = this.state;
 
         return (
             <Wrapper>
@@ -51,6 +51,7 @@ class PostCardGrid extends Component {
 
 const Wrapper = styled.article`
     border: 1px solid ${({ theme }) => theme.color.blue};
+    margin: 0;
 `;
 
 const StyledCardDeck = styled(CardDeck)`

@@ -11,8 +11,8 @@ import {
 const Home = () => {
     return (
         <>
-            <StyledContainer>
-                <Wrapper>
+            <Wrapper>
+                <ShadowBox>
                     <Container>
                         <Row>
                             <Col sm={12}>
@@ -20,7 +20,7 @@ const Home = () => {
                             </Col>
                         </Row>
                     </Container>
-                </Wrapper>
+                </ShadowBox>
                 <Container>
                     <Row>
                         <Col sm={12}>
@@ -28,10 +28,10 @@ const Home = () => {
                         </Col>
                     </Row>
                 </Container>
-            </StyledContainer>
+            </Wrapper>
 
             <Container>
-                <Row style={{ marginTop: '100px' }}>
+                <Row>
                     <Col md={12} xl={8} as="article">
                         <PostCardGrid />
                     </Col>
@@ -44,7 +44,7 @@ const Home = () => {
     );
 };
 
-const StyledContainer = styled.div`
+const Wrapper = styled.div`
     background: pink;
     width: 100%;
     margin: 0;
@@ -54,7 +54,7 @@ const StyledContainer = styled.div`
     }
 `;
 
-const Wrapper = styled.div`
+const ShadowBox = styled.div`
     display: none;
     ${({ theme }) => theme.media.above.md} {
         display: block;
