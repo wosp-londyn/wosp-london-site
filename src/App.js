@@ -60,6 +60,7 @@ class App extends Component {
                             component={views.Home}
                         />
                         <Route
+                            exact
                             path={`${preSlug}/artykuly`}
                             component={views.Posts}
                         />
@@ -107,7 +108,7 @@ class App extends Component {
                         {data.map(post => (
                             <Route
                                 key={post.id}
-                                path={`${preSlug}/${post.slug}`}
+                                path={`${preSlug}/artykuly/${post.slug}`}
                                 render={props => (
                                     <PostTemplate post={post} {...props} />
                                 )}

@@ -27,7 +27,11 @@ const PostCard = ({ post }) => {
                         )}
                     />
                 </Card.Text>
-                <Button variant="primary" as={Link} to={`/${post.slug}`}>
+                <Button
+                    variant="primary"
+                    as={Link}
+                    to={`/artykuly/${post.slug}`}
+                >
                     Zobacz więcej
                 </Button>
             </Card.Body>
