@@ -8,23 +8,6 @@ import FacebookCard from './FacebookCard';
 // Określa style  sekcji postów z fb
 
 const FacebookCardGrid = () => {
-    // Symulacja danych  z API
-    const posts = [
-        {
-            name: 'Name1',
-            text:
-                "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        },
-        {
-            name: 'WCHUj',
-            text: "Some e card's content.",
-        },
-        {
-            name: 'John Doe',
-            text: "Some e card's sdfds.",
-        },
-    ];
-
     return (
         <Wrapper>
             <SectionHeader color={({ theme }) => theme.color.facebook}>
@@ -32,28 +15,29 @@ const FacebookCardGrid = () => {
             </SectionHeader>
 
             <StyledCardDeck>
-                {posts.map(post => (
-                    <FacebookCard
-                        name={post.name}
-                        text={post.text}
-                        key={post.name}
-                    />
-                ))}
+                <FacebookCard />
+                <FacebookCard />
+                <FacebookCard />
             </StyledCardDeck>
         </Wrapper>
     );
 };
 
 const Wrapper = styled.article`
-    border: 1px solid ${({ theme }) => theme.color.facebook};
+    border: 1px solid #a2a2a2;
     height: 1175px;
+
+    display: none;
+
+    ${({ theme }) => theme.media.above.xl} {
+        display: block;
+    }
 `;
 
 const StyledCardDeck = styled(CardDeck)`
-    padding: 0;
+    padding: 9px;
     margin-top: 30px;
     flex-direction: column;
-    /* border: 1px solid ${({ theme }) => theme.color.facebook}; */
 
     ${({ theme }) => theme.media.above.md} {
         margin-top: 0;
