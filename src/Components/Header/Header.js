@@ -5,6 +5,7 @@ import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
 
 import Menu from './Menu';
 import SocialBar from './SocialBar';
+import Leitmotiv from './Leitmotiv';
 import Brand from './Brand';
 
 const Header = () => {
@@ -13,7 +14,10 @@ const Header = () => {
             <Row>
                 <Container>
                     <Row>
-                        <Col md={12}>
+                        <Col md={9}>
+                            <Leitmotiv />
+                        </Col>
+                        <Col md={3}>
                             <SocialBar />
                         </Col>
                     </Row>
