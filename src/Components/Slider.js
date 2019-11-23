@@ -32,15 +32,25 @@ const Slider = () => {
 const StyledCarousel = styled(Carousel)`
     margin: 0px 0 0;
     & span {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        opacity: 0.3;
+    }
+    & span :hover {
+        height: 40px;
+        width: 40px;
+        opacity: 1;
     }
 
-    & .carousel-indicators > li {
-        height: 11px;
-        width: 11px;
-        margin: 0 7px;
+    & .carousel-indicators li {
+        background-color: #bdbdbd;
+        border: 3px solid #bdbdbd;
+        height: 12px;
+        width: 12px;
         border-radius: 50%;
+    }
+    & .carousel-indicators .active {
+        background-color: #424242;
     }
 `;
 
