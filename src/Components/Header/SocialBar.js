@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const SocialBar = () => {
     return (
         <Wrapper>
-            <Icon>fb</Icon>
-            <Icon>ig</Icon>
-            <Icon>yt</Icon>
+            <Icon id="allegro">A</Icon>
+            <Icon id="instagram">ig</Icon>
+            <Icon id="facebook">f</Icon>
         </Wrapper>
     );
 };
@@ -16,19 +16,32 @@ const Icon = styled(Link)`
     width: 30px;
     height: 30px;
     background: #000;
-    color: rgba(255, 255, 255, 0.7);
 
     border-radius: 10px;
-
     display: flex;
     justify-content: center;
     text-align: center;
     line-height: 160%;
+    font-weight: bold;
 
-    border: solid 1px rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 5px 8px -5px black;
 
+    &#allegro {
+        background-color: #ff8140;
+        color: white;
+    }
+
+    &#instagram {
+        background-color: #ececec;
+        color: #848484;
+    }
+
+    &#facebook {
+        background-color: #429be9;
+        color: white;
+    }
     :hover {
-        color: rgba(255, 255, 255, 1);
+        color: rgba(0, 0, 0, 0.2) !important;
         text-decoration: none;
     }
 `;
