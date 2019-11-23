@@ -30,8 +30,7 @@ const Slider = () => {
 };
 
 const StyledCarousel = styled(Carousel)`
-    margin: 50px 0 0;
-
+    margin: 0px 0 0;
     & span {
         height: 30px;
         width: 30px;

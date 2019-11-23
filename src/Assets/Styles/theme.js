@@ -11,6 +11,7 @@ const theme = {
         orange: '#EE7003',
         navyBlue: '#212851',
         facebook: '#3b5998',
+        pink: '#e4007f',
 
         rgb: {
             white: '255,255,255',

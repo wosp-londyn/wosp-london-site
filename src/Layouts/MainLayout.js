@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => (
 const StyledMain = styled.main`
     width: 100vw;
     min-height: 100vh;
-    padding: 10px;
+    /*padding: 10px;*/
     text-align: center;
     /* background: ${({ theme }) => theme.color.bg1}; */
 `;
