@@ -34,10 +34,10 @@ const Home = () => {
 
             <ArticlesContainer fluid={width < 992}>
                 <Row>
-                    <Col md={12} xl={8} as="article">
+                    <Col md={12} xl={8} as="section">
                         <PostCardGrid />
                     </Col>
-                    <Col md={12} xl={4} as="article">
+                    <Col md={12} xl={4} as="section">
                         <FacebookCardGrid />
                     </Col>
                 </Row>
@@ -67,6 +67,14 @@ const ShadowBox = styled.div`
 const ArticlesContainer = styled(Container)`
     ${({ theme }) => theme.media.above.xl} {
         margin-top: 60px;
+    }
+
+    section {
+        padding: 0;
+
+        ${({ theme }) => theme.media.above.lg} {
+            padding: 0 15px;
+        }
     }
 `;
 
