@@ -130,10 +130,10 @@ const SecondRow = styled(StyledRow)`
 `;
 
 const Wrapper = styled.div`
-    padding: 14px 0 0;
+    padding: 14px 0 25px;
 
     ${({ theme }) => theme.media.above.sm} {
-        padding: 55px 0 0;
+        padding: 55px 0 65px;
     }
     ${({ theme }) => theme.media.above.md} {
         padding: 28px 0 0;

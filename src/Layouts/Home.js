@@ -48,11 +48,18 @@ const StyledContainer = styled.div`
     background: pink;
     width: 100%;
     margin: 0;
-    padding-top: 50px;
+    padding: 0;
+    ${({ theme }) => theme.media.above.md} {
+        padding-top: 50px;
+    }
 `;
 
 const Wrapper = styled.div`
-    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    ${({ theme }) => theme.media.above.md} {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 `;
 
 export default Home;
