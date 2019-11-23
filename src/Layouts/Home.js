@@ -30,7 +30,7 @@ const Home = () => {
                 </Container>
             </Wrapper>
 
-            <Container>
+            <ArticlesContainer>
                 <Row>
                     <Col md={12} xl={8} as="article">
                         <PostCardGrid />
@@ -39,7 +39,7 @@ const Home = () => {
                         <FacebookCardGrid />
                     </Col>
                 </Row>
-            </Container>
+            </ArticlesContainer>
         </>
     );
 };
@@ -59,6 +59,12 @@ const ShadowBox = styled.div`
     ${({ theme }) => theme.media.above.md} {
         display: block;
         background-color: rgba(0, 0, 0, 0.5);
+    }
+`;
+
+const ArticlesContainer = styled(Container)`
+    ${({ theme }) => theme.media.above.xl} {
+        margin-top: 60px;
     }
 `;
 
