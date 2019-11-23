@@ -57,22 +57,22 @@ const StyledRow = styled(Row)`
 
         border-radius: 0;
 
-        font-weight: 700;
         text-transform: uppercase;
-
+        font-weight: 700;
+        font-size: 16px;
         ${({ theme }) => theme.media.above.sm} {
-            font-size: 24px;
+            font-size: 20px;
         }
         ${({ theme }) => theme.media.above.md} {
-            font-size: 19px;
+            font-size: 18px;
         }
 
         ${({ theme }) => theme.media.above.lg} {
-            font-size: 25px;
+            font-size: 19px;
         }
 
         ${({ theme }) => theme.media.above.xl} {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
     #button1 {
