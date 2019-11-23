@@ -12,7 +12,7 @@ const PostCard = ({ post }) => {
     };
 
     return (
-        <StyledCard>
+        <StyledCard as="article">
             <Card.Img
                 variant="top"
                 src={post._embedded['wp:featuredmedia']['0'].source_url}
