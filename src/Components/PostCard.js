@@ -30,7 +30,7 @@ const PostCard = ({ post }) => {
                 <Button
                     variant="primary"
                     as={Link}
-                    to={`/artykuly/${post.slug}`}
+                    to={`/aktualnosci/artykuly/${post.slug}`}
                 >
                     Zobacz więcej
                 </Button>
