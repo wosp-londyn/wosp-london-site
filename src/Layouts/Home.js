@@ -7,8 +7,10 @@ import {
     PostCardGrid,
     FacebookCardGrid,
 } from '../Components';
+import windowDimensions from '../Utils/useWindowDimensions';
 
 const Home = () => {
+    const { width } = windowDimensions();
     return (
         <>
             <Wrapper>
@@ -30,7 +32,7 @@ const Home = () => {
                 </Container>
             </Wrapper>
 
-            <ArticlesContainer>
+            <ArticlesContainer fluid={width < 992}>
                 <Row>
                     <Col md={12} xl={8} as="article">
                         <PostCardGrid />
