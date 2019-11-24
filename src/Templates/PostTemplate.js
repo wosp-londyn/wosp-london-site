@@ -31,8 +31,19 @@ class PostTemplate extends Component {
     }
 }
 const StyledContainer = styled(Container)`
-    img {
+    & img {
         max-width: 100%;
+        margin: 0;
+    }
+
+    & > img {
+        max-width: calc(100% + 30px);
+        margin: 0 0 0 -15px;
+
+        ${({ theme }) => theme.media.above.sm} {
+            max-width: calc(100%);
+            margin: 0;
+        }
     }
 `;
 
