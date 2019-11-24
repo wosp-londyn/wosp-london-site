@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/wosp-london-site/static/css/main.d7a2b5f8.chunk.css",
-    "main.js": "/wosp-london-site/static/js/main.3085c0d4.chunk.js",
-    "main.js.map": "/wosp-london-site/static/js/main.3085c0d4.chunk.js.map",
+    "main.css": "/wosp-london-site/static/css/main.a9eacf6f.chunk.css",
+    "main.js": "/wosp-london-site/static/js/main.8c27cacd.chunk.js",
+    "main.js.map": "/wosp-london-site/static/js/main.8c27cacd.chunk.js.map",
     "runtime-main.js": "/wosp-london-site/static/js/runtime-main.1eac863b.js",
     "runtime-main.js.map": "/wosp-london-site/static/js/runtime-main.1eac863b.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/wosp-london-site/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.10e1e671.chunk.js": "/wosp-london-site/static/js/2.10e1e671.chunk.js",
-    "static/js/2.10e1e671.chunk.js.map": "/wosp-london-site/static/js/2.10e1e671.chunk.js.map",
+    "static/js/2.c1817520.chunk.js": "/wosp-london-site/static/js/2.c1817520.chunk.js",
+    "static/js/2.c1817520.chunk.js.map": "/wosp-london-site/static/js/2.c1817520.chunk.js.map",
     "index.html": "/wosp-london-site/index.html",
-    "precache-manifest.2ccb48f0733e8b07ff2124c0021b0a56.js": "/wosp-london-site/precache-manifest.2ccb48f0733e8b07ff2124c0021b0a56.js",
+    "precache-manifest.31fcbd5280283f4b16572c0f0be7b9b9.js": "/wosp-london-site/precache-manifest.31fcbd5280283f4b16572c0f0be7b9b9.js",
     "service-worker.js": "/wosp-london-site/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/wosp-london-site/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.d7a2b5f8.chunk.css.map": "/wosp-london-site/static/css/main.d7a2b5f8.chunk.css.map",
+    "static/css/main.a9eacf6f.chunk.css.map": "/wosp-london-site/static/css/main.a9eacf6f.chunk.css.map",
+    "static/media/fontsLato.css": "/wosp-london-site/static/media/Lato-700.85d339d9.ttf",
+    "static/media/fontsRaleway.css": "/wosp-london-site/static/media/Raleway-700.f49f3d2d.ttf",
     "static/media/cheese.png": "/wosp-london-site/static/media/cheese.22cb1356.png",
     "static/media/dunno.png": "/wosp-london-site/static/media/dunno.a6a28b1a.png",
     "static/media/logo.svg": "/wosp-london-site/static/media/logo.25bf045c.svg",
@@ -21,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.1eac863b.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.10e1e671.chunk.js",
-    "static/css/main.d7a2b5f8.chunk.css",
-    "static/js/main.3085c0d4.chunk.js"
+    "static/js/2.c1817520.chunk.js",
+    "static/css/main.a9eacf6f.chunk.css",
+    "static/js/main.8c27cacd.chunk.js"
   ]
 }
