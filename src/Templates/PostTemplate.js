@@ -67,9 +67,18 @@ const HeadRow = styled(Row)`
     h1 {
         position: absolute;
         bottom: 0;
-        padding: 10px 0;
+        padding: 20px;
+        width: calc(100% - 30px);
+        height: 120px;
+        text-align: center;
 
-        font-size: 29px;
+        font-size: 19px;
+        ${({ theme }) => theme.media.above.xs} {
+            font-size: 22px;
+        }
+        ${({ theme }) => theme.media.above.sm} {
+            font-size: 29px;
+        }
         color: white;
     }
 `;
