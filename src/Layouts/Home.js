@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Row, Container } from 'react-bootstrap';
-import wh from '../Assets/Images/wh.jpg';
 
 import {
     Slider,
     ButtonsToolbar,
     PostCardGrid,
     FacebookCardGrid,
+    BackgroundHome,
 } from '../Components';
 import windowDimensions from '../Utils/useWindowDimensions';
 
@@ -16,6 +16,7 @@ const Home = () => {
     return (
         <>
             <Wrapper>
+                <BackgroundHome />
                 <ShadowBox>
                     <Container>
                         <Row>
@@ -49,7 +50,7 @@ const Home = () => {
 };
 
 const Wrapper = styled.div`
-    background: pink;
+    position: relative;
     width: 100%;
     margin: 0;
     padding: 0;
