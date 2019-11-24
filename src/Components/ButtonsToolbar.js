@@ -8,7 +8,7 @@ import { Button, Row, Col } from 'react-bootstrap';
 const ButtonsToolbar = () => {
     return (
         <Wrapper>
-            <StyledRow>
+            <FirstRow>
                 <Col xs={12} md={3}>
                     <Button id="button1" as={Link} to="/live">
                         Galeria
@@ -29,7 +29,7 @@ const ButtonsToolbar = () => {
                         Wpłać na WOŚP
                     </Button>
                 </Col>
-            </StyledRow>
+            </FirstRow>
             <SecondRow>
                 <Col xs={12} md={12}>
                     <Button id="button5" as={Link} to="/wplac-na-wosp">
@@ -45,23 +45,6 @@ const StyledRow = styled(Row)`
     width: 100%;
     margin: 0;
 
-    div {
-        padding: 0;
-        height: 70px;
-
-        ${({ theme }) => theme.media.above.sm} {
-            height: 100px;
-        }
-
-        ${({ theme }) => theme.media.above.lg} {
-            height: 128px;
-        }
-
-        ${({ theme }) => theme.media.above.xl} {
-            height: 155px;
-        }
-    }
-
     a {
         border: none;
 
@@ -75,20 +58,21 @@ const StyledRow = styled(Row)`
         border-radius: 0;
 
         text-transform: uppercase;
-
+        font-weight: 700;
+        font-size: 16px;
         ${({ theme }) => theme.media.above.sm} {
-            font-size: 24px;
+            font-size: 20px;
         }
         ${({ theme }) => theme.media.above.md} {
-            font-size: 19px;
+            font-size: 18px;
         }
 
         ${({ theme }) => theme.media.above.lg} {
-            font-size: 25px;
+            font-size: 19px;
         }
 
         ${({ theme }) => theme.media.above.xl} {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
     #button1 {
@@ -105,35 +89,61 @@ const StyledRow = styled(Row)`
     }
     #button5 {
         background-color: ${({ theme }) => theme.color.pink};
+
+        height: 70px;
+        ${({ theme }) => theme.media.above.sm} {
+            height: 100px;
+        }
         ${({ theme }) => theme.media.above.md} {
             height: 45px;
         }
-
         ${({ theme }) => theme.media.above.lg} {
             height: 66px;
         }
     }
 `;
 
+const FirstRow = styled(StyledRow)`
+    div {
+        padding: 0;
+        height: 70px;
+
+        ${({ theme }) => theme.media.above.sm} {
+            height: 100px;
+        }
+
+        ${({ theme }) => theme.media.above.lg} {
+            height: 128px;
+        }
+
+        ${({ theme }) => theme.media.above.xl} {
+            height: 155px;
+        }
+    }
+`;
 const SecondRow = styled(StyledRow)`
     margin: 0;
 
+    div {
+        padding: 0;
+    }
+
     ${({ theme }) => theme.media.above.md} {
-        margin: 30px 0 0;
+        margin: 30px 0 40px;
     }
     ${({ theme }) => theme.media.above.lg} {
-        margin: 17px 0 0;
+        margin: 17px 0 50px;
     }
     ${({ theme }) => theme.media.above.xl} {
-        margin: 21px 0 0;
+        margin: 21px 0 30px;
     }
 `;
 
 const Wrapper = styled.div`
-    padding: 14px 0 0;
+    padding: 14px 0 25px;
 
     ${({ theme }) => theme.media.above.sm} {
-        padding: 55px 0 0;
+        padding: 55px 0 65px;
     }
     ${({ theme }) => theme.media.above.md} {
         padding: 28px 0 0;

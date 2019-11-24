@@ -6,8 +6,7 @@ const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         padding:0;
         margin: 0;
-        font-family: ${({ theme }) => theme.font.family.lato} !important;
-        font-weight: 400;
+        font-family: ${({ theme }) => theme.font.family.lato};
     }
     
 

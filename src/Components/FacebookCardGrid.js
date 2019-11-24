@@ -23,7 +23,7 @@ const FacebookCardGrid = () => {
     );
 };
 
-const Wrapper = styled.article`
+const Wrapper = styled.div`
     border: 1px solid #a2a2a2;
     height: 1175px;
 

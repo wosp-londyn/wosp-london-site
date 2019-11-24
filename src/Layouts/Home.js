@@ -1,20 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Row, Container } from 'react-bootstrap';
-import wh from '../Assets/Images/wh.jpg';
 
 import {
     Slider,
     ButtonsToolbar,
     PostCardGrid,
     FacebookCardGrid,
+    BackgroundHome,
 } from '../Components';
+import windowDimensions from '../Utils/useWindowDimensions';
 
 const Home = () => {
+    const { width } = windowDimensions();
     return (
         <>
-            <StyledContainer>
-                <Wrapper>
+            <Wrapper>
+                <BackgroundHome />
+                <ShadowBox>
                     <Container>
                         <Row>
                             <Col sm={12}>
@@ -22,7 +25,7 @@ const Home = () => {
                             </Col>
                         </Row>
                     </Container>
-                </Wrapper>
+                </ShadowBox>
                 <Container>
                     <Row>
                         <Col sm={12}>
@@ -30,33 +33,52 @@ const Home = () => {
                         </Col>
                     </Row>
                 </Container>
-            </StyledContainer>
+            </Wrapper>
 
-            <Container>
-                <Row style={{ marginTop: '100px' }}>
-                    <Col md={12} xl={8} as="article">
+            <ArticlesContainer fluid={width < 992}>
+                <Row>
+                    <Col md={12} xl={8} as="section">
                         <PostCardGrid />
                     </Col>
-                    <Col md={12} xl={4} as="article">
+                    <Col md={12} xl={4} as="section">
                         <FacebookCardGrid />
                     </Col>
                 </Row>
-            </Container>
+            </ArticlesContainer>
         </>
     );
 };
 
-const StyledContainer = styled.div`
-    background: url(${wh});
+const Wrapper = styled.div`
+    position: relative;
     width: 100%;
-    margin: '0';
-    padding-top: 50px;
-    background-position: left bottom;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    ${({ theme }) => theme.media.above.md} {
+        padding-top: 50px;
+    }
 `;
 
-const Wrapper = styled.div`
-    background-color: rgba(0, 0, 0, 0.5);
+const ShadowBox = styled.div`
+    display: none;
+    ${({ theme }) => theme.media.above.md} {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+`;
+
+const ArticlesContainer = styled(Container)`
+    ${({ theme }) => theme.media.above.xl} {
+        margin-top: 60px;
+    }
+
+    section {
+        padding: 0;
+
+        ${({ theme }) => theme.media.above.lg} {
+            padding: 0 15px;
+        }
+    }
 `;
 
 export default Home;
