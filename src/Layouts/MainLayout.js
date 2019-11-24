@@ -45,6 +45,7 @@ const MainLayout = ({ children }) => {
 const StyledMain = styled.main`
     width: 100vw;
     min-height: 100vh;
+    overflow: hidden;
     /*padding: 10px;*/
     text-align: center;
 `;
