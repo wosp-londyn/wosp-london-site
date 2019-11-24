@@ -13,91 +13,85 @@ class PostTemplate extends Component {
         const date = new Date(post.date);
 
         return (
-            <Container>
+            <StyledContainer>
                 <HeadRow>
-                    <img
-                        variant="top"
-                        src={post._embedded['wp:featuredmedia']['0'].source_url}
-                        alt={post._embedded['wp:featuredmedia']['0'].alt_text}
-                    />
-                    <div>
+                    <Col>
+                        <img
+                            variant="top"
+                            src={
+                                post._embedded['wp:featuredmedia']['0']
+                                    .source_url
+                            }
+                            alt={
+                                post._embedded['wp:featuredmedia']['0'].alt_text
+                            }
+                        />
+                        <Fade />
                         <h1>{post.title.rendered}</h1>
-                    </div>
+                    </Col>
                 </HeadRow>
-                <HrRow>
+                <Row>
                     <Col xs={2}>
                         <p>{`${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`}</p>
                     </Col>
                     <Col xs={10}>
                         <hr />
                     </Col>
-                </HrRow>
+                </Row>
                 <Row>
-                    <Content
+                    <div
                         dangerouslySetInnerHTML={createMarkup(
                             post.content.rendered
                         )}
                     />
                 </Row>
-            </Container>
+            </StyledContainer>
         );
     }
 }
+const StyledContainer = styled(Container)``;
 
 const HeadRow = styled(Row)`
     position: relative;
-    width: 100%;
 
     img {
-        max-width: calc(100% + 30px);
+        width: calc(100% + 30px);
         margin: 0 0 0 -15px;
 
         ${({ theme }) => theme.media.above.sm} {
-            max-width: calc(100%);
-            margin: 0 auto;
-            /* width: 100%; */
+            margin: 0;
+            width: 100%;
         }
     }
 
-    div {
+    h1 {
         position: absolute;
         bottom: 0;
+        padding: 10px 0;
 
-        display: flex;
-        align-items: flex-end;
-
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 0.2) 25%,
-            rgba(255, 255, 255, 0) 100%
-        );
-    }
-
-    h1 {
         font-size: 29px;
-        padding: 30px 15px 15px;
         color: white;
-
-        margin: 0 auto;
-        width: 50%;
-        height: 120px;
     }
 `;
 
-const HrRow = styled(Row)`
-    margin: 30px 0 20px;
-`;
+const Fade = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 
-const Content = styled.div`
-    text-align: justify;
-    padding: 0 5px;
-
-    * {
-        max-width: 100%;
+    ${({ theme }) => theme.media.above.sm} {
+        width: calc(100% - 30px);
+        left: 15px;
     }
+
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(59, 59, 59, 0.8211659663865546) 23%,
+        rgba(255, 255, 255, 0) 100%
+    );
 `;
 
 export default PostTemplate;
