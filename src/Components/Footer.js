@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import heart from '../Assets/Images/logo132.png';
+import SocialBar from './SocialBar';
 
 const Footer = () => {
     return (
@@ -18,7 +19,16 @@ const Footer = () => {
                         <Col md={5} />
                     </ColClass>
 
-                    <Col md={3}>Socjalmendja</Col>
+                    <Col md={3}>
+                        <Col3Inside>
+                            <h2>KONTAKT</h2>
+                            <p>
+                                WOŚP sztab w Londynie e-mail loremipsum@lorem.pl
+                                Polityka prywatności
+                            </p>
+                            <SocialBar />
+                        </Col3Inside>
+                    </Col>
                 </Row>
             </StyledContainer>
         </Outher>
@@ -51,6 +61,21 @@ const Img = styled.img`
     width: 140px;
     display: inline-block;
     outline: pink 1px solid;
+`;
+
+const Col3Inside = styled.div`
+    color: white;
+    text-align: left;
+    h2 {
+        font-size: 21px;
+        font-weight: 700;
+        padding-bottom: 5%;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+    }
 `;
 
 export default Footer;
