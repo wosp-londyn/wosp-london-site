@@ -10,7 +10,7 @@ import Brand from './Brand';
 
 const Header = () => {
     return (
-        <Wrapper as="header">
+        <Container fluid as="header">
             <Row>
                 <Container>
                     <Row>
@@ -38,13 +38,9 @@ const Header = () => {
                     </Navbar>
                 </Container>
             </BottomRow>
-        </Wrapper>
+        </Container>
     );
 };
-
-const Wrapper = styled(Container)`
-    background: ${({ theme }) => theme.color.bg1};
-`;
 
 const BottomRow = styled(Row)`
     background-color: ${({ theme }) => theme.color.navyBlue};
