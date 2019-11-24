@@ -1,6 +1,6 @@
-// import React from 'react';
 import React, { Component } from 'react';
-// import {Container, Col, Row} from 'react-bootstrap'
+import styled from 'styled-components';
+import { Container } from 'react-bootstrap';
 
 class PostTemplate extends Component {
     render() {
@@ -10,42 +10,30 @@ class PostTemplate extends Component {
 
         const { post } = this.props;
 
+        const date = new Date(post.date);
+
         return (
-            <div>
+            <StyledContainer>
                 <img
                     variant="top"
                     src={post._embedded['wp:featuredmedia']['0'].source_url}
                     alt={post._embedded['wp:featuredmedia']['0'].alt_text}
                 />
                 <h1>{post.title.rendered}</h1>
-                <p>{post.date}</p>
+                <p>{`${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`}</p>
                 <div
                     dangerouslySetInnerHTML={createMarkup(
                         post.content.rendered
                     )}
                 />
-            </div>
+            </StyledContainer>
         );
     }
 }
-
-// const PostTemplate = title => {
-//     const createMarkup = text => {
-//         return { __html: text };
-//     };
-
-//     return (
-//         <div>
-//             {/* <section>
-//                 <div
-//                     dangerouslySetInnerHTML={createMarkup(
-//                         post.content.rendered
-//                     )}
-//                 />
-//             </section>
-//              */}
-//         </div>
-//     );
-// };
+const StyledContainer = styled(Container)`
+    img {
+        max-width: 100%;
+    }
+`;
 
 export default PostTemplate;
