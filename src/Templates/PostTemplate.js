@@ -30,14 +30,14 @@ class PostTemplate extends Component {
                         <h1>{post.title.rendered}</h1>
                     </Col>
                 </HeadRow>
-                <Row>
-                    <Col xs={2}>
+                <HrRow>
+                    <Col xs={4} sm={3} md={2} xl={1}>
                         <p>{`${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`}</p>
                     </Col>
-                    <Col xs={10}>
+                    <Col xs={8} sm={9} md={10} xl={11}>
                         <hr />
                     </Col>
-                </Row>
+                </HrRow>
                 <Row>
                     <div
                         dangerouslySetInnerHTML={createMarkup(
@@ -101,6 +101,33 @@ const Fade = styled.div`
         rgba(59, 59, 59, 0.8211659663865546) 23%,
         rgba(255, 255, 255, 0) 100%
     );
+`;
+
+const HrRow = styled(Row)`
+    margin: 20px 0;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    hr {
+        border-top: 2px solid #9a9a9a;
+        margin: 0 -15px 0 0;
+        ${({ theme }) => theme.media.above.sm} {
+            margin: 0;
+        }
+    }
+
+    p {
+        text-align: left;
+    }
 `;
 
 export default PostTemplate;
