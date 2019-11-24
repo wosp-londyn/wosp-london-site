@@ -49,6 +49,7 @@ class PostTemplate extends Component {
         );
     }
 }
+
 const StyledContainer = styled(Container)``;
 
 const HeadRow = styled(Row)`
