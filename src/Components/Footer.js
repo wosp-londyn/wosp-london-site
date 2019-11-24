@@ -22,11 +22,13 @@ const Footer = () => {
                     <Col md={3}>
                         <Col3Inside>
                             <h2>KONTAKT</h2>
-                            <p>
-                                WOŚP sztab w Londynie e-mail loremipsum@lorem.pl
-                                Polityka prywatności
-                            </p>
-                            <SocialBar />
+
+                            <p>WOŚP sztab w Londynie</p>
+                            <p>e-mail loremipsum@lorem.pl</p>
+                            <p>Polityka prywatności</p>
+                            <WrapperSocialBar>
+                                <SocialBar />
+                            </WrapperSocialBar>
                         </Col3Inside>
                     </Col>
                 </Row>
@@ -37,7 +39,7 @@ const Footer = () => {
 const ColClass = styled.div`
     padding: 12px;
     width: 32%;
-    height: 150px;
+    height: 210px;
     background: ${({ theme }) => theme.color.navyBlue};
     display: table-cell;
     border-right: solid rgba(255, 255, 255, 0.2) 2px;
@@ -66,6 +68,7 @@ const Img = styled.img`
 const Col3Inside = styled.div`
     color: white;
     text-align: left;
+    margin: 0;
     h2 {
         font-size: 21px;
         font-weight: 700;
@@ -76,6 +79,12 @@ const Col3Inside = styled.div`
         font-weight: 400;
         font-size: 16px;
     }
+`;
+
+const WrapperSocialBar = styled.div`
+    float: left;
+    margin: 0px;
+    padding: 0px;
 `;
 
 export default Footer;
