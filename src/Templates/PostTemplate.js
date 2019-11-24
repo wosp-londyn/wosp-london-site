@@ -39,7 +39,7 @@ class PostTemplate extends Component {
                     </Col>
                 </HrRow>
                 <Row>
-                    <div
+                    <ContentBlock
                         dangerouslySetInnerHTML={createMarkup(
                             post.content.rendered
                         )}
@@ -127,6 +127,21 @@ const HrRow = styled(Row)`
 
     p {
         text-align: left;
+    }
+`;
+
+const ContentBlock = styled.div`
+    padding: 0 5px;
+    width: calc(100% - 10px);
+    text-align: justify;
+
+    ${({ theme }) => theme.media.above.sm} {
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
     }
 `;
 
