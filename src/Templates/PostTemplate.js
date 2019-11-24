@@ -8,12 +8,22 @@ class PostTemplate extends Component {
             return { __html: text };
         };
 
-        const { title, content } = this.props.post;
+        const { post } = this.props;
 
         return (
             <div>
-                <h1>{title.rendered}</h1>
-                <div dangerouslySetInnerHTML={createMarkup(content.rendered)} />
+                <img
+                    variant="top"
+                    src={post._embedded['wp:featuredmedia']['0'].source_url}
+                    alt={post._embedded['wp:featuredmedia']['0'].alt_text}
+                />
+                <h1>{post.title.rendered}</h1>
+                <p>{post.date}</p>
+                <div
+                    dangerouslySetInnerHTML={createMarkup(
+                        post.content.rendered
+                    )}
+                />
             </div>
         );
     }
