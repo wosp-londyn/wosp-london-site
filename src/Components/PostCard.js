@@ -12,7 +12,7 @@ const PostCard = ({ post }) => {
     };
 
     return (
-        <StyledCard>
+        <StyledCard as="article">
             <Card.Img
                 variant="top"
                 src={post._embedded['wp:featuredmedia']['0'].source_url}
@@ -27,7 +27,11 @@ const PostCard = ({ post }) => {
                         )}
                     />
                 </Card.Text>
-                <Button variant="primary" as={Link} to={`/${post.slug}`}>
+                <Button
+                    variant="primary"
+                    as={Link}
+                    to={`/aktualnosci/artykuly/${post.slug}`}
+                >
                     Zobacz więcej
                 </Button>
             </Card.Body>

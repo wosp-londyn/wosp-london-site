@@ -4,13 +4,15 @@ const theme = {
         blue: '#009FE3',
         green: '#96C11F',
         red: '#E30613',
+        mediumRed: '#DE323D',
+        lightRed: '#FF6872',
+
         orange: '#EE7003',
         navyBlue: '#212851',
         pink: '#e4007f',
 
         facebook: '#3b5998',
         cyan: '#0D5065',
-
 
         rgb: {
             white: '255,255,255',
