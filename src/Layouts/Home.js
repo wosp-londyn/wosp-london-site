@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Row, Container } from 'react-bootstrap';
+import wh from '../Assets/Images/wh.jpg';
+
 import {
     Slider,
     ButtonsToolbar,
