@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
 
 import Menu from './Menu';
-import SocialBar from './SocialBar';
+import SocialBar from '../SocialBar';
 import Leitmotiv from './Leitmotiv';
 import Brand from './Brand';
 
