@@ -7,20 +7,6 @@ import { Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Menu = () => {
-    let preSlug = '';
-    if (
-        // If localhost - dont use prefix
-        window.location.hostname === 'localhost' ||
-        window.location.hostname === '127.0.0.1'
-    ) {
-        preSlug = '';
-    } else if (
-        // Prefix if hosted on github
-        window.location.hostname === 'neology92.github.io'
-    ) {
-        preSlug = '/wosp-london-site';
-    }
-
     const newsDropdown = [
         { name: 'Artykuły', slug: '/artykuly' },
         { name: 'Podcasty', slug: '/podcasty' },
@@ -43,8 +29,8 @@ const Menu = () => {
     ];
 
     return (
-        <StyledNav className="navbar-nav navbar-right">
-            <Nav.Link as={Link} to={`${preSlug}/`}>
+        <Nav className="navbar-nav navbar-right">
+            <Nav.Link as={Link} to="/">
                 <FontAwesomeIcon icon="home" size="lg" />
             </Nav.Link>
             <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown">

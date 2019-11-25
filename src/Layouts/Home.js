@@ -8,7 +8,7 @@ import {
     PostCardGrid,
     FacebookCardGrid,
     BackgroundHome,
-} from '../Components';
+} from "../Components";
 import windowDimensions from '../Utils/useWindowDimensions';
 
 const Home = () => {
