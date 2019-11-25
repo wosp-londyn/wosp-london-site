@@ -29,8 +29,10 @@ const Menu = () => {
     ];
 
     return (
-        <Nav className="navbar-nav navbar-right">
+
+        <StyledNav className="navbar-nav navbar-right">
             <Nav.Link as={Link} to="/">
+
                 <FontAwesomeIcon icon="home" size="lg" />
             </Nav.Link>
             <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown">
@@ -68,7 +70,7 @@ const Menu = () => {
             </WspNavDropdown>
 
             <StyledContainer>
-                <Nav.Link as={Link} to={`${preSlug}/kontakt`}>
+                <Nav.Link as={Link} to={`/kontakt`}>
                     KONTAKT
                 </Nav.Link>
             </StyledContainer>

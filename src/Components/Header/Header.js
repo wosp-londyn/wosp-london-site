@@ -10,38 +10,39 @@ import Brand from './Brand';
 
 const Header = ({ sectionColor }) => {
     return (
-        <>
-            <Container fluid as="header">
-                <Row>
-                    <Container>
-                        <Row>
-                            <Col md={9}>
-                                <Leitmotiv />
-                            </Col>
-                            <Col md={3}>
-                                <SocialBar />
-                            </Col>
-                        </Row>
-                    </Container>
-                </Row>
 
-                <BottomRow>
-                    <Container>
-                        <Navbar collapseOnSelect expand="md" variant="dark">
-                            <Navbar.Brand as={Link} to="/">
-                                <Brand />
-                            </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                            <Navbar.Collapse id="basic-navbar-nav">
-                                <Nav className="mr-auto" />
-                                <Menu />
-                            </Navbar.Collapse>
-                        </Navbar>
-                    </Container>
-                </BottomRow>
-            </Container>
-            <ColorBar sectionColor={sectionColor} />
-        </>
+      <>
+        <Container fluid as="header">
+            <Row>
+                <Container>
+                    <Row>
+                        <Col md={10}>
+                            <Leitmotiv />
+                        </Col>
+                        <Col md={2}>
+                            <SocialBar />
+                        </Col>
+                    </Row>
+                </Container>
+            </Row>
+
+            <BottomRow>
+                <Container>
+                    <Navbar collapseOnSelect expand="lg" variant="dark">
+                        <Navbar.Brand as={Link} to="/">
+                            <Brand />
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <StyledNavbarCollapse id="basic-navbar-nav">
+                            <Nav className="mr-auto" />
+                            <Menu />
+                        </StyledNavbarCollapse>
+                    </Navbar>
+                </Container>
+            </BottomRow>
+        </Container>
+       <ColorBar sectionColor={sectionColor} />
+      </>
     );
 };
 
