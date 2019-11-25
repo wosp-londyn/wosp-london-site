@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
 
 import Menu from './Menu';
-import SocialBar from './SocialBar';
+import SocialBar from '../SocialBar';
 import Leitmotiv from './Leitmotiv';
 import Brand from './Brand';
 
-const Header = () => {
+const Header = ({ sectionColor }) => {
     return (
+
+      <>
         <Container fluid as="header">
             <Row>
                 <Container>
@@ -39,6 +41,8 @@ const Header = () => {
                 </Container>
             </BottomRow>
         </Container>
+       <ColorBar sectionColor={sectionColor} />
+      </>
     );
 };
 
@@ -90,4 +94,9 @@ const BottomRow = styled(Row)`
     }
 `;
 
+const ColorBar = styled.div`
+    width: 100%;
+    height: 10px;
+    background: ${({ sectionColor }) => sectionColor};
+`;
 export default Header;
