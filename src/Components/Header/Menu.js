@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { NavDropdown, Nav } from 'react-bootstrap';
 
@@ -41,11 +42,11 @@ const Menu = () => {
     ];
 
     return (
-        <Nav className="navbar-nav navbar-right">
+        <StyledNav className="navbar-nav navbar-right">
             <Nav.Link as={Link} to={`${preSlug}/`}>
                 <FontAwesomeIcon icon="home" size="lg" />
             </Nav.Link>
-            <NavDropdown title="Aktualności" id="basic-nav-dropdown">
+            <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown">
                 {newsDropdown.map(item => (
                     <NavDropdown.Item
                         key={item.name}
@@ -55,8 +56,8 @@ const Menu = () => {
                         {item.name}
                     </NavDropdown.Item>
                 ))}
-            </NavDropdown>
-            <NavDropdown title="Informacje" id="basic-nav-dropdown">
+            </AktNavDropdown>
+            <InfNavDropdown title="INFORMACJE" id="basic-nav-dropdown">
                 {infoDropdown.map(item => (
                     <NavDropdown.Item
                         key={item.name}
@@ -66,8 +67,8 @@ const Menu = () => {
                         {item.name}
                     </NavDropdown.Item>
                 ))}
-            </NavDropdown>
-            <NavDropdown title="Wspieraj nas" id="basic-nav-dropdown">
+            </InfNavDropdown>
+            <WspNavDropdown title="WSPIERAJ NAS" id="basic-nav-dropdown">
                 {supportDropdown.map(item => (
                     <NavDropdown.Item
                         key={item.name}
@@ -77,13 +78,43 @@ const Menu = () => {
                         {item.name}
                     </NavDropdown.Item>
                 ))}
-            </NavDropdown>
+            </WspNavDropdown>
 
             <Nav.Link as={Link} to={`${preSlug}/kontakt`}>
-                Kontakt
+                KONTAKT
             </Nav.Link>
-        </Nav>
+        </StyledNav>
     );
 };
 
 export default Menu;
+
+const StyledNav = styled(Nav)`
+
+    a{
+        border-bottom: 2px solid transparent;
+    }
+
+    a::after{
+        display: none;
+    }
+
+`
+
+const AktNavDropdown = styled(NavDropdown)`
+    a:hover{
+        color: #DE323D;
+        border-bottom: 2px solid #DE323D;
+    }
+`
+
+const InfNavDropdown = styled(NavDropdown)`
+    a:hover{
+        border-bottom: 2px solid #32B2E8;
+    }
+`
+const WspNavDropdown = styled(NavDropdown)`
+    a:hover{
+        border-bottom: 2px solid #AACD4B;
+    }
+`

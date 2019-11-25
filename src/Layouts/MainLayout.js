@@ -50,7 +50,5 @@ const StyledMain = styled.main`
     /*padding: 10px;*/
     text-align: center;
 `;
-//// 100vh destroys everthing O.O
-
 
 export default MainLayout;
