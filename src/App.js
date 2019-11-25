@@ -5,8 +5,10 @@ import {
     Route,
     Redirect,
 } from 'react-router-dom';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 

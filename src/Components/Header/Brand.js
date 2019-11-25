@@ -16,7 +16,7 @@ const Brand = () => {
                     sm={{ offset: 0, span: 6 }}
                     md={6}
                 >
-                    <Row>
+                    <Row h={80}>
                         <Col
                             xs={7}
                             sm={{ offset: 0, span: 5 }}
@@ -24,9 +24,12 @@ const Brand = () => {
                         >
                             WOŚP
                         </Col>
+                    </Row>
+
+                    <Row>
                         <Col
                             xs={7}
-                            sm={{ offset: 4, span: 3 }}
+                            sm={{ offset: 0, span: 3 }}
                             md={{ offset: 0, span: 12 }}
                         >
                             LONDYN
@@ -62,6 +65,7 @@ const RightCol = styled(Col)`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-weight: bold;
 
     border-left: 1px white solid;
 
@@ -69,6 +73,7 @@ const RightCol = styled(Col)`
     ${({ theme }) => theme.media.above.sm} {
         width: 106px;
         font-size: 30px;
+
     }
 
     ${({ theme }) => theme.media.above.md} {
