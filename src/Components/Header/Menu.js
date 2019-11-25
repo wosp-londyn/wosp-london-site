@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { NavDropdown, Nav } from 'react-bootstrap';
+import { Container } from 'react-bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -80,9 +81,12 @@ const Menu = () => {
                 ))}
             </WspNavDropdown>
 
-            <Nav.Link as={Link} to={`${preSlug}/kontakt`}>
-                KONTAKT
-            </Nav.Link>
+            <StyledContainer>
+                <Nav.Link as={Link} to={`${preSlug}/kontakt`}>
+                    KONTAKT
+                </Nav.Link>
+            </StyledContainer>
+
         </StyledNav>
     );
 };
@@ -91,12 +95,26 @@ export default Menu;
 
 const StyledNav = styled(Nav)`
 
+    div{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    div:last-child{
+        padding-right: 0;
+    }
+
     a{
         border-bottom: 2px solid transparent;
     }
 
     a::after{
         display: none;
+    }
+
+    span:hover{
+        color: #DE323D;
+        border-bottom: 2px solid #DE323D;
     }
 
 `
@@ -116,5 +134,12 @@ const InfNavDropdown = styled(NavDropdown)`
 const WspNavDropdown = styled(NavDropdown)`
     a:hover{
         border-bottom: 2px solid #AACD4B;
+    }
+`
+const StyledContainer = styled(Container)`
+    padding: 0;
+
+    a:hover{
+        border-bottom: 2px solid #FAB400;
     }
 `

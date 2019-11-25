@@ -26,21 +26,33 @@ const Header = () => {
 
             <BottomRow>
                 <Container>
-                    <Navbar collapseOnSelect expand="md" variant="dark">
+                    <Navbar collapseOnSelect expand="lg" variant="dark">
                         <Navbar.Brand as={Link} to="/">
                             <Brand />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <StyledNavbarCollapse id="basic-navbar-nav">
                             <Nav className="mr-auto" />
                             <Menu />
-                        </Navbar.Collapse>
+                        </StyledNavbarCollapse>
                     </Navbar>
                 </Container>
             </BottomRow>
         </Container>
     );
 };
+
+const StyledNavbarCollapse = styled(Navbar.Collapse)`
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    ${({ theme }) => theme.media.above.lg} {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+`;
 
 const BottomRow = styled(Row)`
     background-color: ${({ theme }) => theme.color.navyBlue};
@@ -66,7 +78,7 @@ const BottomRow = styled(Row)`
     ${({ theme }) => theme.media.above.sm} {
         min-height: 111px;
         font-size: 18px;
-        text-align: left;
+        text-align: center;
     }
 
     ${({ theme }) => theme.media.above.lg} {
