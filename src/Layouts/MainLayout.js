@@ -12,27 +12,13 @@ import { Header, Footer, Breadcrumbs } from '../Components';
 const MainLayout = ({ children }) => {
     const location = useLocation();
 
-    let preSlug = '';
-    if (
-        // If localhost - dont use prefix
-        window.location.hostname === 'localhost' ||
-        window.location.hostname === '127.0.0.1'
-    ) {
-        preSlug = '';
-    } else if (
-        // Prefix if hosted on github
-        window.location.hostname === 'neology92.github.io'
-    ) {
-        preSlug = '/wosp-london-site';
-    }
-
     return (
         <>
             <ThemeProvider theme={theme}>
                 <>
                     <GlobalStyle />
                     <Header />
-                    {location.pathname === `${preSlug}/` ? null : (
+                    {location.pathname === `/` ? null : (
                         <Breadcrumbs /> // Show breadcrumbs everywhere but homepage
                     )}
                     <StyledMain>{children}</StyledMain>
