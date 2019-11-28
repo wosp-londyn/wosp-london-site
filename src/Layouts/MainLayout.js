@@ -10,6 +10,23 @@ import theme from '../Assets/Styles/theme';
 import { Header, Footer, Breadcrumbs } from '../Components';
 
 const MainLayout = ({ children }) => {
+    const lightenColor = (color, percent) => {
+        const num = parseInt(color.replace('#', ''), 16);
+        const amt = Math.round(2.55 * percent);
+        const R = (num >> 16) + amt;
+        const B = ((num >> 8) & 0x00ff) + amt;
+        const G = (num & 0x0000ff) + amt;
+
+        return `#${(
+            0x1000000 +
+            (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+            (B < 255 ? (B < 1 ? 0 : B) : 255) * 0x100 +
+            (G < 255 ? (G < 1 ? 0 : G) : 255)
+        )
+            .toString(16)
+            .slice(1)}`;
+    };
+
     const getCurrentSection = path => {
         return path.split('/')[1];
     };
@@ -18,16 +35,30 @@ const MainLayout = ({ children }) => {
         const section = getCurrentSection(path);
 
         if (section === 'aktualnosci') {
-            return theme.color.red;
-        } if (section === 'informacje') {
-            return theme.color.blue;
-        } if (section === 'wspieraj-nas') {
-            return theme.color.orange;
-        } if (section === 'kontakt') {
-            return theme.color.yellow;
-        } 
-            return 'none';
-        
+            return {
+                dark: theme.color.red,
+                light: lightenColor(theme.color.red, 40),
+            };
+        }
+        if (section === 'informacje') {
+            return {
+                dark: theme.color.blue,
+                light: lightenColor(theme.color.blue, 40),
+            };
+        }
+        if (section === 'wspieraj-nas') {
+            return {
+                dark: theme.color.orange,
+                light: lightenColor(theme.color.orange, 40),
+            };
+        }
+        if (section === 'kontakt') {
+            return {
+                dark: theme.color.yellow,
+                light: lightenColor(theme.color.yellow, 40),
+            };
+        }
+        return 'none';
     };
 
     const location = useLocation();

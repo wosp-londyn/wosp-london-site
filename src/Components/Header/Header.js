@@ -10,44 +10,42 @@ import Brand from './Brand';
 
 const Header = ({ sectionColor }) => {
     return (
+        <>
+            <Container fluid as="header">
+                <Row>
+                    <Container>
+                        <Row>
+                            <Col md={10}>
+                                <Leitmotiv />
+                            </Col>
+                            <Col md={2}>
+                                <SocialBar />
+                            </Col>
+                        </Row>
+                    </Container>
+                </Row>
 
-      <>
-        <Container fluid as="header">
-            <Row>
-                <Container>
-                    <Row>
-                        <Col md={10}>
-                            <Leitmotiv />
-                        </Col>
-                        <Col md={2}>
-                            <SocialBar />
-                        </Col>
-                    </Row>
-                </Container>
-            </Row>
-
-            <BottomRow>
-                <Container>
-                    <Navbar collapseOnSelect expand="lg" variant="dark">
-                        <Navbar.Brand as={Link} to="/">
-                            <Brand />
-                        </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <StyledNavbarCollapse id="basic-navbar-nav">
-                            <Nav className="mr-auto" />
-                            <Menu />
-                        </StyledNavbarCollapse>
-                    </Navbar>
-                </Container>
-            </BottomRow>
-        </Container>
-       <ColorBar sectionColor={sectionColor} />
-      </>
+                <BottomRow>
+                    <Container>
+                        <Navbar collapseOnSelect expand="lg" variant="dark">
+                            <Navbar.Brand as={Link} to="/">
+                                <Brand />
+                            </Navbar.Brand>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <StyledNavbarCollapse id="basic-navbar-nav">
+                                <Nav className="mr-auto" />
+                                <Menu />
+                            </StyledNavbarCollapse>
+                        </Navbar>
+                    </Container>
+                </BottomRow>
+            </Container>
+            <ColorBar sectionColor={sectionColor} />
+        </>
     );
 };
 
 const StyledNavbarCollapse = styled(Navbar.Collapse)`
-
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -55,7 +53,6 @@ const StyledNavbarCollapse = styled(Navbar.Collapse)`
         padding-top: 0;
         padding-bottom: 0;
     }
-
 `;
 
 const BottomRow = styled(Row)`
@@ -97,6 +94,7 @@ const BottomRow = styled(Row)`
 const ColorBar = styled.div`
     width: 100%;
     height: 10px;
-    background: ${({ sectionColor }) => sectionColor};
+    background: ${({ sectionColor }) => sectionColor.dark};
+    display: ${({ sectionColor }) => (sectionColor.dark ? 'inherit' : 'none')};
 `;
 export default Header;
