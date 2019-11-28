@@ -34,7 +34,7 @@ const Header = ({ sectionColor }) => {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <StyledNavbarCollapse id="basic-navbar-nav">
                                 <Nav className="mr-auto" />
-                                <Menu />
+                                <Menu sectionColor={sectionColor} />
                             </StyledNavbarCollapse>
                         </Navbar>
                     </Container>

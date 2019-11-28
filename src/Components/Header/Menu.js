@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { NavDropdown, Nav } from 'react-bootstrap';
-import { Container } from 'react-bootstrap'
+import { NavDropdown, Nav , Container } from 'react-bootstrap';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -29,10 +29,8 @@ const Menu = () => {
     ];
 
     return (
-
         <StyledNav className="navbar-nav navbar-right">
             <Nav.Link as={Link} to="/">
-
                 <FontAwesomeIcon icon="home" size="lg" />
             </Nav.Link>
             <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown">
@@ -70,11 +68,10 @@ const Menu = () => {
             </WspNavDropdown>
 
             <StyledContainer>
-                <Nav.Link as={Link} to={`/kontakt`}>
+                <Nav.Link as={Link} to="/kontakt">
                     KONTAKT
                 </Nav.Link>
             </StyledContainer>
-
         </StyledNav>
     );
 };
@@ -82,52 +79,52 @@ const Menu = () => {
 export default Menu;
 
 const StyledNav = styled(Nav)`
-
-    div{
+    div {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
 
-    div:last-child{
+    div:last-child {
         padding-right: 0;
     }
 
-    a{
+    a {
         border-bottom: 2px solid transparent;
     }
 
-    a::after{
+    a::after {
         display: none;
     }
 
-    span:hover{
-        color: #DE323D;
-        border-bottom: 2px solid #DE323D;
+    span:hover {
+        color: #de323d;
+        border-bottom: 2px solid #de323d;
     }
-
-`
+`;
 
 const AktNavDropdown = styled(NavDropdown)`
-    a:hover{
-        color: #DE323D;
-        border-bottom: 2px solid #DE323D;
+    a:hover {
+        color: ${({ theme }) => theme.color.red};
+        border-bottom: 2px solid ${({ theme }) => theme.color.red};
     }
-`
+`;
 
 const InfNavDropdown = styled(NavDropdown)`
-    a:hover{
-        border-bottom: 2px solid #32B2E8;
+    a:hover {
+        color: ${({ theme }) => theme.color.blue};
+        border-bottom: 2px solid ${({ theme }) => theme.color.blue};
     }
-`
+`;
 const WspNavDropdown = styled(NavDropdown)`
-    a:hover{
-        border-bottom: 2px solid #AACD4B;
+    a:hover {
+        color: ${({ theme }) => theme.color.green};
+        border-bottom: 2px solid ${({ theme }) => theme.color.green};
     }
-`
+`;
 const StyledContainer = styled(Container)`
     padding: 0;
 
-    a:hover{
-        border-bottom: 2px solid #FAB400;
+    a:hover {
+        border-bottom: 2px solid ${({ theme }) => theme.color.yellow};
     }
-`
+`;
