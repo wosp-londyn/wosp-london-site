@@ -37,25 +37,25 @@ const MainLayout = ({ children }) => {
         if (section === 'aktualnosci') {
             return {
                 dark: theme.color.red,
-                light: lightenColor(theme.color.red, 40),
+                light: lightenColor(theme.color.red, 20),
             };
         }
         if (section === 'informacje') {
             return {
                 dark: theme.color.blue,
-                light: lightenColor(theme.color.blue, 40),
+                light: lightenColor(theme.color.blue, 20),
             };
         }
         if (section === 'wspieraj-nas') {
             return {
-                dark: theme.color.orange,
-                light: lightenColor(theme.color.orange, 40),
+                dark: theme.color.green,
+                light: lightenColor(theme.color.green, 10),
             };
         }
         if (section === 'kontakt') {
             return {
                 dark: theme.color.yellow,
-                light: lightenColor(theme.color.yellow, 40),
+                light: lightenColor(theme.color.yellow, 10),
             };
         }
         return 'none';
@@ -71,7 +71,7 @@ const MainLayout = ({ children }) => {
                     <GlobalStyle />
                     <Header sectionColor={sectionColor} />
                     {location.pathname === `/` ? null : (
-                        <Breadcrumbs /> // Show breadcrumbs everywhere but homepage
+                        <Breadcrumbs sectionColor={sectionColor} /> // Show breadcrumbs everywhere but homepage
                     )}
                     <StyledMain>{children}</StyledMain>
                     <Footer />

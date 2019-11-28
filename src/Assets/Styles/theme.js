@@ -2,7 +2,7 @@ const theme = {
     color: {
         yellow: '#FAB400',
         blue: '#009FE3',
-        green: '#96C11F',
+        green: '#84ad10',
         red: '#DE323D',
         mediumRed: '#DE323D',
         lightRed: '#FF6872',

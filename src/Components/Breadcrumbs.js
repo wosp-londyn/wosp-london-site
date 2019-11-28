@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ sectionColor }) => {
     const { pathname } = useLocation();
 
     const breadcrumbsArray = pathname
@@ -23,7 +23,11 @@ const Breadcrumbs = () => {
     return (
         <Wrapper>
             {breadcrumbsArray.map((element, i) => (
-                <BreadLink to={slugs[i]} key={element}>
+                <BreadLink
+                    to={slugs[i]}
+                    key={element}
+                    sectionColor={sectionColor}
+                >
                     {`${element.split('-').join(' ')}`}
                 </BreadLink>
             ))}
@@ -38,7 +42,7 @@ const Wrapper = styled.nav`
 const BreadLink = styled(Link)`
     padding: 6px 15px 6px 25px;
     color: white;
-    background: ${({ theme }) => theme.color.red};
+    background: ${({ sectionColor }) => sectionColor.dark};
     position: relative;
 
     :hover {
@@ -61,12 +65,12 @@ const BreadLink = styled(Link)`
 
     :nth-child(1),
     &:nth-child(1):after {
-        background: ${({ theme }) => theme.color.mediumRed};
+        background: ${({ sectionColor }) => sectionColor.dark};
     }
 
     :nth-child(2),
     &:nth-child(2):after {
-        background: ${({ theme }) => theme.color.lightRed};
+        background: ${({ sectionColor }) => sectionColor.light};
     }
 
     :nth-child(3) {
