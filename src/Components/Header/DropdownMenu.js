@@ -7,11 +7,15 @@ const DropdownMenu = styled.div`
 
     width: 90px;
     background: #222;
-    outline: black 1px;
+    outline: black 2px;
     display: flex;
     flex-direction: column;
     text-align: center;
     /* text-transform: uppercase; */
+
+    a{
+        text-align: center;
+    }
 `;
 
 export default DropdownMenu;
