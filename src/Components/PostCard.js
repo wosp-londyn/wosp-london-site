@@ -21,7 +21,8 @@ const PostCard = ({ post }) => {
             />
             <Card.Body>
                 <Card.Title>{post.title.rendered}</Card.Title>
-                <Date>{`${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`}</Date>
+                <Date>{`${date.getDate()}.${date.getMonth() +
+                    1}.${date.getFullYear()}`}</Date>
                 <Card.Text>
                     <div
                         dangerouslySetInnerHTML={createMarkup(

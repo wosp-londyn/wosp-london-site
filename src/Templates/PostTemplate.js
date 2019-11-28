@@ -32,7 +32,8 @@ class PostTemplate extends Component {
                 </HeadRow>
                 <HrRow>
                     <Col xs={4} sm={3} md={2} xl={1}>
-                        <p>{`${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`}</p>
+                        <p>{`${date.getDate()}.${date.getMonth() +
+                            1}.${date.getFullYear()}`}</p>
                     </Col>
                     <Col xs={8} sm={9} md={10} xl={11}>
                         <hr />
