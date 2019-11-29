@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -39,13 +40,18 @@ class App extends Component {
         const { data } = this.state;
 
         return (
-            <Router>
-                <ScrollToTop>
-                    <MainLayout>
-                        <RoutePaths data={data} />
-                    </MainLayout>
-                </ScrollToTop>
-            </Router>
+            <>
+                <Helmet>
+                    <title>WOŚP Londyn</title>
+                </Helmet>
+                <Router>
+                    <ScrollToTop>
+                        <MainLayout>
+                            <RoutePaths data={data} />
+                        </MainLayout>
+                    </ScrollToTop>
+                </Router>
+            </>
         );
     }
 }
