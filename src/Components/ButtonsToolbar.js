@@ -10,29 +10,37 @@ const ButtonsToolbar = () => {
         <Wrapper>
             <FirstRow>
                 <Col xs={12} md={3}>
-                    <Button id="button1" as={Link} to="/live">
+                    <Button id="button1" as={Link} to="/aktualnosci/galeria">
                         Galeria
                     </Button>
                 </Col>
                 <Col xs={12} md={3}>
-                    <Button id="button2" as={Link} to="/zostan-wolontariuszem">
+                    <Button id="button2" as={Link} to="/wspieraj-nas/aukcje">
                         Aukcje
                     </Button>
                 </Col>
                 <Col xs={12} md={3}>
-                    <Button id="button3" as={Link} to="/aukcje">
+                    <Button id="button3" as={Link} to="/aktualnosci/live">
                         Na żywo
                     </Button>
                 </Col>
                 <Col xs={12} md={3}>
-                    <Button id="button4" as={Link} to="/wplac-na-wosp">
+                    <Button
+                        id="button4"
+                        as={Link}
+                        to="/wspieraj-nas/wplac-na-wosp"
+                    >
                         Wpłać na WOŚP
                     </Button>
                 </Col>
             </FirstRow>
             <SecondRow>
                 <Col xs={12} md={12}>
-                    <Button id="button5" as={Link} to="/wplac-na-wosp">
+                    <Button
+                        id="button5"
+                        as={Link}
+                        to="/wspieraj-nas/zostan-wolontariuszem"
+                    >
                         Zostań wolontariuszem
                     </Button>
                 </Col>
