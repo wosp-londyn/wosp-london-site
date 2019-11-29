@@ -11,6 +11,8 @@ const PostCard = ({ post }) => {
         return { __html: text };
     };
 
+    const date = new window.Date(post.date);
+
     return (
         <StyledCard as="article">
             <Card.Img
@@ -19,7 +21,8 @@ const PostCard = ({ post }) => {
             />
             <Card.Body>
                 <Card.Title>{post.title.rendered}</Card.Title>
-                <Date>{post.date}</Date>
+                <Date>{`${date.getDate()}.${date.getMonth() +
+                    1}.${date.getFullYear()}`}</Date>
                 <Card.Text>
                     <div
                         dangerouslySetInnerHTML={createMarkup(

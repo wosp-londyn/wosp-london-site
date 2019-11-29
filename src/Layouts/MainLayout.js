@@ -8,32 +8,54 @@ import '../Assets/Styles/fontsRaleway.css';
 import GlobalStyle from '../Assets/Styles/GlobalStyle';
 import theme from '../Assets/Styles/theme';
 import { Header, Footer, Breadcrumbs } from '../Components';
+import lightenColor from '../Utils/lightenColor';
 
 const MainLayout = ({ children }) => {
-    const location = useLocation();
+    const getCurrentSection = path => {
+        return path.split('/')[1];
+    };
 
-    let preSlug = '';
-    if (
-        // If localhost - dont use prefix
-        window.location.hostname === 'localhost' ||
-        window.location.hostname === '127.0.0.1'
-    ) {
-        preSlug = '';
-    } else if (
-        // Prefix if hosted on github
-        window.location.hostname === 'neology92.github.io'
-    ) {
-        preSlug = '/wosp-london-site';
-    }
+    const setColor = path => {
+        const section = getCurrentSection(path);
+
+        if (section === 'aktualnosci') {
+            return {
+                dark: theme.color.red,
+                light: lightenColor(theme.color.red, 20),
+            };
+        }
+        if (section === 'informacje') {
+            return {
+                dark: theme.color.blue,
+                light: lightenColor(theme.color.blue, 20),
+            };
+        }
+        if (section === 'wspieraj-nas') {
+            return {
+                dark: theme.color.green,
+                light: lightenColor(theme.color.green, 10),
+            };
+        }
+        if (section === 'kontakt') {
+            return {
+                dark: theme.color.yellow,
+                light: lightenColor(theme.color.yellow, 10),
+            };
+        }
+        return 'none';
+    };
+
+    const location = useLocation();
+    const sectionColor = setColor(location.pathname);
 
     return (
         <>
             <ThemeProvider theme={theme}>
                 <>
                     <GlobalStyle />
-                    <Header />
-                    {location.pathname === `${preSlug}/` ? null : (
-                        <Breadcrumbs /> // Show breadcrumbs everywhere but homepage
+                    <Header sectionColor={sectionColor} />
+                    {location.pathname === `/` ? null : (
+                        <Breadcrumbs sectionColor={sectionColor} /> // Show breadcrumbs everywhere but homepage
                     )}
                     <StyledMain>{children}</StyledMain>
                     <Footer />
@@ -42,9 +64,11 @@ const MainLayout = ({ children }) => {
         </>
     );
 };
+
 const StyledMain = styled.main`
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
+    overflow: hidden;
     /*padding: 10px;*/
     text-align: center;
 `;
