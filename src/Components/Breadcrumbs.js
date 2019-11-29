@@ -40,7 +40,7 @@ const Wrapper = styled.nav`
 `;
 
 const BreadLink = styled(Link)`
-    padding: 6px 15px 6px 25px;
+    padding: 3px 15px 3px 25px;
     color: white;
     background: ${({ sectionColor }) => sectionColor.dark};
     position: relative;
@@ -51,45 +51,53 @@ const BreadLink = styled(Link)`
     }
 
     &:after {
-        content: '';
-        width: 21px;
-        height: 21px;
-
-        transform: rotate(45deg);
-
-        position: absolute;
-        top: 5px;
-        right: -11px;
-        z-index: 2;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -15px;
+      background-color: black;
+      bottom: 0;
+      height: 30px;
+      width: 15px;
+      clip-path: polygon(0 0, 0 100%, 100% 50%);
+      z-index: 2;
     }
 
-    :nth-child(1),
+    :nth-child(1){
+         background: ${({ sectionColor }) => sectionColor.dark};
+         display: inline-block;
+
+    }
     &:nth-child(1):after {
         background: ${({ sectionColor }) => sectionColor.dark};
     }
 
-    :nth-child(2),
-    &:nth-child(2):after {
+    :nth-child(2){
+        background: ${({ sectionColor }) => sectionColor.light};
+        display: inline-block;
+        margin-top: 8px;
+    }
+    :nth-child(2):after {
         background: ${({ sectionColor }) => sectionColor.light};
     }
 
     :nth-child(3) {
-        background: white;
-        color: #646464;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        display: inline-block;
+        margin-top: 8px;
+        margin-right: 40px;
 
-        border-top: 1px solid #acacac;
-        border-bottom: 1px solid #acacac;
+        background: #EDEDED;
+        color: #8c8c8c;
+
+        font-weight: light;
+
         pointer-events: none;
 
-        &:after {
-            background: white;
-            border-right: 1px solid #acacac;
-            border-top: 1px solid #acacac;
-            top: 4px;
-            right: -11px;
-        }
+    }
+
+    :nth-child(3):after {
+         background-color: #EDEDED;
+         height: 100%
     }
 `;
 
