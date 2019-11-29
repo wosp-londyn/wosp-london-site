@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Slider from './Slider';
 import ButtonsToolbar from './ButtonsToolbar';
 import PostCardGrid from './PostCardGrid';
+import PostCard from './PostCard';
 import FacebookCardGrid from './FacebookCardGrid';
 import Breadcrumbs from './Breadcrumbs';
 import BackgroundHome from './BackgroundHome';
@@ -21,6 +22,7 @@ export {
     Slider,
     ButtonsToolbar,
     PostCardGrid,
+    PostCard,
     FacebookCardGrid,
     Breadcrumbs,
     BackgroundHome,
