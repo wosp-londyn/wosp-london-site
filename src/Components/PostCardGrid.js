@@ -21,7 +21,9 @@ class PostCardGrid extends Component {
     }
 
     fetchPostData() {
-        fetch(`https://wosplondyn.uk/wp-json/wp/v2/posts?_embed`)
+        fetch(
+            `https://wosplondyn.uk/wp-json/wp/v2/posts?_embed&per_page=4&page=1`
+        )
             .then(response => response.json())
             .then(responseJSON => {
                 this.setState({
@@ -40,7 +42,7 @@ class PostCardGrid extends Component {
                 </SectionHeader>
 
                 <StyledCardDeck>
-                    {data.slice(0, 4).map(post => (
+                    {data.map(post => (
                         <PostCard post={post} key={post.id} />
                     ))}
                 </StyledCardDeck>
