@@ -1,18 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const SocialBar = () => {
     return (
         <Wrapper>
-            <Icon id="allegro">A</Icon>
-            <Icon id="instagram">ig</Icon>
-            <Icon id="facebook">f</Icon>
+            <Icon
+                id="allegro"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://aukcje.wosp.org.pl/"
+            >
+                A
+            </Icon>
+            <Icon
+                id="instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/wosplondyn/"
+            >
+                ig
+            </Icon>
+            <Icon
+                id="facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/wosplondyn"
+            >
+                f
+            </Icon>
         </Wrapper>
     );
 };
 
-const Icon = styled(Link)`
+const Icon = styled.a`
     width: 30px;
     height: 30px;
     background: #000;
