@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Col, Row, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import heart from '../Assets/Images/logo132.png';
-// import SocialMedia from './SocialMedia';
+import SocialMedia from './SocialMedia';
 
 const Footer = () => {
     return (
@@ -51,6 +51,9 @@ const Footer = () => {
                             <p>WOŚP sztab w Londynie</p>
                             <p>e-mail loremipsum@lorem.pl</p>
                             <p>Polityka prywatności</p>
+                            <WrapperSocialMedia>
+                                <SocialMedia />
+                            </WrapperSocialMedia>
                         </StyledCol>
                     </StyledRow>
                 </Container>
@@ -75,6 +78,7 @@ const StyledContainer = styled(Container)`
     background: ${({ theme }) => theme.color.navyBlue};
     margin-top: 150px;
 `;
+
 const StyledRow = styled(Row)`
     padding: 15px 0 15px 0;
 
@@ -93,21 +97,51 @@ const StyledRow = styled(Row)`
         }
     }
 `;
+
 const StyledCol = styled(Col)`
-    color: white;
-    text-align: center;
-    padding: 20px 0 20px 0;
-    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: left;
+    padding: 20px 0px 20px 30px;
+
     h2 {
         font-size: 18px;
+        color: white !important;
+    }
+
+    img {
+        float: right;
+        padding-right: 20px;
+    }
+`;
+
+const WrapperSecondColumn = styled.div`
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    .links {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 15px;
+    }
+`;
+
+const WrapperSocialMedia = styled.div`
+    float: left;
+
+    a {
+        align-content: space-around;
+    }
+
+    a:hover {
+        box-shadow: 2px 5px 8px -5px white;
+        color: white;
     }
 `;
 
 const FooterBottom = styled(Container)`
     background: ${({ theme }) => theme.color.footerBottom};
     color: white;
-    text-align: center;
-    position: relative;
+    text-align: left;
     padding-top: 25px;
     padding-bottom: 25px;
     h2 {
@@ -115,19 +149,4 @@ const FooterBottom = styled(Container)`
         font-weight: 400;
     }
 `;
-
-const WrapperSecondColumn = styled.div`
-    display: block;
-    padding-left: 20%;
-    padding-right: 20%;
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-
-    .links {
-        color: rgba(255, 255, 255, 0.6);
-        line-height: 5px;
-    }
-`;
-
 export default Footer;
