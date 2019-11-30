@@ -141,7 +141,7 @@ const WrapperSocialMedia = styled.div`
 const FooterBottom = styled(Container)`
     background: ${({ theme }) => theme.color.footerBottom};
     color: white;
-    text-align: left;
+    text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
     h2 {
