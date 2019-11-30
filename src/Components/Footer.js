@@ -6,29 +6,44 @@ import heart from '../Assets/Images/logo132.png';
 
 const Footer = () => {
     return (
-        <StyledContainer fluid>
-            <Container md="12">
-                <StyledRow>
-                    <StyledCol md="4">
-                        <img src={heart} id="heart" alt="wosp logo" />
-                    </StyledCol>
-                    <StyledCol md="4">
-                        <h2>KONTAKT</h2>
+        <>
+            <StyledContainer fluid>
+                <Container md="12">
+                    <StyledRow>
+                        <StyledCol md="4">
+                            <img src={heart} id="heart" alt="wosp logo" />
+                        </StyledCol>
+                        <StyledCol md="4">
+                            <h2>KONTAKT</h2>
 
-                        <p>WOŚP sztab w Londynie</p>
-                        <p>e-mail loremipsum@lorem.pl</p>
-                        <p>Polityka prywatności</p>
-                    </StyledCol>
-                    <StyledCol md="4">
-                        <h2>KONTAKT</h2>
+                            <p>WOŚP sztab w Londynie</p>
+                            <p>e-mail loremipsum@lorem.pl</p>
+                            <p>Polityka prywatności</p>
+                        </StyledCol>
+                        <StyledCol md="4">
+                            <h2>KONTAKT</h2>
 
-                        <p>WOŚP sztab w Londynie</p>
-                        <p>e-mail loremipsum@lorem.pl</p>
-                        <p>Polityka prywatności</p>
-                    </StyledCol>
-                </StyledRow>
-            </Container>
-        </StyledContainer>
+                            <p>WOŚP sztab w Londynie</p>
+                            <p>e-mail loremipsum@lorem.pl</p>
+                            <p>Polityka prywatności</p>
+                        </StyledCol>
+                    </StyledRow>
+                </Container>
+            </StyledContainer>
+
+            <FooterBottom fluid>
+                <Container md="12">
+                    <Row>
+                        <Col>
+                            <h2>
+                                {' '}
+                                Copyright &copy; by HARDCODED dla WOŚP LONDYN
+                            </h2>
+                        </Col>
+                    </Row>
+                </Container>
+            </FooterBottom>
+        </>
     );
 };
 
@@ -58,6 +73,20 @@ const StyledCol = styled(Col)`
     color: white;
     text-align: center;
     padding: 20px 0 20px 0;
+    position: relative;
+`;
+
+const FooterBottom = styled(Container)`
+    background: ${({ theme }) => theme.color.footerBottom};
+    color: white;
+    text-align: center;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    h2 {
+        font-size: 18px;
+        font-weight: 400;
+    }
 `;
 
 export default Footer;
