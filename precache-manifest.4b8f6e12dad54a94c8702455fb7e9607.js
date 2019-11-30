@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f94fed4464251c36d2c91fd562d0b5af",
+    "revision": "3a37f334eff5504bb5feee6db6297974",
     "url": "//www.wosplondyn-dev.tk/index.html"
   },
   {
