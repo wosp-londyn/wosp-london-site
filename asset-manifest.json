@@ -1,32 +1,30 @@
 {
   "files": {
-    "main.css": "//www.wosplondyn-dev.tk/static/css/main.e41babb6.chunk.css",
-    "main.js": "//www.wosplondyn-dev.tk/static/js/main.aa30ed15.chunk.js",
-    "main.js.map": "//www.wosplondyn-dev.tk/static/js/main.aa30ed15.chunk.js.map",
+    "main.css": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css",
+    "main.js": "//www.wosplondyn-dev.tk/static/js/main.6138a829.chunk.js",
+    "main.js.map": "//www.wosplondyn-dev.tk/static/js/main.6138a829.chunk.js.map",
     "runtime-main.js": "//www.wosplondyn-dev.tk/static/js/runtime-main.fb88d9db.js",
     "runtime-main.js.map": "//www.wosplondyn-dev.tk/static/js/runtime-main.fb88d9db.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.4a94c94c.chunk.js": "//www.wosplondyn-dev.tk/static/js/2.4a94c94c.chunk.js",
-    "static/js/2.4a94c94c.chunk.js.map": "//www.wosplondyn-dev.tk/static/js/2.4a94c94c.chunk.js.map",
+    "static/js/2.3f010b22.chunk.js": "//www.wosplondyn-dev.tk/static/js/2.3f010b22.chunk.js",
+    "static/js/2.3f010b22.chunk.js.map": "//www.wosplondyn-dev.tk/static/js/2.3f010b22.chunk.js.map",
     "index.html": "//www.wosplondyn-dev.tk/index.html",
-    "precache-manifest.1cee8000555db35575c17d223a89c26c.js": "//www.wosplondyn-dev.tk/precache-manifest.1cee8000555db35575c17d223a89c26c.js",
+    "precache-manifest.1cd4ea504f32075c21e3614b96eed07e.js": "//www.wosplondyn-dev.tk/precache-manifest.1cd4ea504f32075c21e3614b96eed07e.js",
     "service-worker.js": "//www.wosplondyn-dev.tk/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.e41babb6.chunk.css.map": "//www.wosplondyn-dev.tk/static/css/main.e41babb6.chunk.css.map",
+    "static/css/main.9990d20c.chunk.css.map": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css.map",
     "static/media/fontsLato.css": "//www.wosplondyn-dev.tk/static/media/Lato-700.85d339d9.ttf",
     "static/media/fontsRaleway.css": "//www.wosplondyn-dev.tk/static/media/Raleway-700.f49f3d2d.ttf",
-    "static/media/cheese.png": "//www.wosplondyn-dev.tk/static/media/cheese.22cb1356.png",
-    "static/media/dunno.png": "//www.wosplondyn-dev.tk/static/media/dunno.a6a28b1a.png",
-    "static/media/logo.svg": "//www.wosplondyn-dev.tk/static/media/logo.25bf045c.svg",
     "static/media/logo131.png": "//www.wosplondyn-dev.tk/static/media/logo131.dee09e07.png",
     "static/media/logo132.png": "//www.wosplondyn-dev.tk/static/media/logo132.6b0d31a1.png",
+    "static/media/slajd1.jpg": "//www.wosplondyn-dev.tk/static/media/slajd1.a0b5f2f1.jpg",
     "static/media/wh.jpg": "//www.wosplondyn-dev.tk/static/media/wh.a4a6906a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fb88d9db.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.4a94c94c.chunk.js",
-    "static/css/main.e41babb6.chunk.css",
-    "static/js/main.aa30ed15.chunk.js"
+    "static/js/2.3f010b22.chunk.js",
+    "static/css/main.9990d20c.chunk.css",
+    "static/js/main.6138a829.chunk.js"
   ]
 }
