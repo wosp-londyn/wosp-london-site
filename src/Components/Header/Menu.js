@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { NavDropdown, Nav , Container } from 'react-bootstrap';
-
+import { NavDropdown, Nav, Container } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -94,11 +93,6 @@ const StyledNav = styled(Nav)`
 
     a::after {
         display: none;
-    }
-
-    span:hover {
-        color: #de323d;
-        border-bottom: 2px solid #de323d;
     }
 `;
 

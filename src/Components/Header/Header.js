@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
 
 import Menu from './Menu';
-import SocialBar from '../SocialBar';
+import SocialMedia from '../SocialMedia';
 import Leitmotiv from './Leitmotiv';
 import Brand from './Brand';
 
@@ -19,7 +19,7 @@ const Header = ({ sectionColor }) => {
                                 <Leitmotiv />
                             </Col>
                             <Col md={2}>
-                                <SocialBar />
+                                <SocialMedia />
                             </Col>
                         </Row>
                     </Container>

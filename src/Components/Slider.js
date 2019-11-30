@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-bootstrap';
+import slajd1 from '../Assets/Images/slajd1.jpg';
 
 // Slider is based on bootstrap-component: Carousel
 
@@ -8,29 +9,18 @@ const Slider = () => {
     return (
         <StyledCarousel>
             <Carousel.Item>
-                <img
-                    src="https://picsum.photos/seed/276/1150/450?grayscale"
-                    alt="First slide"
-                />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    src="https://picsum.photos/seed/666/1150/450?grayscale"
-                    alt="Second slide"
-                />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    src="https://picsum.photos/seed/432/1150/450?grayscale"
-                    alt="Thrid slide"
-                />
+                <Img src={slajd1} alt="First slide" />
             </Carousel.Item>
         </StyledCarousel>
     );
 };
 
+const Img = styled.img`
+    width: 100%;
+`;
+
 const StyledCarousel = styled(Carousel)`
-    margin: 0px 0 0;
+    margin: 0;
     & span {
         height: 40px;
         width: 40px;
