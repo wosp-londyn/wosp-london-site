@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, Button } from 'react-bootstrap';
+import PostPlaceholder from './PostPlaceholder';
 
 // Komponent wyświetlający posta na homepage
 // Dostaje dane jako argument
@@ -11,8 +12,11 @@ const PostCard = ({ post }) => {
         return { __html: text };
     };
 
-    const date = new window.Date(post.date);
+    if (!post) {
+        return <PostPlaceholder />;
+    }
 
+    const date = new window.Date(post.date);
     return (
         <StyledCard as="article">
             <Card.Img
