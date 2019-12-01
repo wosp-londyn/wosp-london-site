@@ -7,6 +7,7 @@ import PostCard from './PostCard';
 import FacebookCardGrid from './FacebookCardGrid';
 import Breadcrumbs from './Breadcrumbs';
 import BackgroundHome from './BackgroundHome';
+import Sidebar from './Sidebar';
 
 // Place where you can export component to use on page
 
@@ -20,4 +21,5 @@ export {
     FacebookCardGrid,
     Breadcrumbs,
     BackgroundHome,
+    Sidebar,
 };
