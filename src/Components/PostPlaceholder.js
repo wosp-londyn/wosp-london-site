@@ -25,6 +25,8 @@ const PostPlaceholder = () => {
                     <Line />
                     <Line />
                     <Line />
+                    <Line />
+                    <Line />
                 </Card.Text>
                 <Button />
             </Card.Body>
@@ -33,7 +35,7 @@ const PostPlaceholder = () => {
 };
 
 const Line = styled.div`
-    width: 60%;
+    width: 100%;
     height: 16px;
     margin: 5px auto 5px 0;
     border-radius: 10px;
@@ -41,38 +43,11 @@ const Line = styled.div`
 `;
 
 const Button = styled.div`
-    width: 20%;
+    width: 30%;
     height: 25px;
-    margin: 5px auto;
+    margin: 20px 0 0 auto;
     border-radius: 10px;
     background: #ddd;
-`;
-const ldsEllipsis1 = keyframes` {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}`;
-
-const ldsEllipsis3 = keyframes` {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}`;
-
-const ldsEllipsis2 = keyframes` {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(24px, 0);
-    }
-}
 `;
 
 const StyledCard = styled(Card)`
@@ -104,11 +79,43 @@ const StyledCard = styled(Card)`
     }
 `;
 
+const ldsEllipsis1 = keyframes` {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}`;
+
+const ldsEllipsis3 = keyframes` {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}`;
+
+const ldsEllipsis2 = keyframes` {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+`;
+
 const Loading = styled.div`
     position: relative;
     width: 80px;
     height: 80px;
-    margin: 60px 200px;
+    margin: 20% auto;
+
+    ${({ theme }) => theme.media.above.md} {
+        margin: 60px 130px;
+    }
 
     div {
         position: absolute;
