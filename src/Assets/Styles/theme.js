@@ -11,6 +11,8 @@ const theme = {
         navyBlue: '#212851',
         pink: '#e4007f',
 
+        footerBottom: '#161b37',
+
         facebook: '#3b5998',
         cyan: '#0D5065',
 
