@@ -121,11 +121,11 @@ const FirstRow = styled(StyledRow)`
         }
 
         ${({ theme }) => theme.media.above.lg} {
-            height: 128px;
+            height: 120px;
         }
 
         ${({ theme }) => theme.media.above.xl} {
-            height: 155px;
+            height: 140px;
         }
     }
 `;
