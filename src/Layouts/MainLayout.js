@@ -11,7 +11,6 @@ import theme from '../Assets/Styles/theme';
 import { Header, Footer, Breadcrumbs, Sidebar } from '../Components';
 import lightenColor from '../Utils/lightenColor';
 
-
 const MainLayout = ({ children }) => {
     const getCurrentSection = path => {
         return path.split('/')[1];
@@ -76,7 +75,6 @@ const MainLayout = ({ children }) => {
                             </Row>
                         </Container>
                     )}
-                    <Sidebar />
                     <Footer />
                 </>
             </ThemeProvider>
