@@ -15,35 +15,58 @@ const RoutePaths = ({ data }) => {
             {data.map(post => (
                 <Route
                     key={post.id}
+                    exact
                     path={`/aktualnosci/artykuly/${post.slug}`}
                     render={props => <PostTemplate post={post} {...props} />}
                 />
             ))}
-            <Route path="/aktualnosci/podcasty" component={views.Podcasts} />
-            <Route path="/aktualnosci/live" component={views.Live} />
-            <Route path="/aktualnosci/galeria" component={views.Gallery} />
+            <Route
+                exact
+                path="/aktualnosci/podcasty"
+                component={views.Podcasts}
+            />
+            <Route exact path="/aktualnosci/live" component={views.Live} />
+            <Route
+                exact
+                path="/aktualnosci/galeria"
+                component={views.Gallery}
+            />
 
             <Route exact path="/informacje">
                 <Redirect to="/informacje/program" />
             </Route>
-            <Route path="/informacje/program" component={views.Program} />
-            <Route path="/informacje/gwiazdy" component={views.Stars} />
-            <Route path="/informacje/partnerzy" component={views.Partners} />
+            <Route exact path="/informacje/program" component={views.Program} />
+            <Route exact path="/informacje/gwiazdy" component={views.Stars} />
+            <Route
+                exact
+                path="/informacje/partnerzy"
+                component={views.Partners}
+            />
 
             <Route exact path="/wspieraj-nas">
                 <Redirect to="/wspieraj-nas/zostan-wolontariuszem" />
             </Route>
             <Route
+                exact
                 path="/wspieraj-nas/zostan-wolontariuszem"
                 component={views.Volunteer}
             />
             <Route
+                exact
                 path="/wspieraj-nas/wplac-na-wosp"
                 component={views.Support}
             />
-            <Route path="/wspieraj-nas/aukcje" component={views.Auctions} />
+            <Route
+                exact
+                path="/wspieraj-nas/aukcje"
+                component={views.Auctions}
+            />
 
-            <Route path="/kontakt" component={views.Contact} />
+            <Route exact path="/kontakt" component={views.Contact} />
+            <Route exact path="/404" component={views.PageNotFound} />
+            <Route>
+                <Redirect to="/404" />
+            </Route>
         </Switch>
     );
 };

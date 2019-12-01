@@ -11,6 +11,7 @@ import Volunteer from './Volunteer';
 import Gallery from './Gallery';
 import Podcasts from './Podcasts';
 import Support from './Support';
+import PageNotFound from './PageNotFound';
 
 export {
     Auctions,
@@ -26,4 +27,5 @@ export {
     Gallery,
     Podcasts,
     Support,
+    PageNotFound,
 };

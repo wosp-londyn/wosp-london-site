@@ -54,7 +54,8 @@ const MainLayout = ({ children }) => {
                 <>
                     <GlobalStyle />
                     <Header sectionColor={sectionColor} />
-                    {location.pathname === `/` ? null : (
+                    {location.pathname === `/` ||
+                    location.pathname === `/404` ? null : (
                         <Breadcrumbs sectionColor={sectionColor} /> // Show breadcrumbs everywhere but homepage
                     )}
                     <StyledMain>{children}</StyledMain>
