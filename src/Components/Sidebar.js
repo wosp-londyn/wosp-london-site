@@ -117,6 +117,7 @@ const SponsorsGroup = styled.section`
         width: 100%;
         margin: 10px 0;
         filter: grayscale(50%);
+
     }
 
     img:hover {
