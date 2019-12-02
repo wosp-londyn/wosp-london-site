@@ -6,9 +6,11 @@ import {
     Slider,
     ButtonsToolbar,
     PostCardGrid,
-    FacebookCardGrid,
+    // FacebookCardGrid,
+    FacebookWidget,
     BackgroundHome,
-} from "../Components";
+    MainSponsor,
+} from '../Components';
 import windowDimensions from '../Utils/useWindowDimensions';
 
 const Home = () => {
@@ -40,8 +42,9 @@ const Home = () => {
                     <Col md={12} xl={8} as="section">
                         <PostCardGrid />
                     </Col>
-                    <Col md={12} xl={4} as="section">
-                        <FacebookCardGrid />
+                    <Col md={12} xl={4} as="aside">
+                        <MainSponsor />
+                        <FacebookWidget />
                     </Col>
                 </Row>
             </ArticlesContainer>
