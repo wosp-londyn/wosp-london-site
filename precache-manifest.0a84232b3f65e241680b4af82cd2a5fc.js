@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a37f334eff5504bb5feee6db6297974",
+    "revision": "9944c03dd4409713f52e5c50e075cef8",
     "url": "//www.wosplondyn-dev.tk/index.html"
   },
   {
-    "revision": "3caf5ee2e50c0d686b0c",
+    "revision": "9ad7863bc3a28ce3125c",
     "url": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "21cdb39c901943523881",
+    "revision": "3228c6bca77ed11f8c4f",
     "url": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css"
   },
   {
-    "revision": "3caf5ee2e50c0d686b0c",
-    "url": "//www.wosplondyn-dev.tk/static/js/2.3f010b22.chunk.js"
+    "revision": "9ad7863bc3a28ce3125c",
+    "url": "//www.wosplondyn-dev.tk/static/js/2.ab6dea66.chunk.js"
   },
   {
-    "revision": "21cdb39c901943523881",
-    "url": "//www.wosplondyn-dev.tk/static/js/main.6138a829.chunk.js"
+    "revision": "3228c6bca77ed11f8c4f",
+    "url": "//www.wosplondyn-dev.tk/static/js/main.e066e069.chunk.js"
   },
   {
     "revision": "2e2112e44280efea25b7",
@@ -40,6 +40,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn-dev.tk/static/media/Raleway-700.f49f3d2d.ttf"
   },
   {
+    "revision": "8fe6c2b9bb240dcb68d141f98632799e",
+    "url": "//www.wosplondyn-dev.tk/static/media/ant.8fe6c2b9.png"
+  },
+  {
+    "revision": "d85c8ade3daccda15338528bd6ae7efd",
+    "url": "//www.wosplondyn-dev.tk/static/media/emotionwraps.d85c8ade.png"
+  },
+  {
     "revision": "dee09e0723b9ce74c2f0c61debff1c5d",
     "url": "//www.wosplondyn-dev.tk/static/media/logo131.dee09e07.png"
   },
@@ -48,8 +56,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn-dev.tk/static/media/logo132.6b0d31a1.png"
   },
   {
+    "revision": "6c5626d9e0f3e38bf1134365048e7a2f",
+    "url": "//www.wosplondyn-dev.tk/static/media/mleczko.6c5626d9.png"
+  },
+  {
+    "revision": "6441ce227f525d1e108ba63ae5c1f441",
+    "url": "//www.wosplondyn-dev.tk/static/media/piling.6441ce22.png"
+  },
+  {
     "revision": "a0b5f2f13615c1d2c0753672cfdcb6dd",
     "url": "//www.wosplondyn-dev.tk/static/media/slajd1.a0b5f2f1.jpg"
+  },
+  {
+    "revision": "78e49a64fc16f33dfdf0cff2a4882a79",
+    "url": "//www.wosplondyn-dev.tk/static/media/smartchoice.78e49a64.png"
+  },
+  {
+    "revision": "ef2c02ddf61c2c8b5faf48c5bbf42128",
+    "url": "//www.wosplondyn-dev.tk/static/media/transfergo.ef2c02dd.png"
   },
   {
     "revision": "a4a6906a0171ee2da7649cf623de2cb8",
