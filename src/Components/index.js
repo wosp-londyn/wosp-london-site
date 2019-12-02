@@ -8,6 +8,8 @@ import FacebookCardGrid from './FacebookCardGrid';
 import Breadcrumbs from './Breadcrumbs';
 import BackgroundHome from './BackgroundHome';
 import Sidebar from './Sidebar';
+import FacebookWidget from './FacebookWidget';
+import MainSponsor from './MainSponsor';
 
 // Place where you can export component to use on page
 
@@ -22,4 +24,6 @@ export {
     Breadcrumbs,
     BackgroundHome,
     Sidebar,
+    FacebookWidget,
+    MainSponsor,
 };
