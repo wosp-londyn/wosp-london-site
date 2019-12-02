@@ -7,7 +7,7 @@ class Posts extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { data: [] };
+        this.state = { data: [null, null, null, null] };
         this.fetchPostData = this.fetchPostData.bind(this);
     }
 
@@ -32,8 +32,8 @@ class Posts extends Component {
 
         return (
             <Container>
-                {data.map(post => (
-                    <PostCard post={post} key={post.id} />
+                {data.map((post, index) => (
+                    <PostCard post={post} key={post ? post.id : index} />
                 ))}
             </Container>
         );
