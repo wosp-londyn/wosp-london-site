@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9944c03dd4409713f52e5c50e075cef8",
+    "revision": "4c63a3c0e010a1f01f80624344ad3bad",
     "url": "//www.wosplondyn-dev.tk/index.html"
   },
   {
-    "revision": "9ad7863bc3a28ce3125c",
+    "revision": "baa2d54b54c378a7852f",
     "url": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "3228c6bca77ed11f8c4f",
+    "revision": "2ad87aa0d7b5cfa3ee64",
     "url": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css"
   },
   {
-    "revision": "9ad7863bc3a28ce3125c",
-    "url": "//www.wosplondyn-dev.tk/static/js/2.ab6dea66.chunk.js"
+    "revision": "baa2d54b54c378a7852f",
+    "url": "//www.wosplondyn-dev.tk/static/js/2.65a7f961.chunk.js"
   },
   {
-    "revision": "3228c6bca77ed11f8c4f",
-    "url": "//www.wosplondyn-dev.tk/static/js/main.e066e069.chunk.js"
+    "revision": "2ad87aa0d7b5cfa3ee64",
+    "url": "//www.wosplondyn-dev.tk/static/js/main.4ebd2301.chunk.js"
   },
   {
     "revision": "2e2112e44280efea25b7",
