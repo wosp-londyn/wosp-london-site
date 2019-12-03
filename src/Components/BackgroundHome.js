@@ -12,7 +12,7 @@ const BackgroundHome = styled.div`
     padding: 0;
     background-position: center center;
     background-size: cover;
-    filter: grayscale(100%) opacity(45%);
+    filter: grayscale(20%) opacity(80%);
 `;
 
 export default BackgroundHome;

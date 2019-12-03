@@ -58,7 +58,7 @@ const Wrapper = styled.div`
     margin: 0;
     padding: 0;
     ${({ theme }) => theme.media.above.md} {
-        padding-top: 50px;
+        padding-top: 20px;
     }
 `;
 
