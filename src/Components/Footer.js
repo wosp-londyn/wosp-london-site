@@ -13,6 +13,7 @@ const Footer = () => {
                         <StyledCol md="4">
                             <img src={heart} id="heart" alt="wosp logo" />
                         </StyledCol>
+
                         <StyledCol md="4">
                             <WrapperSecondColumn>
                                 <h2>NA SKRÓTY</h2>
@@ -45,15 +46,19 @@ const Footer = () => {
                                 </StyledNav>
                             </WrapperSecondColumn>
                         </StyledCol>
+
                         <StyledCol md="4">
-                            <h2>KONTAKT</h2>
-                            <br />
-                            <p>WOŚP sztab w Londynie</p>
-                            <p>e-mail loremipsum@lorem.pl</p>
-                            <p>Polityka prywatności</p>
-                            <WrapperSocialMedia>
-                                <SocialMedia />
-                            </WrapperSocialMedia>
+                            <WrapperThirdColumn>
+                                <h2>KONTAKT</h2>
+                                <br />
+                                <p>WOŚP sztab w Londynie</p>
+                                <p>e-mail loremipsum@lorem.pl</p>
+                                <p>Polityka prywatności</p>
+
+                                <WrapperSocialMedia>
+                                    <SocialMedia />
+                                </WrapperSocialMedia>
+                            </WrapperThirdColumn>
                         </StyledCol>
                     </StyledRow>
                 </Container>
@@ -73,15 +78,6 @@ const Footer = () => {
         </>
     );
 };
-
-const StyledNav = styled(Nav)`
-    a{
-         padding-left:0;
-    }
-    a:hover{
-         color:white;
-    }
-`;
 
 const StyledContainer = styled(Container)`
     background: ${({ theme }) => theme.color.navyBlue};
@@ -118,8 +114,17 @@ const StyledCol = styled(Col)`
     }
 
     img {
-        item-align: center;
+        justify-items: center;
         padding-right: 20px;
+    }
+`;
+
+const StyledNav = styled(Nav)`
+    a {
+        padding-left: 0;
+    }
+    a:hover {
+        color: white;
     }
 `;
 
@@ -132,6 +137,11 @@ const WrapperSecondColumn = styled.div`
         color: rgba(255, 255, 255, 0.6);
         line-height: 15px;
     }
+`;
+
+const WrapperThirdColumn = styled.div`
+    text-align: left;
+    float: left;
 `;
 
 const WrapperSocialMedia = styled.div`

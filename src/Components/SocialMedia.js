@@ -68,9 +68,8 @@ const Icon = styled.a`
 `;
 
 const Wrapper = styled.div`
-    display: none;
 
-    ${({ theme }) => theme.media.above.md} {
+    /* ${({ theme }) => theme.media.above.md} {
         width: 100px;
 
         display: flex;
@@ -79,6 +78,16 @@ const Wrapper = styled.div`
         align-content: center;
 
         margin: 15px 0 15px auto;
+    } */
+
+    
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+
+        margin: 15px 0 15px auto
     }
 `;
 
