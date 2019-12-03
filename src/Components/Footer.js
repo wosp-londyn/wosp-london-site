@@ -17,7 +17,7 @@ const Footer = () => {
                             <WrapperSecondColumn>
                                 <h2>NA SKRÓTY</h2>
                                 <br />
-                                <Nav className="flex-column">
+                                <StyledNav className="flex-column">
                                     <Nav.Link href="/home" className="links">
                                         Strona Główna
                                     </Nav.Link>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     <Nav.Link href="/Contact" className="links">
                                         Kontakt
                                     </Nav.Link>
-                                </Nav>
+                                </StyledNav>
                             </WrapperSecondColumn>
                         </StyledCol>
                         <StyledCol md="4">
@@ -74,6 +74,15 @@ const Footer = () => {
     );
 };
 
+const StyledNav = styled(Nav)`
+    a{
+         padding-left:0;
+    }
+    a:hover{
+         color:white;
+    }
+`;
+
 const StyledContainer = styled(Container)`
     background: ${({ theme }) => theme.color.navyBlue};
     margin-top: 150px;
@@ -100,8 +109,8 @@ const StyledRow = styled(Row)`
 
 const StyledCol = styled(Col)`
     color: rgba(255, 255, 255, 0.6);
-    text-align: left;
     padding: 20px 0px 20px 30px;
+    text-align: center;
 
     h2 {
         font-size: 18px;
@@ -109,7 +118,7 @@ const StyledCol = styled(Col)`
     }
 
     img {
-        float: right;
+        item-align: center;
         padding-right: 20px;
     }
 `;
