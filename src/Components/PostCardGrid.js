@@ -50,7 +50,6 @@ class PostCardGrid extends Component {
         );
     }
 }
-
 const Wrapper = styled.div`
     border: 1px solid ${({ theme }) => theme.color.blue};
     margin: 0;
@@ -58,6 +57,8 @@ const Wrapper = styled.div`
 
 const StyledCardDeck = styled(CardDeck)`
     flex-direction: column;
+    width: 100%;
+    margin: 0 !important;
 `;
 
 export default PostCardGrid;

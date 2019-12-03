@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import PostPlaceholder from './PostPlaceholder';
 
 // Komponent wyświetlający posta na homepage
@@ -19,59 +19,65 @@ const PostCard = ({ post }) => {
     const date = new window.Date(post.date);
     return (
         <StyledCard as="article">
-            <Card.Img
-                variant="top"
-                src={post._embedded['wp:featuredmedia']['0'].source_url}
-            />
-            <Card.Body>
-                <Card.Title>{post.title.rendered}</Card.Title>
-                <Date>{`${date.getDate()}.${date.getMonth() +
-                    1}.${date.getFullYear()}`}</Date>
-                <Card.Text>
-                    <div
-                        dangerouslySetInnerHTML={createMarkup(
-                            post.excerpt.rendered
-                        )}
-                    />
-                </Card.Text>
-                <Button
-                    variant="primary"
-                    as={Link}
-                    to={`/aktualnosci/artykuly/${post.slug}`}
-                >
-                    Zobacz więcej
-                </Button>
-            </Card.Body>
+            <Container>
+                <Row>
+                    <ImgWrapper lg="6">
+                        <Card.Img
+                            variant="top"
+                            src={post._embedded['wp:featuredmedia']['0'].source_url}
+                        />
+                    </ImgWrapper>
+                    <BodyWrapper lg="6">
+                        <Card.Body>
+                            <Card.Title>{post.title.rendered}</Card.Title>
+                            <Date>{`${date.getDate()}.${date.getMonth() +
+                                1}.${date.getFullYear()}`}</Date>
+                            <Card.Text>
+                                <div
+                                    dangerouslySetInnerHTML={createMarkup(
+                                        post.excerpt.rendered
+                                    )}
+                                />
+                            </Card.Text>
+                            <Button
+                                variant="primary"
+                                as={Link}
+                                to={`/aktualnosci/artykuly/${post.slug}`}
+                            >
+                                Zobacz więcej
+                            </Button>
+                        </Card.Body>
+                    </BodyWrapper>
+                </Row>
+            </Container>
         </StyledCard>
     );
 };
 
-const StyledCard = styled(Card)`
-    display: flex !important;
-    flex-direction: column !important;
+const BodyWrapper = styled(Col)`
 
+`;
+
+const ImgWrapper = styled(Col)`
+    background: #616161;
+    padding: 0;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+`;
+
+const StyledCard = styled(Card)`
     border: none;
 
     img {
-        width: 100%;
-        height: auto;
-        padding: 15px;
+        width: 100% !important;
+        height: auto !important;
     }
 
     ${({ theme }) => theme.media.above.md} {
-        flex-direction: row !important;
-        margin-top: 5px;
 
         img {
-            height: 100%;
-            max-height: 250px;
-            width: auto;
-            padding: 15px;
         }
 
-        .card-body {
-            width: 70%;
-        }
     }
 `;
 
