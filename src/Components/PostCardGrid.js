@@ -37,9 +37,9 @@ class PostCardGrid extends Component {
 
         return (
             <Wrapper>
-                <SectionHeader color={({ theme }) => theme.color.blue}>
+                <StyledSectionHeader color={({ theme }) => theme.color.blue}>
                     Aktualności
-                </SectionHeader>
+               </StyledSectionHeader>
 
                 <StyledCardDeck>
                     {data.map((post, index) => (
@@ -50,9 +50,14 @@ class PostCardGrid extends Component {
         );
     }
 }
+const StyledSectionHeader = styled(SectionHeader)`
+     height: 80px;
+`;
+
 const Wrapper = styled.div`
     border: 1px solid ${({ theme }) => theme.color.blue};
     margin: 0;
+    background: #f0f0f0;
 `;
 
 const StyledCardDeck = styled(CardDeck)`
