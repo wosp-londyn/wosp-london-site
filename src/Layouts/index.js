@@ -7,7 +7,6 @@ import Partners from './Partners';
 import Posts from './Posts';
 import Program from './Program';
 import Stars from './Stars';
-import Volunteer from './Volunteer';
 import Gallery from './Gallery';
 import Podcasts from './Podcasts';
 import Support from './Support';
@@ -23,7 +22,6 @@ export {
     Posts,
     Program,
     Stars,
-    Volunteer,
     Gallery,
     Podcasts,
     Support,

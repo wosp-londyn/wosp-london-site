@@ -38,8 +38,10 @@ const ButtonsToolbar = () => {
                 <Col xs={12} md={12}>
                     <Button
                         id="button5"
-                        as={Link}
-                        to="/wspieraj-nas/zostan-wolontariuszem"
+                        as="a"
+                        href="https://www.wosp.org.pl/final/dla-wolontariuszy"
+                        rel="noreferrer noopener"
+                        target="_blank"
                     >
                         Zostań wolontariuszem
                     </Button>

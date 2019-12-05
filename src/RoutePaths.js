@@ -48,11 +48,6 @@ const RoutePaths = ({ data }) => {
             </Route>
             <Route
                 exact
-                path="/wspieraj-nas/zostan-wolontariuszem"
-                component={views.Volunteer}
-            />
-            <Route
-                exact
                 path="/wspieraj-nas/wplac-na-wosp"
                 component={views.Support}
             />

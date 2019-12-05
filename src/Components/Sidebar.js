@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
 import {
@@ -28,6 +29,7 @@ const Sidebar = () => {
         <Wrapper>
             <ButtonsContainer>
                 <StyledButton
+                    as={Link}
                     to="https://www.transfergo.com/pl"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -35,7 +37,10 @@ const Sidebar = () => {
                     WRZUĆ DO PUSZKI
                 </StyledButton>
                 <StyledButton
-                    to="/wspieraj-nas/zostan-wolontariuszem"
+                    as="a"
+                    href="https://www.wosp.org.pl/final/dla-wolontariuszy"
+                    rel="noreferrer noopener"
+                    target="_blank"
                     bgcolor="pink"
                 >
                     ZOSTAŃ WOLONTARIUSZEM
@@ -138,17 +143,25 @@ const StyledButton = styled(Button)`
     width: 100%;
     height: 100px;
     margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: ${({ bgcolor, theme }) =>
         bgcolor === 'pink' ? theme.color.pink : theme.color.blue};
 
     transition: opacity 0.2s ease-in-out;
     :hover {
+        text-decoration: none;
+        color: white;
         opacity: 90%;
         background-color: ${({ bgcolor, theme }) =>
             bgcolor === 'pink' ? theme.color.pink : theme.color.blue};
     }
 
+    text-align: center;
+    color: white;
+    text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     ${({ theme }) => theme.media.above.xl} {
