@@ -38,7 +38,7 @@ class PostCardGrid extends Component {
         return (
             <Wrapper>
                 <StyledSectionHeader color={({ theme }) => theme.color.blue}>
-                    Aktualności
+                    AKTUALNOŚCI
                </StyledSectionHeader>
 
                 <StyledCardDeck>
@@ -52,6 +52,8 @@ class PostCardGrid extends Component {
 }
 const StyledSectionHeader = styled(SectionHeader)`
      height: 80px;
+     font-weight: 700;
+     font-size: 1.25rem;
 `;
 
 const Wrapper = styled.div`

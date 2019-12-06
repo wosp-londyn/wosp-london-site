@@ -60,6 +60,7 @@ const Wrapper = styled.div`
     ${({ theme }) => theme.media.above.md} {
         padding-top: 20px;
     }
+    box-shadow: 0px 5px 10px 0px rgba(135,135,135,0.6);
 `;
 
 const ShadowBox = styled.div`
@@ -73,6 +74,7 @@ const ShadowBox = styled.div`
 const ArticlesContainer = styled(Container)`
     ${({ theme }) => theme.media.above.xl} {
         margin-top: 60px;
+        margin-bottom: 150px;
     }
 
     section {

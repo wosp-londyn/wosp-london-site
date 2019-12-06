@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import PostPlaceholder from './PostPlaceholder';
+import bg from '../Assets/Images/bg.png';
 
 // Komponent wyświetlający posta na homepage
 // Dostaje dane jako argument
@@ -20,7 +21,7 @@ const PostCard = ({ post }) => {
     return (
         <StyledCard as="article">
             <Container>
-                <Row className="bg-dark">
+                <StyledRow>
                     <ImgWrapper md="6">
                         <Card.Img
                             variant="top"
@@ -48,11 +49,18 @@ const PostCard = ({ post }) => {
                             </Button>
                        </StyledCardBody>
                     </BodyWrapper>
-                </Row>
+                </StyledRow>
             </Container>
         </StyledCard>
     );
 };
+const StyledRow = styled(Row)`
+    background: url(${bg});
+    background-position: left bottom;
+    background-size: 100%;
+    background-color: #f0f0f0;
+`;
+
 const CardText = styled(Card.Text)`
      text-align: justify;
 `;
@@ -112,6 +120,7 @@ const Date = styled(Card.Text)`
     font-size: 14px;
     color: #6a6a6a;
     text-align: left;
+
 `;
 
 export default PostCard;
