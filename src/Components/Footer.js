@@ -1,10 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Col, Row, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import heart from '../Assets/Images/logo132.png';
 import SocialMedia from './SocialMedia';
 
 const Footer = () => {
+    const links = [
+        { name: 'Strona Główna', slug: '/' },
+        { name: 'Aktualności', slug: '/aktualnosci/artykuly' },
+        { name: 'Galeria', slug: '/aktualnosci/galeria' },
+        { name: 'Program', slug: '/informacje/program' },
+        { name: 'Gwiazdy', slug: '/informacje/gwiazdy' },
+        { name: 'Aukcje', slug: '/wspieraj-nas/aukcje' },
+        { name: 'Kontakt', slug: '/kontakt' },
+    ];
+
     return (
         <>
             <StyledContainer fluid>
@@ -18,30 +29,16 @@ const Footer = () => {
                                 <h2>NA SKRÓTY</h2>
                                 <br />
                                 <StyledNav className="flex-column">
-                                    <Nav.Link href="/home" className="links">
-                                        Strona Główna
-                                    </Nav.Link>
-                                    <Nav.Link href="/Posts" className="links">
-                                        Aktualności
-                                    </Nav.Link>
-                                    <Nav.Link href="/Posts" className="links">
-                                        Aktualności
-                                    </Nav.Link>
-                                    <Nav.Link href="/Program" className="links">
-                                        Informacje
-                                    </Nav.Link>
-                                    <Nav.Link href="/Support" className="links">
-                                        Wpłać na WOŚP
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        href="/Volunteer"
-                                        className="links"
-                                    >
-                                        Zostań Wolontariuszem
-                                    </Nav.Link>
-                                    <Nav.Link href="/Contact" className="links">
-                                        Kontakt
-                                    </Nav.Link>
+                                    {links.map(link => (
+                                        <Nav.Link
+                                            key={link.slug}
+                                            as={Link}
+                                            to={link.slug}
+                                            className="links"
+                                        >
+                                            {link.name}
+                                        </Nav.Link>
+                                    ))}
                                 </StyledNav>
                             </WrapperSecondColumn>
                         </StyledCol>
@@ -75,11 +72,11 @@ const Footer = () => {
 };
 
 const StyledNav = styled(Nav)`
-    a{
-         padding-left:0;
+    a {
+        padding-left: 0;
     }
-    a:hover{
-         color:white;
+    a:hover {
+        color: white;
     }
 `;
 
@@ -118,7 +115,6 @@ const StyledCol = styled(Col)`
     }
 
     img {
-        item-align: center;
         padding-right: 20px;
     }
 `;
