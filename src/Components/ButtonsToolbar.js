@@ -87,18 +87,48 @@ const StyledRow = styled(Row)`
     }
     #button1 {
         background-color: ${({ theme }) => theme.color.blue};
+        :hover{
+            filter: brightness(110%);
+        }
+        :active{
+            filter: brightness(95%);
+        }
     }
     #button2 {
         background-color: ${({ theme }) => theme.color.orange};
+        :hover{
+            filter: brightness(110%);
+        }
+        :active{
+            filter: brightness(95%);
+        }
     }
     #button3 {
         background-color: ${({ theme }) => theme.color.red};
+        :hover{
+            filter: brightness(110%);
+        }
+        :active{
+            filter: brightness(95%);
+        }
     }
     #button4 {
         background-color: ${({ theme }) => theme.color.green};
+        :hover{
+            filter: brightness(110%);
+        }
+        :active{
+            filter: brightness(95%);
+        }
     }
     #button5 {
         background-color: ${({ theme }) => theme.color.pink};
+        :hover{
+            filter: brightness(110%);
+        }
+        :active{
+            filter: brightness(95%);
+        }
 
         height: 70px;
         ${({ theme }) => theme.media.above.sm} {

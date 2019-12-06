@@ -49,10 +49,13 @@ const Wrapper = styled.section`
         display: block;
         border: 1px solid #a2a2a2;
         padding: 0 !important;
+
     }
 `;
 
 const StyledSectionHeader = styled(SectionHeader)`
+    width: 100%;
+    margin: 0;
     ${({ theme }) => theme.media.below.xl} {
         display: none;
     }

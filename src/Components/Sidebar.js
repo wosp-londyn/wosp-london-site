@@ -34,7 +34,7 @@ const Sidebar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    WRZUĆ DO PUSZKI
+                    WPŁAĆ NA WOŚP
                 </StyledButton>
                 <StyledButton
                     as="a"
@@ -95,45 +95,37 @@ const SponsorsBar = styled.h1`
     font-weight: bold;
     color: white;
 
-    background: ${({ theme }) => theme.color.orange};
+    background: #737373;
 `;
 const SponsorsGroup = styled.section`
     width: 100%;
     padding: 20px;
+    border-left: 1px solid #9a9a9a;
+    border-right: 1px solid #9a9a9a;
 
     display: flex;
     flex-direction: column;
 
+    :last-child{
+        border-bottom: 1px solid #9a9a9a;
+    }
+
     ${({ level, theme }) =>
         level === 'main'
-            ? `border-bottom: 1px solid ${theme.color.orange};
-            border-left: 1px solid ${theme.color.orange};
-            border-right: 1px solid ${theme.color.orange};`
+            ? `background-color: #fff9b3 `
             : level === 'gold'
-            ? `border-bottom: 1px solid #E4DC0A;
-            border-left: 1px solid #E4DC0A;
-            border-right: 1px solid #E4DC0A;`
-            : `border-bottom: 1px solid #B0C1C8;
-            border-left: 1px solid #B0C1C8;
-            border-right: 1px solid #B0C1C8;
+            ? `background-color: #FFFBEF`
+            : `background-color: #FBFBFB;
             `}
 
     img {
         width: 100%;
         margin: 10px 0;
-        filter: grayscale(50%);
-    }
 
-    img:hover {
-        filter: grayscale(0%);
     }
 `;
 
 const ButtonsContainer = styled.nav`
-    border-top: 1px solid #d1d1d1;
-    border-left: 1px solid #d1d1d1;
-    border-right: 1px solid #d1d1d1;
-    padding: 20px 20px 40px;
 `;
 
 const StyledButton = styled(Button)`
@@ -147,7 +139,7 @@ const StyledButton = styled(Button)`
     align-items: center;
 
     background-color: ${({ bgcolor, theme }) =>
-        bgcolor === 'pink' ? theme.color.pink : theme.color.blue};
+        bgcolor === 'pink' ? theme.color.pink : theme.color.green};
 
     transition: opacity 0.2s ease-in-out;
     :hover {
@@ -155,7 +147,7 @@ const StyledButton = styled(Button)`
         color: white;
         opacity: 90%;
         background-color: ${({ bgcolor, theme }) =>
-            bgcolor === 'pink' ? theme.color.pink : theme.color.blue};
+            bgcolor === 'pink' ? theme.color.pink : theme.color.green};
     }
 
     text-align: center;

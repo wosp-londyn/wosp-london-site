@@ -2,37 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
 
-import heart from '../../Assets/Images/logo131.png';
+import heart from '../../Assets/Images/logo-512.png';
 
 const Brand = () => {
     return (
         <>
             <MainRow>
-                <Col xs={5} sm={6} md={6}>
+                <LogoCol xs={5} sm={6} md={6} >
                     <Img src={heart} />
-                </Col>
+                </LogoCol>
                 <RightCol
                     xs={{ offset: 3, span: 4 }}
                     sm={{ offset: 0, span: 6 }}
                     md={6}
                 >
-                    <Row h={80}>
+                    <Row>
                         <Col
-                            xs={7}
-                            sm={{ offset: 0, span: 5 }}
-                            md={{ offset: 0, span: 12 }}
+                            xs={12}
                         >
-                            WOŚP
+                            <h1>WOŚP</h1>
                         </Col>
                     </Row>
 
                     <Row>
                         <Col
-                            xs={7}
-                            sm={{ offset: 0, span: 3 }}
-                            md={{ offset: 0, span: 12 }}
+                            xs={12}
                         >
-                            LONDYN
+                            <h1>LONDYN</h1>
                         </Col>
                     </Row>
                 </RightCol>
@@ -66,30 +62,35 @@ const RightCol = styled(Col)`
     flex-direction: column;
     justify-content: center;
     font-weight: bold;
+    text-align: left;
 
     border-left: 1px white solid;
 
-    font-size: 21px;
-    ${({ theme }) => theme.media.above.sm} {
-        width: 106px;
-        font-size: 30px;
+    h1{
+        font-size: 21px;
+        font-weight: 700;
+        ${({ theme }) => theme.media.above.sm} {
+            width: 106px;
+            font-size: 30px;
 
+        }
+
+        ${({ theme }) => theme.media.above.md} {
+            width: 85px;
+            font-size: 22px;
+        }
+
+        ${({ theme }) => theme.media.above.lg} {
+            width: 110px;
+            font-size: 29px;
+        }
+
+        ${({ theme }) => theme.media.above.xl} {
+            width: 131px;
+            font-size: 35px;
+        }
     }
 
-    ${({ theme }) => theme.media.above.md} {
-        width: 85px;
-        font-size: 22px;
-    }
-
-    ${({ theme }) => theme.media.above.lg} {
-        width: 110px;
-        font-size: 29px;
-    }
-
-    ${({ theme }) => theme.media.above.xl} {
-        width: 131px;
-        font-size: 35px;
-    }
 `;
 
 const MainRow = styled(Row)`
@@ -98,4 +99,12 @@ const MainRow = styled(Row)`
     }
 `;
 
+const LogoCol = styled(Col)`
+    padding-right: 10px;
+    padding-left: 0;
+
+    ${({ theme }) => theme.media.above.sm} {
+        padding-left: 15px;
+    }
+`;
 export default Brand;

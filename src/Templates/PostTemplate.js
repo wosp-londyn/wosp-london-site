@@ -31,12 +31,9 @@ class PostTemplate extends Component {
                     </Col>
                 </HeadRow>
                 <HrRow>
-                    <Col xs={4} sm={3} md={2} xl={1}>
+                    <Col>
                         <p>{`${date.getDate()}.${date.getMonth() +
                             1}.${date.getFullYear()}`}</p>
-                    </Col>
-                    <Col xs={8} sm={9} md={10} xl={11}>
-                        <hr />
                     </Col>
                 </HrRow>
                 <Row>
@@ -69,10 +66,10 @@ const HeadRow = styled(Row)`
     h1 {
         position: absolute;
         bottom: 0;
-        padding: 20px;
+        padding: 20px 0 20px 0;
         width: calc(100% - 30px);
-        height: 120px;
         text-align: center;
+        font-weight: 700;
 
         font-size: 19px;
         ${({ theme }) => theme.media.above.xs} {
@@ -80,6 +77,7 @@ const HeadRow = styled(Row)`
         }
         ${({ theme }) => theme.media.above.sm} {
             font-size: 29px;
+            padding: 20px 10px 20px 10px;
         }
         color: white;
     }
@@ -97,12 +95,8 @@ const Fade = styled.div`
         left: 15px;
     }
 
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(59, 59, 59, 0.8211659663865546) 23%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 `;
 
 const HrRow = styled(Row)`
@@ -129,7 +123,23 @@ const HrRow = styled(Row)`
 
     p {
         text-align: left;
+        color: #6e6e6e;
     }
+
+    p:after{
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0.7em;
+        border-top: 2px solid #6e6e6e;
+        z-index: -1;
+        margin-left: 90px;
+
+    }
+
+
 `;
 
 const ContentBlock = styled.div`
@@ -144,6 +154,24 @@ const ContentBlock = styled.div`
 
     img {
         max-width: 100%;
+    }
+
+    li{
+        text-align: center;
+
+        ${({ theme }) => theme.media.above.sm} {
+            display: inline-block;
+            width: 50%;
+
+            :first-child{
+                padding-right: 10px;
+            }
+
+            :nth-child(even){
+                padding-left: 10px;
+            }
+        }
+
     }
 `;
 

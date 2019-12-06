@@ -32,37 +32,37 @@ const Menu = () => {
             <Nav.Link as={Link} to="/">
                 <FontAwesomeIcon icon="home" size="lg" />
             </Nav.Link>
-            <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown">
+            <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown dropdown-menu-right">
                 {newsDropdown.map(item => (
-                    <NavDropdown.Item
+                    <StyledNavDropdownItem
                         key={item.name}
                         as={Link}
                         to={`/aktualnosci${item.slug}`}
                     >
                         {item.name}
-                    </NavDropdown.Item>
+                    </StyledNavDropdownItem>
                 ))}
             </AktNavDropdown>
             <InfNavDropdown title="INFORMACJE" id="basic-nav-dropdown">
                 {infoDropdown.map(item => (
-                    <NavDropdown.Item
+                    <StyledNavDropdownItem
                         key={item.name}
                         as={Link}
                         to={`/informacje${item.slug}`}
                     >
                         {item.name}
-                    </NavDropdown.Item>
+                    </StyledNavDropdownItem>
                 ))}
             </InfNavDropdown>
             <WspNavDropdown title="WSPIERAJ NAS" id="basic-nav-dropdown">
                 {supportDropdown.map(item => (
-                    <NavDropdown.Item
+                    <StyledNavDropdownItem
                         key={item.name}
                         as={Link}
                         to={`/wspieraj-nas${item.slug}`}
                     >
                         {item.name}
-                    </NavDropdown.Item>
+                    </StyledNavDropdownItem>
                 ))}
             </WspNavDropdown>
 
@@ -77,13 +77,22 @@ const Menu = () => {
 
 export default Menu;
 
-const StyledNav = styled(Nav)`
-    div {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+const StyledNavDropdownItem = styled(NavDropdown.Item)`
+    display: block;
+    line-height: 2;
+    color: #2a2a2a;
+    font-size: 1rem;
+    :hover{
+        text-decoration: none;
     }
+    ${({ theme }) => theme.media.below.md} {
+        line-height: 3;
+    }
+`;
 
-    div:last-child {
+const StyledNav = styled(Nav)`
+    text-align: center;
+    :last-child{
         padding-right: 0;
     }
 
@@ -94,9 +103,39 @@ const StyledNav = styled(Nav)`
     a::after {
         display: none;
     }
+
+    div > div{
+        margin-top: 5px;
+        width: 100%;
+    }
+    ${({ theme }) => theme.media.below.md} {
+        line-height: 3;
+    }
 `;
 
 const AktNavDropdown = styled(NavDropdown)`
+    margin-left: 0.8rem;
+
+    ${({ theme }) => theme.media.below.lg} {
+        margin-left: 0px;
+    }
+
+    div{
+        width: auto;
+        min-width: 0;
+    }
+
+    div > a{
+        text-align: center;
+    }
+    div > a:hover {
+        color: white;
+        background: ${({ theme }) => theme.color.red};
+        text-align: center;
+    }
+    div > a:active {
+        filter: brightness(85%);
+    }
     a:hover {
         color: ${({ theme }) => theme.color.red};
         border-bottom: 2px solid ${({ theme }) => theme.color.red};
@@ -104,20 +143,60 @@ const AktNavDropdown = styled(NavDropdown)`
 `;
 
 const InfNavDropdown = styled(NavDropdown)`
+    margin-left: 0.8rem;
+
+    ${({ theme }) => theme.media.below.lg} {
+        margin-left: 0px;
+    }
+    div{
+        width: auto;
+        min-width: 0;
+    }
+    div > a{
+        text-align: center;
+    }
+    div > a:hover {
+        color: white;
+        background: ${({ theme }) => theme.color.blue};
+    }
+    div > a:active {
+        filter: brightness(85%);
+    }
     a:hover {
         color: ${({ theme }) => theme.color.blue};
         border-bottom: 2px solid ${({ theme }) => theme.color.blue};
     }
 `;
 const WspNavDropdown = styled(NavDropdown)`
+    margin-left: 0.8rem;
+    ${({ theme }) => theme.media.below.lg} {
+        margin-left: 0px;
+    }
+    div{
+        width: auto;
+        min-width: 0;
+    }
+    div > a{
+        text-align: center;
+    }
+    div > a:hover {
+        color: white;
+        background: ${({ theme }) => theme.color.green};
+    }
+    div > a:active {
+        filter: brightness(85%);
+    }
     a:hover {
         color: ${({ theme }) => theme.color.green};
         border-bottom: 2px solid ${({ theme }) => theme.color.green};
     }
 `;
 const StyledContainer = styled(Container)`
+    margin-left: 0.8rem;
+    ${({ theme }) => theme.media.below.lg} {
+        margin-left: 0px;
+    }
     padding: 0;
-
     a:hover {
         border-bottom: 2px solid ${({ theme }) => theme.color.yellow};
     }
