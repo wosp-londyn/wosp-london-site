@@ -122,7 +122,6 @@ const SponsorsGroup = styled.section`
         width: 100%;
         margin: 10px 0;
         filter: grayscale(50%);
-
     }
 
     img:hover {
@@ -172,7 +171,7 @@ const StyledButton = styled(Button)`
 const Wrapper = styled.aside`
     display: none;
 
-    ${({ theme }) => theme.media.above.md} {
+    ${({ theme }) => theme.media.above.lg} {
         display: flex;
         flex-direction: column;
         background: #fbfbfb;
