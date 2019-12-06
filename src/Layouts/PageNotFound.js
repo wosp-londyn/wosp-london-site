@@ -79,11 +79,26 @@ const Wrapper = styled.div`
 
     .notfound h2 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 60px;
         font-weight: 700;
         margin-top: 120px;
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.mediumRed};
+
+        ${({ theme }) => theme.media.above.xl} {
+            font-size: 60px;
+        }
+        ${({ theme }) => theme.media.above.lg} {
+            font-size: 50px;
+        }
+        ${({ theme }) => theme.media.above.md} {
+            font-size: 40px;
+        }
+        ${({ theme }) => theme.media.above.sm} {
+            font-size: 30px;
+        }
+        ${({ theme }) => theme.media.above.xs} {
+            font-size: 20px;
+        }
     }
 
     .notfound p {
@@ -93,7 +108,7 @@ const Wrapper = styled.div`
         font-weight: 300;
     }
 
-    @media only screen and (max-width: 520px) {
+    ${({ theme }) => theme.media.above.sm} {
         .notfound .notfound-404 {
             height: 115px;
         }
