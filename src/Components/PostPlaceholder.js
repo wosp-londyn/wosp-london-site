@@ -53,6 +53,7 @@ const Button = styled.div`
 const StyledCard = styled(Card)`
     display: flex !important;
     flex-direction: column !important;
+    height: 250px;
 
     border: none;
 

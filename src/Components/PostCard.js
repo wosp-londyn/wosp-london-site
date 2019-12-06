@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import PostPlaceholder from './PostPlaceholder';
 
 // Komponent wyświetlający posta na homepage
@@ -19,65 +19,99 @@ const PostCard = ({ post }) => {
     const date = new window.Date(post.date);
     return (
         <StyledCard as="article">
-            <Card.Img
-                variant="top"
-                src={post._embedded['wp:featuredmedia']['0'].source_url}
-            />
-            <Card.Body>
-                <Card.Title>{post.title.rendered}</Card.Title>
-                <Date>{`${date.getDate()}.${date.getMonth() +
-                    1}.${date.getFullYear()}`}</Date>
-                <Card.Text>
-                    <div
-                        dangerouslySetInnerHTML={createMarkup(
-                            post.excerpt.rendered
-                        )}
-                    />
-                </Card.Text>
-                <Button
-                    variant="primary"
-                    as={Link}
-                    to={`/aktualnosci/artykuly/${post.slug}`}
-                >
-                    Zobacz więcej
-                </Button>
-            </Card.Body>
+            <Container>
+                <Row className="bg-dark">
+                    <ImgWrapper md="6">
+                        <Card.Img
+                            variant="top"
+                            src={post._embedded['wp:featuredmedia']['0'].source_url}
+                        />
+                    </ImgWrapper>
+                    <BodyWrapper md="6">
+                        <StyledCardBody>
+                            <StyledCardTitle>{post.title.rendered}</StyledCardTitle>
+                            <Date>{`${date.getDate()}.${date.getMonth() +
+                                1}.${date.getFullYear()}`}</Date>
+                            <CardText>
+                                <div
+                                    dangerouslySetInnerHTML={createMarkup(
+                                        post.excerpt.rendered
+                                    )}
+                                />
+                            </CardText>
+                            <Button
+                                variant="primary"
+                                as={Link}
+                                to={`/aktualnosci/artykuly/${post.slug}`}
+                            >
+                                Zobacz więcej
+                            </Button>
+                       </StyledCardBody>
+                    </BodyWrapper>
+                </Row>
+            </Container>
         </StyledCard>
     );
 };
+const CardText = styled(Card.Text)`
+     text-align: justify;
+`;
+
+const StyledCardTitle = styled(Card.Title)`
+     text-align: left;
+     font-weight: 700;
+`;
+
+const StyledCardBody = styled(Card.Body)`
+     padding: 20px;
+
+     ${({ theme }) => theme.media.above.md} {
+        padding: 15px;
+        height: 100%;
+    }
+
+`;
+
+const BodyWrapper = styled(Col)`
+     padding: 0;
+     background: white;
+
+     :last-child{
+          text-align: right;
+     }
+`;
+
+const ImgWrapper = styled(Col)`
+    padding: 0;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+`;
 
 const StyledCard = styled(Card)`
-    display: flex !important;
-    flex-direction: column !important;
-
     border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 7px 15px -5px #8f8f8f;
+    background: white;
+    margin-left: 0;
 
     img {
-        width: 100%;
-        height: auto;
-        padding: 15px;
+        width: 100% !important;
+        height: auto !important;
+        background:
     }
 
     ${({ theme }) => theme.media.above.md} {
-        flex-direction: row !important;
-        margin-top: 5px;
-
         img {
-            height: 100%;
-            max-height: 250px;
-            width: auto;
-            padding: 15px;
-        }
-
-        .card-body {
-            width: 70%;
+             margin: 0;
         }
     }
 `;
 
 const Date = styled(Card.Text)`
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    color: #6a6a6a;
+    text-align: left;
 `;
 
 export default PostCard;
