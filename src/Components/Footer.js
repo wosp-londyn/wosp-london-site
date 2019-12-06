@@ -46,8 +46,7 @@ const Footer = () => {
                             <h2>KONTAKT</h2>
                             <br />
                             <p>WOŚP sztab w Londynie</p>
-                            <p>e-mail loremipsum@lorem.pl</p>
-                            <p>Polityka prywatności</p>
+                            <p>e-mail koordynator@wosplondyn.uk</p>
                             <WrapperSocialMedia>
                                 <SocialMedia />
                             </WrapperSocialMedia>
@@ -61,7 +60,7 @@ const Footer = () => {
                     <Row>
                         <Col>
                             <h2>
-                                Copyright &copy; by HARDCODED dla WOŚP LONDYN
+                                Copyright &copy; 2019 HARDCODED dla WOŚP LONDYN
                             </h2>
                         </Col>
                     </Row>
