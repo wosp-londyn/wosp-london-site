@@ -95,8 +95,12 @@ const Fade = styled.div`
         left: 15px;
     }
 
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
 `;
 
 const HrRow = styled(Row)`
@@ -126,8 +130,8 @@ const HrRow = styled(Row)`
         color: #6e6e6e;
     }
 
-    p:after{
-        content:"";
+    p:after {
+        content: '';
         position: absolute;
         bottom: 0;
         left: 0;
@@ -136,10 +140,7 @@ const HrRow = styled(Row)`
         border-top: 2px solid #6e6e6e;
         z-index: -1;
         margin-left: 90px;
-
     }
-
-
 `;
 
 const ContentBlock = styled.div`
@@ -156,22 +157,21 @@ const ContentBlock = styled.div`
         max-width: 100%;
     }
 
-    li{
+    li {
         text-align: center;
 
         ${({ theme }) => theme.media.above.sm} {
             display: inline-block;
             width: 50%;
 
-            :first-child{
+            :first-child {
                 padding-right: 10px;
             }
 
-            :nth-child(even){
+            :nth-child(even) {
                 padding-left: 10px;
             }
         }
-
     }
 `;
 

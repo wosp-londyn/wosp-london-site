@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -13,31 +13,8 @@ import RoutePaths from './RoutePaths';
 
 library.add(faHome);
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { data: [] };
-        this.fetchPostData = this.fetchPostData.bind(this);
-    }
-
-    componentDidMount() {
-        this.fetchPostData();
-    }
-
-    fetchPostData() {
-        fetch(`https://wosplondyn.uk/wp-json/wp/v2/posts?_embed&per_page=100`)
-            .then(response => response.json())
-            .then(responseJSON => {
-                this.setState({
-                    data: responseJSON,
-                });
-            });
-    }
-
+class App extends PureComponent {
     render() {
-        const { data } = this.state;
-
         return (
             <>
                 <Helmet>
@@ -46,7 +23,7 @@ class App extends Component {
                 <Router>
                     <ScrollToTop>
                         <MainLayout>
-                            <RoutePaths data={data} />
+                            <RoutePaths />
                         </MainLayout>
                     </ScrollToTop>
                 </Router>

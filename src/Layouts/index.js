@@ -1,6 +1,7 @@
 import Auctions from './Auctions';
 import Contact from './Contact';
 import Live from './Live';
+import Loading from './Loading';
 import Media from './Media';
 import Home from './Home';
 import Partners from './Partners';
@@ -18,6 +19,7 @@ export {
     Auctions,
     Contact,
     Live,
+    Loading,
     Media,
     Home,
     Partners,
