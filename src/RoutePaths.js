@@ -39,18 +39,19 @@ const RoutePaths = ({ data }) => {
             <Route exact path="/informacje/gwiazdy" component={views.Stars} />
             <Route
                 exact
+                path="/informacje/sponsorzy"
+                component={views.Sponsors}
+            />
+            <Route
+                exact
                 path="/informacje/partnerzy"
                 component={views.Partners}
             />
+            <Route exact path="/informacje/media" component={views.Media} />
 
             <Route exact path="/wspieraj-nas">
                 <Redirect to="/wspieraj-nas/zostan-wolontariuszem" />
             </Route>
-            <Route
-                exact
-                path="/wspieraj-nas/zostan-wolontariuszem"
-                component={views.Volunteer}
-            />
             <Route
                 exact
                 path="/wspieraj-nas/wplac-na-wosp"

@@ -1,10 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Col, Row, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import heart from '../Assets/Images/logo132.png';
 import SocialMedia from './SocialMedia';
 
 const Footer = () => {
+    const links = [
+        { name: 'Strona Główna', slug: '/' },
+        { name: 'Aktualności', slug: '/aktualnosci/artykuly' },
+        { name: 'Galeria', slug: '/aktualnosci/galeria' },
+        { name: 'Program', slug: '/informacje/program' },
+        { name: 'Gwiazdy', slug: '/informacje/gwiazdy' },
+        { name: 'Aukcje', slug: '/wspieraj-nas/aukcje' },
+        { name: 'Kontakt', slug: '/kontakt' },
+    ];
+
     return (
         <>
             <StyledContainer fluid>
@@ -19,46 +30,28 @@ const Footer = () => {
                                 <h2>NA SKRÓTY</h2>
                                 <br />
                                 <StyledNav className="flex-column">
-                                    <Nav.Link href="/home" className="links">
-                                        Strona Główna
-                                    </Nav.Link>
-                                    <Nav.Link href="/Posts" className="links">
-                                        Aktualności
-                                    </Nav.Link>
-                                    <Nav.Link href="/Posts" className="links">
-                                        Aktualności
-                                    </Nav.Link>
-                                    <Nav.Link href="/Program" className="links">
-                                        Informacje
-                                    </Nav.Link>
-                                    <Nav.Link href="/Support" className="links">
-                                        Wpłać na WOŚP
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        href="/Volunteer"
-                                        className="links"
-                                    >
-                                        Zostań Wolontariuszem
-                                    </Nav.Link>
-                                    <Nav.Link href="/Contact" className="links">
-                                        Kontakt
-                                    </Nav.Link>
+                                    {links.map(link => (
+                                        <Nav.Link
+                                            key={link.slug}
+                                            as={Link}
+                                            to={link.slug}
+                                            className="links"
+                                        >
+                                            {link.name}
+                                        </Nav.Link>
+                                    ))}
                                 </StyledNav>
                             </WrapperSecondColumn>
                         </StyledCol>
 
                         <StyledCol md="4">
-                            <WrapperThirdColumn>
-                                <h2>KONTAKT</h2>
-                                <br />
-                                <p>WOŚP sztab w Londynie</p>
-                                <p>e-mail loremipsum@lorem.pl</p>
-                                <p>Polityka prywatności</p>
-
-                                <WrapperSocialMedia>
-                                    <SocialMedia />
-                                </WrapperSocialMedia>
-                            </WrapperThirdColumn>
+                            <h2>KONTAKT</h2>
+                            <br />
+                            <p>WOŚP sztab w Londynie</p>
+                            <p>e-mail koordynator@wosplondyn.uk</p>
+                            <WrapperSocialMedia>
+                                <SocialMedia />
+                            </WrapperSocialMedia>
                         </StyledCol>
                     </StyledRow>
                 </Container>
@@ -69,7 +62,7 @@ const Footer = () => {
                     <Row>
                         <Col>
                             <h2>
-                                Copyright &copy; by HARDCODED dla WOŚP LONDYN
+                                Copyright &copy; 2019 HARDCODED dla WOŚP LONDYN
                             </h2>
                         </Col>
                     </Row>
@@ -106,7 +99,7 @@ const StyledRow = styled(Row)`
 const StyledCol = styled(Col)`
     color: rgba(255, 255, 255, 0.6);
     padding: 20px 0px 20px 30px;
-    text-align: center;
+    text-align: left;
 
     h2 {
         font-size: 18px;
@@ -114,7 +107,6 @@ const StyledCol = styled(Col)`
     }
 
     img {
-        justify-items: center;
         padding-right: 20px;
     }
 `;
@@ -137,11 +129,6 @@ const WrapperSecondColumn = styled.div`
         color: rgba(255, 255, 255, 0.6);
         line-height: 15px;
     }
-`;
-
-const WrapperThirdColumn = styled.div`
-    text-align: left;
-    float: left;
 `;
 
 const WrapperSocialMedia = styled.div`

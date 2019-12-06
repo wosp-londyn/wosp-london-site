@@ -1,27 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Container, Col, Row } from 'react-bootstrap';
 import owsiak from '../Assets/Images/404.png';
 
 const PageNotFound = () => {
     return (
         <Wrapper>
-            <div style={{ paddingTop: '100px' }}>
-                <div className="notfound">
-                    <div className="notfound-404">
-                        <h1>
-                            4<span />4
-                        </h1>
-                    </div>
-                    <h2>
-                        Upss!
-                        <br /> Chyba graliśmy za głośno
-                    </h2>
-                    <p>
-                        Strona której szukasz, nie została odnaleziona. Sprawdź
-                        czy we wpisanym przez Ciebie adresie nie ma błędu.
-                    </p>
-                </div>
-            </div>
+            <Container>
+                <Row style={{ paddingTop: '100px' }}>
+                    <Col className="notfound">
+                        <Col className="notfound-404">
+                            <h1>
+                                4<span />4
+                            </h1>
+                        </Col>
+                        <h2>
+                            Upss!
+                            <br /> Chyba graliśmy za głośno
+                        </h2>
+                        <p>
+                            Strona której szukasz, nie została odnaleziona.
+                            Sprawdź czy we wpisanym przez Ciebie adresie nie ma
+                            błędu.
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
         </Wrapper>
     );
 };
