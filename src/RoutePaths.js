@@ -51,11 +51,6 @@ export default class RoutePaths extends Component {
                         )}
                     />
                 ))}
-                <Route
-                    exact
-                    path="/aktualnosci/podcasty"
-                    component={views.Podcasts}
-                />
                 <Route exact path="/aktualnosci/live" component={views.Live} />
                 <Route
                     exact

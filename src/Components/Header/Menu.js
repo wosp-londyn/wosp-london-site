@@ -8,9 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Menu = () => {
     const newsDropdown = [
         { name: 'Artykuły', slug: '/artykuly' },
-        { name: 'Podcasty', slug: '/podcasty' },
-        { name: 'Na żywo', slug: '/live' },
         { name: 'Galeria', slug: '/galeria' },
+        { name: 'Na żywo', slug: '/live' },
     ];
 
     const infoDropdown = [
@@ -32,7 +31,10 @@ const Menu = () => {
             <Nav.Link as={Link} to="/">
                 <FontAwesomeIcon icon="home" size="lg" />
             </Nav.Link>
-            <AktNavDropdown title="AKTUALNOŚCI" id="basic-nav-dropdown dropdown-menu-right">
+            <AktNavDropdown
+                title="AKTUALNOŚCI"
+                id="basic-nav-dropdown dropdown-menu-right"
+            >
                 {newsDropdown.map(item => (
                     <StyledNavDropdownItem
                         key={item.name}
@@ -82,7 +84,7 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
     line-height: 2;
     color: #2a2a2a;
     font-size: 1rem;
-    :hover{
+    :hover {
         text-decoration: none;
     }
     ${({ theme }) => theme.media.below.md} {
@@ -92,7 +94,7 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
 
 const StyledNav = styled(Nav)`
     text-align: center;
-    :last-child{
+    :last-child {
         padding-right: 0;
     }
 
@@ -104,7 +106,7 @@ const StyledNav = styled(Nav)`
         display: none;
     }
 
-    div > div{
+    div > div {
         margin-top: 5px;
         width: 100%;
     }
@@ -120,13 +122,17 @@ const AktNavDropdown = styled(NavDropdown)`
         margin-left: 0px;
     }
 
-    div{
+    div {
         width: auto;
         min-width: 0;
     }
 
-    div > a{
+    div > a {
         text-align: center;
+    }
+    a:hover {
+        color: ${({ theme }) => theme.color.red};
+        border-bottom: 2px solid ${({ theme }) => theme.color.red};
     }
     div > a:hover {
         color: white;
@@ -136,10 +142,6 @@ const AktNavDropdown = styled(NavDropdown)`
     div > a:active {
         filter: brightness(85%);
     }
-    a:hover {
-        color: ${({ theme }) => theme.color.red};
-        border-bottom: 2px solid ${({ theme }) => theme.color.red};
-    }
 `;
 
 const InfNavDropdown = styled(NavDropdown)`
@@ -148,12 +150,16 @@ const InfNavDropdown = styled(NavDropdown)`
     ${({ theme }) => theme.media.below.lg} {
         margin-left: 0px;
     }
-    div{
+    div {
         width: auto;
         min-width: 0;
     }
-    div > a{
+    div > a {
         text-align: center;
+    }
+    a:hover {
+        color: ${({ theme }) => theme.color.blue};
+        border-bottom: 2px solid ${({ theme }) => theme.color.blue};
     }
     div > a:hover {
         color: white;
@@ -162,22 +168,22 @@ const InfNavDropdown = styled(NavDropdown)`
     div > a:active {
         filter: brightness(85%);
     }
-    a:hover {
-        color: ${({ theme }) => theme.color.blue};
-        border-bottom: 2px solid ${({ theme }) => theme.color.blue};
-    }
 `;
 const WspNavDropdown = styled(NavDropdown)`
     margin-left: 0.8rem;
     ${({ theme }) => theme.media.below.lg} {
         margin-left: 0px;
     }
-    div{
+    div {
         width: auto;
         min-width: 0;
     }
-    div > a{
+    div > a {
         text-align: center;
+    }
+    a:hover {
+        color: ${({ theme }) => theme.color.green};
+        border-bottom: 2px solid ${({ theme }) => theme.color.green};
     }
     div > a:hover {
         color: white;
@@ -185,10 +191,6 @@ const WspNavDropdown = styled(NavDropdown)`
     }
     div > a:active {
         filter: brightness(85%);
-    }
-    a:hover {
-        color: ${({ theme }) => theme.color.green};
-        border-bottom: 2px solid ${({ theme }) => theme.color.green};
     }
 `;
 const StyledContainer = styled(Container)`
