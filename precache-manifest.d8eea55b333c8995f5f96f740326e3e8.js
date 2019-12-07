@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "36b38490dc5ed8474a8488ac270d5731",
+    "revision": "0a7bfb9143b921c26637480ff1bb23b2",
     "url": "//www.wosplondyn-dev.tk/index.html"
   },
   {
-    "revision": "1c04978863b766c19a52",
+    "revision": "5959f4299383853e877b",
     "url": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "8a842db2efcc75bb0ed2",
+    "revision": "301d8c90830ee93bf100",
     "url": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css"
   },
   {
-    "revision": "1c04978863b766c19a52",
-    "url": "//www.wosplondyn-dev.tk/static/js/2.3218aad1.chunk.js"
+    "revision": "5959f4299383853e877b",
+    "url": "//www.wosplondyn-dev.tk/static/js/2.d4612fb5.chunk.js"
   },
   {
-    "revision": "8a842db2efcc75bb0ed2",
-    "url": "//www.wosplondyn-dev.tk/static/js/main.3fe78c64.chunk.js"
+    "revision": "301d8c90830ee93bf100",
+    "url": "//www.wosplondyn-dev.tk/static/js/main.f5638b6b.chunk.js"
   },
   {
     "revision": "2e2112e44280efea25b7",
@@ -44,12 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn-dev.tk/static/media/ant.8fe6c2b9.png"
   },
   {
+    "revision": "acd452c59fe46e714df6900fa41aa989",
+    "url": "//www.wosplondyn-dev.tk/static/media/bg.acd452c5.png"
+  },
+  {
     "revision": "d85c8ade3daccda15338528bd6ae7efd",
     "url": "//www.wosplondyn-dev.tk/static/media/emotionwraps.d85c8ade.png"
   },
   {
-    "revision": "dee09e0723b9ce74c2f0c61debff1c5d",
-    "url": "//www.wosplondyn-dev.tk/static/media/logo131.dee09e07.png"
+    "revision": "ddeaa37c03c8a3989749846d9a156dd7",
+    "url": "//www.wosplondyn-dev.tk/static/media/logo-512.ddeaa37c.png"
   },
   {
     "revision": "6b0d31a1a42d3e4c6fe059d57f05d392",

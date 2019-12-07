@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "//www.wosplondyn-dev.tk/precache-manifest.64f6ab3b7019a1c4b7fe860c780e7c2d.js"
+  "//www.wosplondyn-dev.tk/precache-manifest.d8eea55b333c8995f5f96f740326e3e8.js"
 );
 
 self.addEventListener('message', (event) => {

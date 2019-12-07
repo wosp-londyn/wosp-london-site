@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css",
-    "main.js": "//www.wosplondyn-dev.tk/static/js/main.3fe78c64.chunk.js",
-    "main.js.map": "//www.wosplondyn-dev.tk/static/js/main.3fe78c64.chunk.js.map",
+    "main.js": "//www.wosplondyn-dev.tk/static/js/main.f5638b6b.chunk.js",
+    "main.js.map": "//www.wosplondyn-dev.tk/static/js/main.f5638b6b.chunk.js.map",
     "runtime-main.js": "//www.wosplondyn-dev.tk/static/js/runtime-main.fb88d9db.js",
     "runtime-main.js.map": "//www.wosplondyn-dev.tk/static/js/runtime-main.fb88d9db.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.3218aad1.chunk.js": "//www.wosplondyn-dev.tk/static/js/2.3218aad1.chunk.js",
-    "static/js/2.3218aad1.chunk.js.map": "//www.wosplondyn-dev.tk/static/js/2.3218aad1.chunk.js.map",
+    "static/js/2.d4612fb5.chunk.js": "//www.wosplondyn-dev.tk/static/js/2.d4612fb5.chunk.js",
+    "static/js/2.d4612fb5.chunk.js.map": "//www.wosplondyn-dev.tk/static/js/2.d4612fb5.chunk.js.map",
     "index.html": "//www.wosplondyn-dev.tk/index.html",
-    "precache-manifest.64f6ab3b7019a1c4b7fe860c780e7c2d.js": "//www.wosplondyn-dev.tk/precache-manifest.64f6ab3b7019a1c4b7fe860c780e7c2d.js",
+    "precache-manifest.d8eea55b333c8995f5f96f740326e3e8.js": "//www.wosplondyn-dev.tk/precache-manifest.d8eea55b333c8995f5f96f740326e3e8.js",
     "service-worker.js": "//www.wosplondyn-dev.tk/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css.map",
     "static/css/main.9990d20c.chunk.css.map": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css.map",
     "static/media/fontsLato.css": "//www.wosplondyn-dev.tk/static/media/Lato-700.85d339d9.ttf",
     "static/media/fontsRaleway.css": "//www.wosplondyn-dev.tk/static/media/Raleway-700.f49f3d2d.ttf",
     "static/media/ant.png": "//www.wosplondyn-dev.tk/static/media/ant.8fe6c2b9.png",
+    "static/media/bg.png": "//www.wosplondyn-dev.tk/static/media/bg.acd452c5.png",
     "static/media/emotionwraps.png": "//www.wosplondyn-dev.tk/static/media/emotionwraps.d85c8ade.png",
-    "static/media/logo131.png": "//www.wosplondyn-dev.tk/static/media/logo131.dee09e07.png",
+    "static/media/logo-512.png": "//www.wosplondyn-dev.tk/static/media/logo-512.ddeaa37c.png",
     "static/media/logo132.png": "//www.wosplondyn-dev.tk/static/media/logo132.6b0d31a1.png",
     "static/media/mleczko.png": "//www.wosplondyn-dev.tk/static/media/mleczko.6c5626d9.png",
     "static/media/piling.png": "//www.wosplondyn-dev.tk/static/media/piling.6441ce22.png",
@@ -29,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.fb88d9db.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.3218aad1.chunk.js",
+    "static/js/2.d4612fb5.chunk.js",
     "static/css/main.9990d20c.chunk.css",
-    "static/js/main.3fe78c64.chunk.js"
+    "static/js/main.f5638b6b.chunk.js"
   ]
 }
