@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 
     .notfound .notfound-404 h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 250px;
+        font-size: 150px;
         font-weight: 700;
         margin: 0px;
         color: ${({ theme }) => theme.color.navyBlue};
@@ -69,8 +69,8 @@ const Wrapper = styled.div`
     .notfound .notfound-404 h1 > span {
         display: inline-block;
 
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         background-image: url(${owsiak});
         background-size: cover;
         transform: scale(1.4);
@@ -79,27 +79,13 @@ const Wrapper = styled.div`
 
     .notfound h2 {
         font-family: 'Montserrat', sans-serif;
+        font-size: 60px;
         font-weight: 700;
-        margin-top: 120px;
+        margin-top: 30px;
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.mediumRed};
 
-        ${({ theme }) => theme.media.above.xl} {
-            font-size: 60px;
         }
-        ${({ theme }) => theme.media.above.lg} {
-            font-size: 50px;
-        }
-        ${({ theme }) => theme.media.above.md} {
-            font-size: 40px;
-        }
-        ${({ theme }) => theme.media.above.sm} {
-            font-size: 30px;
-        }
-        ${({ theme }) => theme.media.above.xs} {
-            font-size: 20px;
-        }
-    }
 
     .notfound p {
         font-family: 'Montserrat', sans-serif;
@@ -107,31 +93,10 @@ const Wrapper = styled.div`
         margin-top: 10px;
         font-weight: 300;
     }
-
-    ${({ theme }) => theme.media.above.sm} {
-        .notfound .notfound-404 {
-            height: 115px;
-        }
-        .notfound .notfound-404 h1 {
-            font-size: 110px;
-        }
-
-        .notfound h2 {
-            font-size: 30px;
-            margin-top: 30px;
-            padding: 10px;
-        }
-
-        .notfound p {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .notfound .notfound-404 h1 > span {
-            width: 96px;
-            height: 96px;
-        }
     }
+
+
+
 `;
 
 export default PageNotFound;
