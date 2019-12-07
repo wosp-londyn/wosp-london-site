@@ -11,7 +11,7 @@ import Brand from './Brand';
 const Header = ({ sectionColor }) => {
     return (
         <>
-            <StyledContainer fluid as="header">
+            <Container fluid as="header">
                 <Row>
                     <Container>
                         <Row>
@@ -39,14 +39,12 @@ const Header = ({ sectionColor }) => {
                         </Navbar>
                     </Container>
                 </BottomRow>
-            </StyledContainer>
+            </Container>
             <ColorBar sectionColor={sectionColor} />
         </>
     );
 };
-const StyledContainer = styled(Container)`
-    box-shadow: 0px 5px 10px 0px rgba(135,135,135,0.6);
-`;
+
 const StyledNavbarCollapse = styled(Navbar.Collapse)`
     padding-top: 10px;
     padding-bottom: 10px;
