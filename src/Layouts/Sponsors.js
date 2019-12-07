@@ -1,7 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+import PageTemplate from '../Templates/PageTemplate';
 
-const Partners = () => {
-    return <div>Sponsorzy</div>;
+const ContentBlock = styled.div``;
+
+const Sponsors = () => {
+    return <PageTemplate slug="sponsorzy" ContentWrapper={ContentBlock} />;
 };
 
-export default Partners;
+export default Sponsors;
