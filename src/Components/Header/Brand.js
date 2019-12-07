@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
 
-import heart from '../../Assets/Images/logo-512.png';
+import logo from '../../Assets/Images/logo-512.png';
 
 const Brand = () => {
     return (
         <>
             <MainRow>
                 <LogoCol xs={5} sm={6} md={6} >
-                    <Img src={heart} />
+                    <Img src={logo} />
                 </LogoCol>
                 <RightCol
                     xs={{ offset: 3, span: 4 }}
