@@ -30,23 +30,31 @@ const PostCard = ({ post }) => {
                     </ImgWrapper>
                     <BodyWrapper md="6">
                         <StyledCardBody>
-                            <StyledCardTitle>{post.title.rendered}</StyledCardTitle>
-                            <Date>{`${date.getDate()}.${date.getMonth() +
-                                1}.${date.getFullYear()}`}</Date>
-                            <CardText>
-                                <div
-                                    dangerouslySetInnerHTML={createMarkup(
-                                        post.excerpt.rendered
-                                    )}
-                                />
-                            </CardText>
-                            <Button
-                                variant="primary"
-                                as={Link}
-                                to={`/aktualnosci/artykuly/${post.slug}`}
-                            >
-                                Zobacz więcej
-                            </Button>
+                            <StyledBodyRow>
+                                <Col xs={12}>
+                                    <StyledCardTitle>{post.title.rendered}</StyledCardTitle>
+                                    <Date>{`${date.getDate()}.${date.getMonth() +
+                                        1}.${date.getFullYear()}`}</Date>
+
+                                    <CardText>
+                                        <div
+                                            dangerouslySetInnerHTML={createMarkup(
+                                                post.excerpt.rendered
+                                            )}
+                                        />
+                                    </CardText>
+                                </Col>
+                                <Col xs={12} className="align-self-end">
+                                        <Button
+                                            variant="primary"
+                                            as={Link}
+                                            to={`/aktualnosci/artykuly/${post.slug}`}
+                                            className="rounded-0"
+                                        >
+                                            Zobacz więcej
+                                        </Button>
+                                </Col>
+                            </StyledBodyRow>
                        </StyledCardBody>
                     </BodyWrapper>
                 </StyledRow>
@@ -54,6 +62,9 @@ const PostCard = ({ post }) => {
         </StyledCard>
     );
 };
+const StyledBodyRow = styled(Row)`
+    height: 100%;
+`;
 const StyledRow = styled(Row)`
     background: url(${bg});
     background-position: left bottom;
@@ -70,8 +81,8 @@ const StyledCardTitle = styled(Card.Title)`
      font-weight: 700;
 `;
 
-const StyledCardBody = styled(Card.Body)`
-     padding: 20px;
+const StyledCardBody = styled(Container)`
+     padding: 0 20px 0 20px;
 
      ${({ theme }) => theme.media.above.md} {
         padding: 15px;
