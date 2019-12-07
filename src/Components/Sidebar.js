@@ -30,9 +30,9 @@ const Sidebar = () => {
             <ButtonsContainer>
                 <StyledButton
                     as={Link}
-                    to="https://www.transfergo.com/pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    to="/wspieraj-nas/wplac-na-wosp"
+                    // target="_blank"
+                    // rel="noopener noreferrer"
                 >
                     WPŁAĆ NA WOŚP
                 </StyledButton>
@@ -106,11 +106,11 @@ const SponsorsGroup = styled.section`
     display: flex;
     flex-direction: column;
 
-    :last-child{
+    :last-child {
         border-bottom: 1px solid #9a9a9a;
     }
 
-    ${({ level, theme }) =>
+    ${({ level }) =>
         level === 'main'
             ? `background-color: #fff9b3 `
             : level === 'gold'
@@ -121,12 +121,10 @@ const SponsorsGroup = styled.section`
     img {
         width: 100%;
         margin: 10px 0;
-
     }
 `;
 
-const ButtonsContainer = styled.nav`
-`;
+const ButtonsContainer = styled.nav``;
 
 const StyledButton = styled(Button)`
     border-radius: 0;

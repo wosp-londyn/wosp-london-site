@@ -21,7 +21,6 @@ const Menu = () => {
     ];
 
     const supportDropdown = [
-        { name: 'Zostań Wolontariuszem', slug: '/zostan-wolontariuszem' },
         { name: 'Wpłać na WOŚP', slug: '/wplac-na-wosp' },
         { name: 'Aukcje', slug: '/aukcje' },
     ];
@@ -57,6 +56,14 @@ const Menu = () => {
                 ))}
             </InfNavDropdown>
             <WspNavDropdown title="WSPIERAJ NAS" id="basic-nav-dropdown">
+                <StyledNavDropdownItem
+                    as="a"
+                    href="https://www.wosp.org.pl/final/dla-wolontariuszy"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                >
+                    Zostań Wolontariuszem
+                </StyledNavDropdownItem>
                 {supportDropdown.map(item => (
                     <StyledNavDropdownItem
                         key={item.name}
