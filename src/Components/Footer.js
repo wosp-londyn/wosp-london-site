@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Col, Row, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
-import heart from '../Assets/Images/logo132.png';
+import logo from '../Assets/Images/logo-512.png';
 import SocialMedia from './SocialMedia';
 
 const Footer = () => {
@@ -21,10 +21,10 @@ const Footer = () => {
             <StyledContainer fluid>
                 <Container md="12">
                     <StyledRow>
-                        <StyledCol md="4">
-                            <img src={heart} id="heart" alt="wosp logo" />
+                        <StyledCol xs={12} md={4}>
+                            <img src={logo} id="heart" alt="wosp logo" />
                         </StyledCol>
-                        <StyledCol md="4">
+                        <StyledCol xs={12} md={4}>
                             <WrapperSecondColumn>
                                 <h2>NA SKRÓTY</h2>
                                 <br />
@@ -42,13 +42,15 @@ const Footer = () => {
                                 </StyledNav>
                             </WrapperSecondColumn>
                         </StyledCol>
-                        <StyledCol md="4">
-                            <h2>KONTAKT</h2>
-                            <br />
-                            <p>WOŚP sztab w Londynie</p>
-                            <p>e-mail koordynator@wosplondyn.uk</p>
-                            <WrapperSocialMedia>
-                                <SocialMedia />
+                        <StyledCol xs={12} md={4}>
+                            <WrapperContact>
+                                <h2>KONTAKT</h2>
+                                <br />
+                                <p>WOŚP sztab w Londynie</p>
+                                <p>E-mail: koordynator@wosplondyn.uk</p>
+                            </WrapperContact>
+                            <WrapperSocialMedia class="align-bottom" >
+                                <SocialMedia/>
                             </WrapperSocialMedia>
                         </StyledCol>
                     </StyledRow>
@@ -71,9 +73,6 @@ const Footer = () => {
 };
 
 const StyledNav = styled(Nav)`
-    a {
-        padding-left: 0;
-    }
     a:hover {
         color: white;
     }
@@ -85,11 +84,12 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledRow = styled(Row)`
-    padding: 15px 0 15px 0;
+    padding: 15px 0 0 0;
 
     div:nth-child(2) {
-        border-top: 3px solid rgba(255, 255, 255, 0.6);
-        border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+
     }
     ${({ theme }) => theme.media.above.md} {
         padding: 30px 0 30px 0;
@@ -97,41 +97,67 @@ const StyledRow = styled(Row)`
         div:nth-child(2) {
             border-top: 0;
             border-bottom: 0;
-            border-left: 3px solid rgba(255, 255, 255, 0.6);
-            border-right: 3px solid rgba(255, 255, 255, 0.6);
+            border-left: 1px solid white;
+            border-right: 1px solid white;
         }
     }
 `;
 
 const StyledCol = styled(Col)`
     color: rgba(255, 255, 255, 0.6);
-    padding: 20px 0px 20px 30px;
     text-align: center;
+    :first-child{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: 350px;
+
+        ${({ theme }) => theme.media.above.md} {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 20px;
+            height: auto;
+            margin: auto;
+        }
+    }
 
     h2 {
         font-size: 18px;
         color: white !important;
+        font-weight: 700 !important;
     }
+    img{
+        max-width: 100%;
+        max-height: 100%;
 
-    img {
-        padding-right: 20px;
+        ${({ theme }) => theme.media.above.lg} {
+            max-width: 80%;
+            max-height: 80%;
+        }
     }
 `;
 
+
 const WrapperSecondColumn = styled.div`
-    text-align: left;
-    font-size: 14px;
+    text-align: center;
     text-transform: uppercase;
+    padding: 15px 0 15px 0;
+
 
     .links {
         color: rgba(255, 255, 255, 0.6);
-        line-height: 15px;
+        line-height: 1.75;
+        font-weight: 400;
+        font-size: 16px;
     }
 `;
+const WrapperContact = styled.div`
+    padding: 15px 0 0 0;
 
-const WrapperSocialMedia = styled.div`
-    float: left;
-
+`;
+const WrapperSocialMedia = styled(Col)`
+    display: inline;
+    border: none !important;
     a {
         align-content: space-around;
     }
@@ -139,6 +165,9 @@ const WrapperSocialMedia = styled.div`
     a:hover {
         box-shadow: 2px 5px 8px -5px white;
         color: white;
+    }
+    div{
+        margin: auto;
     }
 `;
 
