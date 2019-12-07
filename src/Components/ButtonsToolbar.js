@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Button, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col, Image, Container} from 'react-bootstrap';
+import transfergo from '../Assets/Images/Sponsors/transfergo.png';
 
 // Buttons under slider - homepage
 
@@ -11,17 +12,17 @@ const ButtonsToolbar = () => {
             <FirstRow>
                 <Col xs={12} md={3}>
                     <Button id="button1" as={Link} to="/aktualnosci/galeria">
-                        Galeria
-                    </Button>
-                </Col>
-                <Col xs={12} md={3}>
-                    <Button id="button2" as={Link} to="/wspieraj-nas/aukcje">
-                        Aukcje
+                        GALERIA
                     </Button>
                 </Col>
                 <Col xs={12} md={3}>
                     <Button id="button3" as={Link} to="/aktualnosci/live">
-                        Na żywo
+                        NA ŻYWO
+                    </Button>
+                </Col>
+                <Col xs={12} md={3}>
+                    <Button id="button2" as={Link} to="/wspieraj-nas/aukcje">
+                        AUKCJE
                     </Button>
                 </Col>
                 <Col xs={12} md={3}>
@@ -30,12 +31,11 @@ const ButtonsToolbar = () => {
                         as={Link}
                         to="/wspieraj-nas/wplac-na-wosp"
                     >
-                        Wpłać na WOŚP
+                        PROGRAM
                     </Button>
                 </Col>
             </FirstRow>
             <SecondRow>
-                <Col xs={12} md={12}>
                     <Button
                         id="button5"
                         as="a"
@@ -43,14 +43,67 @@ const ButtonsToolbar = () => {
                         rel="noreferrer noopener"
                         target="_blank"
                     >
-                        Zostań wolontariuszem
+                        <ButtonRow xs={12}>
+                            <Col xs={6} md={12} className="align-self-center">WPŁAĆ NA WOŚP</Col>
+                            <Col xs={6} md={3} className="align-self-center"><p>Powered by</p><img src={transfergo} alt=""/></Col>
+                        </ButtonRow>
                     </Button>
-                </Col>
             </SecondRow>
         </Wrapper>
     );
 };
+const ButtonRow = styled(Row)`
+    div:first-child{
+        text-align: right;
+        padding-right: 0;
+        ${({ theme }) => theme.media.above.md} {
+            text-align: center;
+        }
+    }
+    div:nth-child(2){
+        width: auto;
+        padding-left: 25px;
+        text-align: left;
+        font-size: 10px;
+        font-weight: 400;
+        p{
+            margin: 0;
+        }
 
+        ${({ theme }) => theme.media.above.sm} {
+            padding-left: 20px;
+        }
+        ${({ theme }) => theme.media.above.md} {
+            display: inline;
+            padding-left: 0;
+            position: absolute;
+            left: 490px;
+        }
+        ${({ theme }) => theme.media.above.lg} {
+            left: 730px;
+        }
+        ${({ theme }) => theme.media.above.xl} {
+            left: 890px;
+        }
+
+    }
+    img{
+        max-width: 150px !important;
+        padding-top: 2px;
+        ${({ theme }) => theme.media.above.sm} {
+            max-width: 180px !important;
+        }
+        ${({ theme }) => theme.media.above.md} {
+            max-width: 200px !important;
+        }
+        ${({ theme }) => theme.media.above.xl} {
+            max-width: 220px !important;
+        }
+
+
+    }
+
+`;
 const StyledRow = styled(Row)`
     width: 100%;
     margin: 0;
@@ -89,6 +142,7 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.blue};
         :hover{
             filter: brightness(110%);
+            transition: all .2s ease;
         }
         :active{
             filter: brightness(95%);
@@ -98,6 +152,7 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.orange};
         :hover{
             filter: brightness(110%);
+            transition: all .2s ease;
         }
         :active{
             filter: brightness(95%);
@@ -107,38 +162,40 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.red};
         :hover{
             filter: brightness(110%);
+            transition: all .2s ease;
         }
         :active{
             filter: brightness(95%);
         }
     }
     #button4 {
-        background-color: ${({ theme }) => theme.color.green};
+        background-color: ${({ theme }) => theme.color.pink};
         :hover{
             filter: brightness(110%);
+            transition: all .2s ease;
+
         }
         :active{
             filter: brightness(95%);
         }
     }
     #button5 {
-        background-color: ${({ theme }) => theme.color.pink};
+        background-color: ${({ theme }) => theme.color.green};
         :hover{
-            filter: brightness(110%);
+            background-color: #91be12;
         }
         :active{
-            filter: brightness(95%);
+            background-color: #7da40f;
         }
 
-        height: 70px;
         ${({ theme }) => theme.media.above.sm} {
             height: 100px;
         }
         ${({ theme }) => theme.media.above.md} {
-            height: 45px;
+            height: 100px;
         }
         ${({ theme }) => theme.media.above.lg} {
-            height: 66px;
+            height: 100px;
         }
     }
 `;
@@ -161,11 +218,13 @@ const FirstRow = styled(StyledRow)`
         }
     }
 `;
+
 const SecondRow = styled(StyledRow)`
     margin: 0;
+    background-color: ${({ theme }) => theme.color.green};
 
-    div {
-        padding: 0;
+    img{
+        width: 100%;
     }
 
     ${({ theme }) => theme.media.above.md} {
@@ -178,6 +237,8 @@ const SecondRow = styled(StyledRow)`
         margin: 21px 0 30px;
     }
 `;
+
+
 
 const Wrapper = styled.div`
     padding: 14px 0 25px;
