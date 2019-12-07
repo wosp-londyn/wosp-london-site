@@ -37,13 +37,11 @@ const Sidebar = () => {
                     WPŁAĆ NA WOŚP
                 </StyledButton>
                 <StyledButton
-                    as="a"
-                    href="https://www.wosp.org.pl/final/dla-wolontariuszy"
-                    rel="noreferrer noopener"
-                    target="_blank"
+                    as={Link}
+                    to="/informacje/program"
                     bgcolor="pink"
                 >
-                    ZOSTAŃ WOLONTARIUSZEM
+                    PROGRAM
                 </StyledButton>
             </ButtonsContainer>
             <SponsorsBar>SPONSORZY</SponsorsBar>

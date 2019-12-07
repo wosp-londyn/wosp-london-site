@@ -29,7 +29,7 @@ const ButtonsToolbar = () => {
                     <Button
                         id="button4"
                         as={Link}
-                        to="/wspieraj-nas/wplac-na-wosp"
+                        to="/informacje/program"
                     >
                         PROGRAM
                     </Button>
