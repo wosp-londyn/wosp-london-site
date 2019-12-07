@@ -29,7 +29,6 @@ export default class RoutePaths extends Component {
 
     render() {
         const { data } = this.state;
-        console.log(data);
 
         return (
             <Switch>
