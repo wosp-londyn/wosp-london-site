@@ -43,7 +43,7 @@ const Home = () => {
                         <PostCardGrid />
                     </Col>
                     <Col md={12} xl={4} as="aside">
-                        <MainSponsor />
+                        {/* <MainSponsor /> */}
                         <FacebookWidget />
                     </Col>
                 </Row>
