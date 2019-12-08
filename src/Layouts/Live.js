@@ -2,16 +2,17 @@ import React from 'react';
 
 const Live = () => {
     return (
-        <div>
-            Trzeba tutaj napisać coś mądrego na temat live
-            <br />
-            <br />
-            <ul>
-                <li>#będzie</li>
-                <li>#jeszczeNieMa</li>
-                <li>#kiedyBędzie</li>
-                <li>#SieMa</li>
-            </ul>
+        <div style={{ fontSize: '17px' }}>
+            <p>
+                Finał WOŚP transmitujemy na żywo!
+                <br />
+                Śledźcie nas uważnie i czekajcie na więcej informacji!
+            </p>
+            <p>
+                Gramy do końca świata i o jeden dzień dłużej!
+                <br />
+                Sie ma!
+            </p>
         </div>
     );
 };
