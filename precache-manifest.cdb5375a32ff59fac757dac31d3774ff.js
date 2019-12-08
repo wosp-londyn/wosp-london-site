@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2d3d35b4cec24a509f0e819d56470760",
+    "revision": "68a5dcea231e0edde3bb31fc9c079c41",
     "url": "//www.wosplondyn.uk/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn.uk/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "879070201932c9c64c4b",
+    "revision": "f4507a4ec876b82e7f57",
     "url": "//www.wosplondyn.uk/static/css/main.bae90056.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn.uk/static/js/2.a7d2db0c.chunk.js"
   },
   {
-    "revision": "879070201932c9c64c4b",
-    "url": "//www.wosplondyn.uk/static/js/main.02e3b4e0.chunk.js"
+    "revision": "f4507a4ec876b82e7f57",
+    "url": "//www.wosplondyn.uk/static/js/main.09d5f439.chunk.js"
   },
   {
     "revision": "299bd27c19c194802ee5",
