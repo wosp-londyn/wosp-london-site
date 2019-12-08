@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import instagram from '../Assets/Images/instagram.webp';
 // import { Link } from 'react-router-dom';
 
 const SocialBar = () => {
@@ -19,7 +20,7 @@ const SocialBar = () => {
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/wosplondyn/"
             >
-                ig
+                <img src={instagram} alt="" />
             </Icon>
             <Icon
                 id="facebook"
@@ -47,6 +48,11 @@ const Icon = styled.a`
 
     box-shadow: 2px 5px 8px -5px black;
 
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
     &#allegro {
         background-color: #ff8140;
         color: white;
@@ -60,6 +66,7 @@ const Icon = styled.a`
     &#facebook {
         background-color: #429be9;
         color: white;
+        font-family: 'Klavika';
     }
     :hover {
         color: rgba(0, 0, 0, 0.2) !important;
