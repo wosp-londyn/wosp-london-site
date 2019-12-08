@@ -14,33 +14,29 @@ const Leitmotiv = () => {
 };
 
 const StyledRow = styled(Row)`
-    text-transform: uppercase;
-    font-size: 14px;
-
-
-    & div:nth-child(1) {
-        font-weight: 700;
-        display: inline-block;
-        padding-right: 20px;
-    }
-    & div:nth-child(2) {
-        font-weight: 500;
-        display: inline-block;
-    }
-
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    padding: 5px 0;
+    display: none;
 
     ${({ theme }) => theme.media.above.sm} {
+        height: 100%;
+
+        display: flex;
         flex-direction: row;
+
+        padding: 10px 0 10px 0;
+
+        text-transform: uppercase;
         text-align: center;
-        padding: 10px 0;
-        padding-left: 0;
         font-size: 14px;
+
+        & div:nth-child(1) {
+            font-weight: 700;
+            display: inline-block;
+            padding-right: 20px;
+        }
+        & div:nth-child(2) {
+            font-weight: 500;
+            display: inline-block;
+        }
     }
 
     ${({ theme }) => theme.media.above.md} {
