@@ -5,7 +5,7 @@ import { NavDropdown, Nav, Container } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Menu = () => {
+const Menu = ({ setExpanded }) => {
     const newsDropdown = [
         { name: 'Artykuły', slug: '/artykuly' },
         { name: 'Galeria', slug: '/galeria' },
@@ -39,6 +39,7 @@ const Menu = () => {
                         key={item.name}
                         as={Link}
                         to={`/aktualnosci${item.slug}`}
+                        onClick={() => setExpanded(false)}
                     >
                         {item.name}
                     </StyledNavDropdownItem>
@@ -50,6 +51,7 @@ const Menu = () => {
                         key={item.name}
                         as={Link}
                         to={`/informacje${item.slug}`}
+                        onClick={() => setExpanded(false)}
                     >
                         {item.name}
                     </StyledNavDropdownItem>
@@ -61,6 +63,7 @@ const Menu = () => {
                     href="https://www.wosp.org.pl/final/dla-wolontariuszy"
                     rel="noreferrer noopener"
                     target="_blank"
+                    onClick={() => setExpanded(false)}
                 >
                     Zostań Wolontariuszem
                 </StyledNavDropdownItem>
@@ -69,6 +72,7 @@ const Menu = () => {
                         key={item.name}
                         as={Link}
                         to={`/wspieraj-nas${item.slug}`}
+                        onClick={() => setExpanded(false)}
                     >
                         {item.name}
                     </StyledNavDropdownItem>
@@ -76,7 +80,11 @@ const Menu = () => {
             </WspNavDropdown>
 
             <StyledContainer>
-                <Nav.Link as={Link} to="/kontakt">
+                <Nav.Link
+                    as={Link}
+                    to="/kontakt"
+                    onClick={() => setExpanded(false)}
+                >
                     KONTAKT
                 </Nav.Link>
             </StyledContainer>

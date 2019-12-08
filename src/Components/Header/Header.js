@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
@@ -9,6 +9,8 @@ import Leitmotiv from './Leitmotiv';
 import Brand from './Brand';
 
 const Header = ({ sectionColor }) => {
+    const [expanded, setExpanded] = useState(false);
+
     return (
         <>
             <Container fluid as="header">
@@ -27,14 +29,22 @@ const Header = ({ sectionColor }) => {
 
                 <BottomRow>
                     <Container>
-                        <Navbar collapseOnSelect expand="lg" variant="dark">
+                        <Navbar expanded={expanded} expand="lg" variant="dark">
                             <Navbar.Brand as={Link} to="/">
                                 <Brand />
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Navbar.Toggle
+                                onClick={() =>
+                                    setExpanded(expanded ? false : 'expanded')
+                                }
+                                aria-controls="basic-navbar-nav"
+                            />
                             <StyledNavbarCollapse id="basic-navbar-nav">
                                 <Nav className="mr-auto" />
-                                <Menu sectionColor={sectionColor} />
+                                <Menu
+                                    sectionColor={sectionColor}
+                                    setExpanded={setExpanded}
+                                />
                             </StyledNavbarCollapse>
                         </Navbar>
                     </Container>
