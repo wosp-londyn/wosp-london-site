@@ -17,7 +17,9 @@ export default class RoutePaths extends Component {
     }
 
     fetchPostData() {
-        fetch(`https://wosplondyn.uk/wp-json/wp/v2/posts?_embed&per_page=100`)
+        fetch(
+            `https://wosplondyn-api.tk/wp-json/wp/v2/posts?_embed&per_page=100`
+        )
             .then(response => response.json())
             .then(responseJSON => {
                 this.setState({

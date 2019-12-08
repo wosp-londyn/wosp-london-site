@@ -22,7 +22,7 @@ class PostCardGrid extends Component {
 
     fetchPostData() {
         fetch(
-            `https://wosplondyn.uk/wp-json/wp/v2/posts?_embed&per_page=4&page=1`
+            `https://wosplondyn-api.tk/wp-json/wp/v2/posts?_embed&per_page=4&page=1`
         )
             .then(response => response.json())
             .then(responseJSON => {
@@ -39,7 +39,7 @@ class PostCardGrid extends Component {
             <Wrapper>
                 <StyledSectionHeader color={({ theme }) => theme.color.blue}>
                     AKTUALNOŚCI
-               </StyledSectionHeader>
+                </StyledSectionHeader>
 
                 <StyledCardDeck>
                     {data.map((post, index) => (
@@ -51,9 +51,9 @@ class PostCardGrid extends Component {
     }
 }
 const StyledSectionHeader = styled(SectionHeader)`
-     height: 80px;
-     font-weight: 700;
-     font-size: 1.25rem;
+    height: 80px;
+    font-weight: 700;
+    font-size: 1.25rem;
 `;
 
 const Wrapper = styled.div`

@@ -15,7 +15,7 @@ export default class PageTemplate extends Component {
 
     fetchPostData() {
         const { slug } = this.props;
-        fetch(`https://wosplondyn.uk/wp-json/wp/v2/pages?slug=${slug}`)
+        fetch(`https://wosplondyn-api.tk/wp-json/wp/v2/pages?slug=${slug}`)
             .then(response => response.json())
             .then(responseJSON => {
                 this.setState({

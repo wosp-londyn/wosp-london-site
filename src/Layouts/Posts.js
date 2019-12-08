@@ -17,7 +17,7 @@ class Posts extends Component {
 
     fetchPostData() {
         fetch(
-            `https://wosplondyn.uk/wp-json/wp/v2/posts?_embed&per_page=100&page=1`
+            `https://wosplondyn-api.tk/wp-json/wp/v2/posts?_embed&per_page=100&page=1`
         )
             .then(response => response.json())
             .then(responseJSON => {
