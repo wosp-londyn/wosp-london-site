@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import instagram from '../Assets/Images/instagram.webp';
 // import { Link } from 'react-router-dom';
 
-const SocialBar = () => {
+const SocialBar = ({ right }) => {
     return (
-        <Wrapper>
+        <Wrapper right={right}>
             <Icon
                 id="allegro"
                 target="_blank"
@@ -85,7 +85,7 @@ const Wrapper = styled.div`
         justify-content: space-between;
         align-content: center;
 
-        margin: 15px auto;
+        margin: ${({ right }) => (right ? '15px 0 15px auto' : '15px auto')};
     }
 `;
 

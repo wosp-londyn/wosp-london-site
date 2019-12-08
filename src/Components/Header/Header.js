@@ -21,7 +21,7 @@ const Header = ({ sectionColor }) => {
                                 <Leitmotiv />
                             </Col>
                             <Col md={2}>
-                                <SocialMedia />
+                                <SocialMedia right />
                             </Col>
                         </Row>
                     </Container>
