@@ -17,47 +17,67 @@ const Footer = () => {
     ];
 
     return (
-        <>
-            <StyledContainer fluid>
+        <footer>
+            <Top>
                 <Container md="12">
                     <StyledRow>
                         <StyledCol xs={12} md={4}>
-                            <img src={logo} id="heart" alt="wosp logo" />
+                            <Img src={logo} alt="wosp logo" />
                         </StyledCol>
                         <StyledCol xs={12} md={4}>
-                            <WrapperSecondColumn>
-                                <h2>NA SKRÓTY</h2>
-                                <br />
-                                <StyledNav className="flex-column">
-                                    {links.map(link => (
-                                        <Nav.Link
-                                            key={link.slug}
-                                            as={Link}
-                                            to={link.slug}
-                                            className="links"
-                                        >
-                                            {link.name}
-                                        </Nav.Link>
-                                    ))}
-                                </StyledNav>
-                            </WrapperSecondColumn>
+                            <h2>NA SKRÓTY</h2>
+                            <br />
+                            <StyledNav>
+                                {links.map(link => (
+                                    <Nav.Link
+                                        key={link.slug}
+                                        as={Link}
+                                        to={link.slug}
+                                    >
+                                        {link.name}
+                                    </Nav.Link>
+                                ))}
+                            </StyledNav>
                         </StyledCol>
                         <StyledCol xs={12} md={4}>
-                            <WrapperContact>
-                                <h2>KONTAKT</h2>
-                                <br />
-                                <p>WOŚP sztab w Londynie</p>
-                                <p>E-mail: koordynator@wosplondyn.uk</p>
-                            </WrapperContact>
-                            <WrapperSocialMedia class="align-bottom" >
-                                <SocialMedia/>
-                            </WrapperSocialMedia>
+                            <h2>KONTAKT</h2>
+                            <br />
+
+                            <h6>WOŚP sztab w Londynie</h6>
+                            <br />
+                            <br />
+
+                            <section>
+                                <address>
+                                    <a href="mailto:koordynator@wosplondyn.uk">
+                                        koordynator@wosplondyn.uk
+                                    </a>
+                                </address>
+                                <address>
+                                    <a href="mailto:wolontariusze@wosplondyn.uk">
+                                        wolontariusze@wosplondyn.uk
+                                    </a>
+                                </address>
+                                <address>
+                                    <a href="mailto:sponsorzy@wosplondyn.uk">
+                                        sponsorzy@wosplondyn.uk
+                                    </a>
+                                </address>
+                                <address>
+                                    <a href="mailto:media@wosplondyn.uk">
+                                        media@wosplondyn.uk
+                                    </a>
+                                </address>
+                            </section>
+                            <br />
+
+                            <SocialMedia />
                         </StyledCol>
                     </StyledRow>
                 </Container>
-            </StyledContainer>
+            </Top>
 
-            <FooterBottom fluid>
+            <Bottom>
                 <Container md="12">
                     <Row>
                         <Col>
@@ -67,55 +87,57 @@ const Footer = () => {
                         </Col>
                     </Row>
                 </Container>
-            </FooterBottom>
-        </>
+            </Bottom>
+        </footer>
     );
 };
 
 const StyledNav = styled(Nav)`
-    a:hover {
-        color: white;
-    }
-`;
+    display: flex;
+    flex-direction: column;
 
-const StyledContainer = styled(Container)`
-    background: ${({ theme }) => theme.color.navyBlue};
-    margin-top: 150px;
+    a {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.75;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
 `;
 
 const StyledRow = styled(Row)`
     padding: 15px 0 0 0;
 
-    div:nth-child(2) {
+    > div:nth-child(2) {
         border-top: 1px solid white;
         border-bottom: 1px solid white;
 
-    }
-    ${({ theme }) => theme.media.above.md} {
-        padding: 30px 0 30px 0;
-
-        div:nth-child(2) {
+        ${({ theme }) => theme.media.above.md} {
             border-top: 0;
             border-bottom: 0;
             border-left: 1px solid white;
             border-right: 1px solid white;
         }
     }
+
+    ${({ theme }) => theme.media.above.md} {
+        padding: 30px 0 30px 0;
+    }
 `;
 
 const StyledCol = styled(Col)`
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    :first-child{
+
+    padding: 15px 0;
+
+    :first-child {
         padding-top: 40px;
         padding-bottom: 40px;
         height: 350px;
 
         ${({ theme }) => theme.media.above.md} {
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: 0;
-            padding-right: 20px;
+            padding: 0 20px 0 0;
             height: auto;
             margin: auto;
         }
@@ -126,52 +148,36 @@ const StyledCol = styled(Col)`
         color: white !important;
         font-weight: 700 !important;
     }
-    img{
-        max-width: 100%;
-        max-height: 100%;
 
-        ${({ theme }) => theme.media.above.lg} {
-            max-width: 80%;
-            max-height: 80%;
-        }
-    }
-`;
-
-
-const WrapperSecondColumn = styled.div`
-    text-align: center;
-    text-transform: uppercase;
-    padding: 15px 0 15px 0;
-
-
-    .links {
+    a {
         color: rgba(255, 255, 255, 0.6);
-        line-height: 1.75;
         font-weight: 400;
         font-size: 16px;
-    }
-`;
-const WrapperContact = styled.div`
-    padding: 15px 0 0 0;
-
-`;
-const WrapperSocialMedia = styled(Col)`
-    display: inline;
-    border: none !important;
-    a {
-        align-content: space-around;
+        text-decoration: none;
     }
 
     a:hover {
-        box-shadow: 2px 5px 8px -5px white;
         color: white;
-    }
-    div{
-        margin: auto;
     }
 `;
 
-const FooterBottom = styled(Container)`
+const Img = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+
+    ${({ theme }) => theme.media.above.lg} {
+        max-width: 80%;
+        max-height: 80%;
+    }
+`;
+
+const Top = styled.section`
+    background: ${({ theme }) => theme.color.navyBlue};
+    margin-top: 150px;
+    width: 100%;
+`;
+
+const Bottom = styled.section`
     background: ${({ theme }) => theme.color.footerBottom};
     color: white;
     text-align: center;
