@@ -128,21 +128,6 @@ const StyledRow = styled(Row)`
 const StyledCol = styled(Col)`
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    :first-child{
-        padding-top: 40px;
-        padding-bottom: 40px;
-        height: 350px;
-
-        ${({ theme }) => theme.media.above.md} {
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: 0;
-            padding-right: 20px;
-            height: auto;
-            margin: auto;
-        }
-    }
-
     padding: 15px 0;
 
     :first-child {
@@ -165,7 +150,7 @@ const StyledCol = styled(Col)`
     img{
         max-width: 100%;
         max-height: 100%;
-
+    }
     a {
         color: rgba(255, 255, 255, 0.6);
         font-weight: 400;
@@ -177,8 +162,6 @@ const StyledCol = styled(Col)`
         color: white;
     }
 `;
-const WrapperContact = styled.div`
-    padding: 15px 0 0 0;
 
 const Img = styled.img`
     max-width: 100%;
