@@ -92,12 +92,17 @@ const StyledCardBody = styled(Container)`
 `;
 
 const BodyWrapper = styled(Col)`
-     padding: 0;
+     padding: 15px 0 15px 0;
      background: white;
 
      :last-child{
           text-align: right;
      }
+
+     ${({ theme }) => theme.media.above.md} {
+        padding: 0;
+    }
+
 `;
 
 const ImgWrapper = styled(Col)`
