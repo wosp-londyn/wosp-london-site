@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a7bfb9143b921c26637480ff1bb23b2",
+    "revision": "0bbac10a9f06a43fc653a0542f1b9d4c",
     "url": "//www.wosplondyn-dev.tk/index.html"
   },
   {
-    "revision": "5959f4299383853e877b",
+    "revision": "b8b304e05cf5c1da6143",
     "url": "//www.wosplondyn-dev.tk/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "301d8c90830ee93bf100",
-    "url": "//www.wosplondyn-dev.tk/static/css/main.9990d20c.chunk.css"
+    "revision": "a9a6c2644491e816bbe5",
+    "url": "//www.wosplondyn-dev.tk/static/css/main.701de2d1.chunk.css"
   },
   {
-    "revision": "5959f4299383853e877b",
-    "url": "//www.wosplondyn-dev.tk/static/js/2.d4612fb5.chunk.js"
+    "revision": "b8b304e05cf5c1da6143",
+    "url": "//www.wosplondyn-dev.tk/static/js/2.d74c5d8f.chunk.js"
   },
   {
-    "revision": "301d8c90830ee93bf100",
-    "url": "//www.wosplondyn-dev.tk/static/js/main.f5638b6b.chunk.js"
+    "revision": "a9a6c2644491e816bbe5",
+    "url": "//www.wosplondyn-dev.tk/static/js/main.a2cf256d.chunk.js"
   },
   {
     "revision": "2e2112e44280efea25b7",
@@ -40,6 +40,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn-dev.tk/static/media/Raleway-700.f49f3d2d.ttf"
   },
   {
+    "revision": "08dfbbfc22844f528e07d883f580dd72",
+    "url": "//www.wosplondyn-dev.tk/static/media/allegro.08dfbbfc.png"
+  },
+  {
     "revision": "8fe6c2b9bb240dcb68d141f98632799e",
     "url": "//www.wosplondyn-dev.tk/static/media/ant.8fe6c2b9.png"
   },
@@ -52,12 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//www.wosplondyn-dev.tk/static/media/emotionwraps.d85c8ade.png"
   },
   {
-    "revision": "ddeaa37c03c8a3989749846d9a156dd7",
-    "url": "//www.wosplondyn-dev.tk/static/media/logo-512.ddeaa37c.png"
+    "revision": "d1135e8c64f3a8ef581f678c49497712",
+    "url": "//www.wosplondyn-dev.tk/static/media/instagram.d1135e8c.webp"
   },
   {
-    "revision": "6b0d31a1a42d3e4c6fe059d57f05d392",
-    "url": "//www.wosplondyn-dev.tk/static/media/logo132.6b0d31a1.png"
+    "revision": "ddeaa37c03c8a3989749846d9a156dd7",
+    "url": "//www.wosplondyn-dev.tk/static/media/logo-512.ddeaa37c.png"
   },
   {
     "revision": "6c5626d9e0f3e38bf1134365048e7a2f",
