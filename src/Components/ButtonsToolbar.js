@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Button, Row, Col, Image, Container} from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import transfergo from '../Assets/Images/Sponsors/transfergo.png';
 
 // Buttons under slider - homepage
@@ -26,28 +26,31 @@ const ButtonsToolbar = () => {
                     </Button>
                 </Col>
                 <Col xs={12} md={3}>
-                    <Button
-                        id="button4"
-                        as={Link}
-                        to="/informacje/program"
-                    >
+                    <Button id="button4" as={Link} to="/informacje/program">
                         PROGRAM
                     </Button>
                 </Col>
             </FirstRow>
             <SecondRow>
-                    <Button
-                        id="button5"
-                        as="a"
-                        href="https://www.wosp.org.pl/final/dla-wolontariuszy"
-                        rel="noreferrer noopener"
-                        target="_blank"
-                    >
-                        <ButtonRow xs={12}>
-                            <Col xs={6} md={12} className="align-self-center">WPŁAĆ NA WOŚP</Col>
-                            <Col xs={6} md={3} className="align-self-center"><p>Powered by</p><img src={transfergo} alt=""/></Col>
-                        </ButtonRow>
-                    </Button>
+                <Button
+                    id="button5"
+                    as={Link}
+                    to="/wspieraj-nas/wplac-na-wosp"
+                    // as="a"
+                    // href="https://www.wosp.org.pl/final/dla-wolontariuszy"
+                    // rel="noreferrer noopener"
+                    // target="_blank"
+                >
+                    <ButtonRow xs={12}>
+                        <Col xs={6} md={12} className="align-self-center">
+                            WPŁAĆ NA WOŚP
+                        </Col>
+                        <Col xs={6} md={3} className="align-self-center">
+                            <p>Powered by</p>
+                            <img src={transfergo} alt="" />
+                        </Col>
+                    </ButtonRow>
+                </Button>
             </SecondRow>
         </Wrapper>
     );
@@ -140,31 +143,31 @@ const StyledRow = styled(Row)`
     }
     #button1 {
         background-color: ${({ theme }) => theme.color.blue};
-        :hover{
+        :hover {
             filter: brightness(110%);
             transition: all .2s ease;
         }
-        :active{
+        :active {
             filter: brightness(95%);
         }
     }
     #button2 {
         background-color: ${({ theme }) => theme.color.orange};
-        :hover{
+        :hover {
             filter: brightness(110%);
             transition: all .2s ease;
         }
-        :active{
+        :active {
             filter: brightness(95%);
         }
     }
     #button3 {
         background-color: ${({ theme }) => theme.color.red};
-        :hover{
+        :hover {
             filter: brightness(110%);
             transition: all .2s ease;
         }
-        :active{
+        :active {
             filter: brightness(95%);
         }
     }
@@ -175,7 +178,7 @@ const StyledRow = styled(Row)`
             transition: all .2s ease;
 
         }
-        :active{
+        :active {
             filter: brightness(95%);
         }
     }

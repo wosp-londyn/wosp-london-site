@@ -1,7 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+import PageTemplate from '../Templates/PageTemplate';
 
-const Partners = () => {
-    return <div>Media</div>;
+const ContentBlock = styled.div``;
+
+const Media = () => {
+    return <PageTemplate slug="media" ContentWrapper={ContentBlock} />;
 };
 
-export default Partners;
+export default Media;

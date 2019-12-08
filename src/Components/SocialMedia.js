@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import instagram from '../Assets/Images/instagram.webp';
+import allegro from '../Assets/Images/allegro.png';
+import facebook from '../Assets/Images/facebook.png';
 // import { Link } from 'react-router-dom';
 
-const SocialBar = () => {
+const SocialBar = ({ right }) => {
     return (
-        <Wrapper>
+        <Wrapper right={right}>
             <Icon
                 id="allegro"
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://aukcje.wosp.org.pl/"
             >
-                A
+                <img src={allegro} alt="" />
             </Icon>
             <Icon
                 id="instagram"
@@ -19,7 +22,7 @@ const SocialBar = () => {
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/wosplondyn/"
             >
-                ig
+                <img src={instagram} alt="" />
             </Icon>
             <Icon
                 id="facebook"
@@ -27,7 +30,7 @@ const SocialBar = () => {
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/wosplondyn"
             >
-                f
+                <img src={facebook} alt="" />
             </Icon>
         </Wrapper>
     );
@@ -46,6 +49,11 @@ const Icon = styled.a`
     font-weight: bold;
 
     box-shadow: 2px 5px 8px -5px black;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 
     &#allegro {
         background-color: #ff8140;
@@ -78,7 +86,7 @@ const Wrapper = styled.div`
         justify-content: space-between;
         align-content: center;
 
-        margin: 15px 0 15px auto;
+        margin: ${({ right }) => (right ? '15px 0 15px auto' : '15px auto')};
     }
 `;
 
