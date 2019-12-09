@@ -56,20 +56,20 @@ const ButtonsToolbar = () => {
     );
 };
 const ButtonRow = styled(Row)`
-    div:first-child {
+    div:first-child{
         text-align: right;
         padding-right: 0;
         ${({ theme }) => theme.media.above.md} {
             text-align: center;
         }
     }
-    div:nth-child(2) {
+    div:nth-child(2){
         width: auto;
         padding-left: 25px;
         text-align: left;
         font-size: 10px;
         font-weight: 400;
-        p {
+        p{
             margin: 0;
         }
 
@@ -80,19 +80,17 @@ const ButtonRow = styled(Row)`
             display: inline;
             padding-left: 0;
             position: absolute;
-            bottom: 60px;
             left: 490px;
         }
         ${({ theme }) => theme.media.above.lg} {
             left: 730px;
-            bottom: 65px;
         }
         ${({ theme }) => theme.media.above.xl} {
             left: 890px;
-            bottom: 45px;
         }
+
     }
-    img {
+    img{
         max-width: 150px !important;
         padding-top: 2px;
         ${({ theme }) => theme.media.above.sm} {
@@ -104,7 +102,10 @@ const ButtonRow = styled(Row)`
         ${({ theme }) => theme.media.above.xl} {
             max-width: 220px !important;
         }
+
+
     }
+
 `;
 const StyledRow = styled(Row)`
     width: 100%;
@@ -144,7 +145,7 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.blue};
         :hover {
             filter: brightness(110%);
-            transition: all 0.2s ease;
+            transition: all .2s ease;
         }
         :active {
             filter: brightness(95%);
@@ -154,7 +155,7 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.orange};
         :hover {
             filter: brightness(110%);
-            transition: all 0.2s ease;
+            transition: all .2s ease;
         }
         :active {
             filter: brightness(95%);
@@ -164,7 +165,7 @@ const StyledRow = styled(Row)`
         background-color: ${({ theme }) => theme.color.red};
         :hover {
             filter: brightness(110%);
-            transition: all 0.2s ease;
+            transition: all .2s ease;
         }
         :active {
             filter: brightness(95%);
@@ -172,9 +173,10 @@ const StyledRow = styled(Row)`
     }
     #button4 {
         background-color: ${({ theme }) => theme.color.pink};
-        :hover {
+        :hover{
             filter: brightness(110%);
-            transition: all 0.2s ease;
+            transition: all .2s ease;
+
         }
         :active {
             filter: brightness(95%);
@@ -182,10 +184,10 @@ const StyledRow = styled(Row)`
     }
     #button5 {
         background-color: ${({ theme }) => theme.color.green};
-        :hover {
+        :hover{
             background-color: #91be12;
         }
-        :active {
+        :active{
             background-color: #7da40f;
         }
 
@@ -224,7 +226,7 @@ const SecondRow = styled(StyledRow)`
     margin: 0;
     background-color: ${({ theme }) => theme.color.green};
 
-    img {
+    img{
         width: 100%;
     }
 
@@ -238,6 +240,8 @@ const SecondRow = styled(StyledRow)`
         margin: 21px 0 30px;
     }
 `;
+
+
 
 const Wrapper = styled.div`
     padding: 14px 0 25px;

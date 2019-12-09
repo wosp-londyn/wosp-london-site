@@ -9,7 +9,6 @@ import {
     // FacebookCardGrid,
     FacebookWidget,
     BackgroundHome,
-    MainSponsor,
 } from '../Components';
 import windowDimensions from '../Utils/useWindowDimensions';
 
@@ -43,7 +42,6 @@ const Home = () => {
                         <PostCardGrid />
                     </Col>
                     <Col md={12} xl={4} as="aside">
-                        {/* <MainSponsor /> */}
                         <FacebookWidget />
                     </Col>
                 </Row>

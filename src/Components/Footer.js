@@ -128,7 +128,6 @@ const StyledRow = styled(Row)`
 const StyledCol = styled(Col)`
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
-
     padding: 15px 0;
 
     :first-child {
@@ -148,7 +147,10 @@ const StyledCol = styled(Col)`
         color: white !important;
         font-weight: 700 !important;
     }
-
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
     a {
         color: rgba(255, 255, 255, 0.6);
         font-weight: 400;

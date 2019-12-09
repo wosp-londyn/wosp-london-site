@@ -48,8 +48,6 @@ const Icon = styled.a`
     line-height: 160%;
     font-weight: bold;
 
-    box-shadow: 2px 5px 8px -5px black;
-
     img {
         width: 100%;
         height: 100%;
