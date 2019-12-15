@@ -11,7 +11,7 @@ const ButtonsToolbar = () => {
         <Wrapper>
             <FirstRow>
                 <Col xs={12} md={3}>
-                    <Button id="button1" as={Link} to="/informacje/gwiazdy">
+                    <Button id="button1" as={Link} to="/informacje/program">
                         PROGRAM
                     </Button>
                 </Col>

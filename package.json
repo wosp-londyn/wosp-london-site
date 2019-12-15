@@ -1,6 +1,6 @@
 {
     "name": "wosp-london-site",
-    "homepage": "http://www.wosplondyn.uk/",
+    "homepage": "https://wosplondyn.uk/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
