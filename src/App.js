@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,9 +16,6 @@ class App extends PureComponent {
     render() {
         return (
             <>
-                <Helmet>
-                    <title>WOŚP Londyn</title>
-                </Helmet>
                 <Router>
                     <ScrollToTop>
                         <MainLayout>

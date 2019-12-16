@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -13,37 +14,51 @@ class PostTemplate extends Component {
         const date = new Date(post.date);
 
         return (
-            <StyledContainer>
-                <HeadRow>
-                    <Col>
-                        <img
-                            variant="top"
-                            src={
-                                post._embedded['wp:featuredmedia']['0']
-                                    .source_url
-                            }
-                            alt={
-                                post._embedded['wp:featuredmedia']['0'].alt_text
-                            }
-                        />
-                        <Fade />
-                        <h1>{post.title.rendered}</h1>
-                    </Col>
-                </HeadRow>
-                <HrRow>
-                    <Col>
-                        <p>{`${date.getDate()}.${date.getMonth() +
-                            1}.${date.getFullYear()}`}</p>
-                    </Col>
-                </HrRow>
-                <Row>
-                    <ContentBlock
-                        dangerouslySetInnerHTML={createMarkup(
-                            post.content.rendered
-                        )}
+            <>
+                <Helmet>
+                    <title>WOŚP Londyn - {post.title.rendered}</title>
+                    <meta
+                        name="description"
+                        content={`${post.excerpt.rendered}...`}
                     />
-                </Row>
-            </StyledContainer>
+                    <meta
+                        name="keywords"
+                        content="WOŚP, WOŚP 2020, WOŚP Londyn, WOŚP Anglia, WOŚP Wielka Brytania, zbiórka pieniędzy Londyn, WOŚP London, WOŚP Great Britain, WOŚP England, WOŚP informacje, WOŚP Londyn informacje, WOŚP London informations, WOŚP gwiazdy, WOŚP kto zagra, WOŚP Londyn kto gra, zespoły WOŚP Londyn "
+                    />
+                </Helmet>
+                <StyledContainer>
+                    <HeadRow>
+                        <Col>
+                            <img
+                                variant="top"
+                                src={
+                                    post._embedded['wp:featuredmedia']['0']
+                                        .source_url
+                                }
+                                alt={
+                                    post._embedded['wp:featuredmedia']['0']
+                                        .alt_text
+                                }
+                            />
+                            <Fade />
+                            <h1>{post.title.rendered}</h1>
+                        </Col>
+                    </HeadRow>
+                    <HrRow>
+                        <Col>
+                            <p>{`${date.getDate()}.${date.getMonth() +
+                                1}.${date.getFullYear()}`}</p>
+                        </Col>
+                    </HrRow>
+                    <Row>
+                        <ContentBlock
+                            dangerouslySetInnerHTML={createMarkup(
+                                post.content.rendered
+                            )}
+                        />
+                    </Row>
+                </StyledContainer>
+            </>
         );
     }
 }

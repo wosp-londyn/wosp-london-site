@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 
@@ -51,6 +52,17 @@ const MainLayout = ({ children }) => {
 
     return (
         <>
+            <Helmet>
+                <title>WOŚP Londyn</title>
+                <meta
+                    name="description"
+                    content="WOŚP Londyn - Sprawdź kto zagra z nami w tym roku! Dołącz do nas! - Gramy do końca świata i o jeden dzień dłużej!"
+                />
+                <meta
+                    name="keywords"
+                    content="WOŚP, WOŚP 2020, WOŚP Londyn, WOŚP Anglia, WOŚP Wielka Brytania, zbiórka pieniędzy Londyn, WOŚP London, WOŚP Great Britain, WOŚP England "
+                />
+            </Helmet>
             <ThemeProvider theme={theme}>
                 <>
                     <GlobalStyle />
