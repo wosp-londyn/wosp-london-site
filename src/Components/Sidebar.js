@@ -14,7 +14,7 @@ import {
 
 const Sidebar = () => {
     const goldSponsors = [
-        { img: mleczko, link: 'http://www.mieszko.co.uk/' },
+        { img: mleczko, link: 'https://www.mleczkodelikatesy.com/' },
         { img: smartchoice, link: 'https://smartchoicegroup.co.uk/' },
         { img: ant, link: 'https://antbm.co.uk/' },
     ];
@@ -36,11 +36,7 @@ const Sidebar = () => {
                 >
                     WPŁAĆ NA WOŚP
                 </StyledButton>
-                <StyledButton
-                    as={Link}
-                    to="/informacje/program"
-                    bgcolor="pink"
-                >
+                <StyledButton as={Link} to="/informacje/program" bgcolor="pink">
                     PROGRAM
                 </StyledButton>
             </ButtonsContainer>
