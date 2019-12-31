@@ -34,12 +34,12 @@ const ButtonsToolbar = () => {
             <SecondRow>
                 <Button
                     id="button5"
-                    as={Link}
-                    to="/wspieraj-nas/wplac-na-wosp"
-                    // as="a"
-                    // href="https://www.wosp.org.pl/final/dla-wolontariuszy"
-                    // rel="noreferrer noopener"
-                    // target="_blank"
+                    // as={Link}
+                    // to="/wspieraj-nas/wplac-na-wosp"
+                    as="a"
+                    href="https://try.transfergo.com/wosplondon/"
+                    rel="noreferrer noopener"
+                    target="_blank"
                 >
                     <ButtonRow xs={12}>
                         <Col xs={6} md={12} className="align-self-center">

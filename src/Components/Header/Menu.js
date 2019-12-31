@@ -20,10 +20,7 @@ const Menu = ({ setExpanded }) => {
         { name: 'Media', slug: '/media' },
     ];
 
-    const supportDropdown = [
-        { name: 'Wpłać na WOŚP', slug: '/wplac-na-wosp' },
-        { name: 'Aukcje', slug: '/aukcje' },
-    ];
+    const supportDropdown = [{ name: 'Aukcje', slug: '/aukcje' }];
 
     return (
         <StyledNav className="navbar-nav navbar-right">
@@ -66,6 +63,15 @@ const Menu = ({ setExpanded }) => {
                     onClick={() => setExpanded(false)}
                 >
                     Zostań Wolontariuszem
+                </StyledNavDropdownItem>
+                <StyledNavDropdownItem
+                    as="a"
+                    href="https://try.transfergo.com/wosplondon/"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                    onClick={() => setExpanded(false)}
+                >
+                    Wpłać na WOŚP
                 </StyledNavDropdownItem>
                 {supportDropdown.map(item => (
                     <StyledNavDropdownItem
