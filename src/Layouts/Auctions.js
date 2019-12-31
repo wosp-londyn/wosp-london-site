@@ -1,5 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
+import PageTemplate from '../Templates/PageTemplate';
+
+const ContentBlock = styled.div`
+    img {
+        max-width: 100%;
+    }
+`;
 
 const Auctions = () => {
     return (
@@ -15,19 +23,7 @@ const Auctions = () => {
                     content="WOŚP, WOŚP 2020, WOŚP Londyn, WOŚP Anglia, WOŚP Wielka Brytania, zbiórka pieniędzy Londyn, WOŚP London, WOŚP Great Britain, WOŚP England, WOŚP auctions, WOŚP aukcje, WOŚP Londyn aukcje, WOŚP London auctions"
                 />
             </Helmet>
-            <div style={{ fontSize: '17px' }}>
-                <p>
-                    Aukcje pojawią się już nie długo! <br />
-                    Śledźcie uważnie nasze kanały komunikacji: <br />
-                    Facebook, Instagram i wszędzie gdzie jeszcze uda się wam nas
-                    znaleźć!
-                </p>
-                <p>
-                    Gramy do końca świata i jeden dzień dłużej!
-                    <br />
-                    Sie ma!
-                </p>
-            </div>
+            <PageTemplate slug="aukcje" ContentWrapper={ContentBlock} />
         </>
     );
 };
