@@ -1,5 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import PageTemplate from '../Templates/PageTemplate';
+
+const ContentBlock = styled.div``;
 
 const Gallery = () => {
     return (
@@ -15,7 +19,7 @@ const Gallery = () => {
                     content="WOŚP, WOŚP 2020, WOŚP Londyn, WOŚP Anglia, WOŚP Wielka Brytania, zbiórka pieniędzy Londyn, WOŚP London, WOŚP Great Britain, WOŚP England, WOŚP galeria, WOŚP gallery, WOŚP Londyn galeria, WOŚP London gallery, WOŚP zdjęcia, WOŚP Londyn zdjęcia, WOŚP w Londynie zdjęcia"
                 />
             </Helmet>
-            <div />
+            <PageTemplate slug="galeria" ContentWrapper={ContentBlock} />
         </>
     );
 };
