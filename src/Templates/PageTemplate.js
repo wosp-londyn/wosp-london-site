@@ -24,7 +24,7 @@ export default class PageTemplate extends Component {
                     data: responseJSON[0],
                     isLoading: false,
                 });
-                console.log(this.state.data);
+                // console.log(this.state.data);
             });
     }
 
@@ -33,8 +33,25 @@ export default class PageTemplate extends Component {
             return { __html: text };
         };
 
+        const removeTag = (text, phrase) => {
+            return text
+                .split(`<${  phrase  }>`)
+                .join('')
+                .split(`</${  phrase  }>`)
+                .join('');
+        };
+
         const { data, isLoading } = this.state;
         const { ContentWrapper } = this.props;
+        let rendered = '';
+
+        if (!isLoading) {
+            rendered = data.content.rendered;
+
+            if (this.props.slug === 'galeria') {
+                rendered = removeTag(rendered, 'figure');
+            }
+        }
 
         return (
             <>
@@ -42,9 +59,7 @@ export default class PageTemplate extends Component {
                     <Loading />
                 ) : (
                     <ContentWrapper
-                        dangerouslySetInnerHTML={createMarkup(
-                            data.content.rendered
-                        )}
+                        dangerouslySetInnerHTML={createMarkup(rendered)}
                     />
                 )}
             </>
