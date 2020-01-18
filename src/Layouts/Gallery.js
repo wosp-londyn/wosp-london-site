@@ -3,7 +3,61 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import PageTemplate from '../Templates/PageTemplate';
 
-const ContentBlock = styled.div``;
+const ContentBlock = styled.div`
+    ul {
+        margin-top: -5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        flex-grow: 1;
+        padding: 5px 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    ${({ theme }) => theme.media.above.md} {
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        li {
+            height: 230px;
+            flex-grow: 1;
+            padding: 5px;
+        }
+
+        img {
+            width: inherit;
+            height: inherit;
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
+
+        li:last-child:not(:nth-child(even)) {
+            width: 100%;
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        ${({ theme }) => theme.media.above.xl} {
+            li {
+                height: 270px;
+            }
+        }
+    }
+`;
 
 const Gallery = () => {
     return (

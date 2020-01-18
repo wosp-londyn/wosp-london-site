@@ -35,9 +35,9 @@ export default class PageTemplate extends Component {
 
         const removeTag = (text, phrase) => {
             return text
-                .split(`<${  phrase  }>`)
+                .split(`<${phrase}>`)
                 .join('')
-                .split(`</${  phrase  }>`)
+                .split(`</${phrase}>`)
                 .join('');
         };
 
