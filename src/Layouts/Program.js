@@ -1,10 +1,40 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab, Button } from 'react-bootstrap';
 import PageTemplate from '../Templates/PageTemplate';
 
-const ContentBlock = styled.div``;
+const ContentBlock = styled.div`
+    .wp-block-button__link {
+        border-radius: 0;
+        border: none;
+        width: 100px;
+        height: 40px;
+        margin: 0 auto 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: ${({ theme }) => theme.color.pink};
+
+        transition: opacity 0.2s ease-in-out;
+        :hover {
+            text-decoration: none;
+            color: white;
+            opacity: 90%;
+            background-color: ${({ theme }) => theme.color.pink};
+        }
+
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        ${({ theme }) => theme.media.above.xl} {
+            font-size: 16px;
+        }
+    }
+`;
 
 const Program = () => {
     return (
