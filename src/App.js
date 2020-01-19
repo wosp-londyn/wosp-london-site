@@ -6,9 +6,14 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import ReactGA from 'react-ga';
 import MainLayout from './Layouts/MainLayout';
 import ScrollToTop from './Utils/ScrollToTop';
 import RoutePaths from './RoutePaths';
+
+
+ReactGA.initialize('UA-156444412-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 library.add(faHome);
 
