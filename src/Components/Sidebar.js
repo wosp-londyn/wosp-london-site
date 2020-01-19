@@ -29,14 +29,14 @@ const Sidebar = () => {
         <Wrapper>
             <ButtonsContainer>
                 <StyledButton
-                    as={Link}
-                    to="/wspieraj-nas/wplac-na-wosp"
-                    // target="_blank"
-                    // rel="noopener noreferrer"
+                    as="a"
+                    href="https://try.transfergo.com/wosplondon/"
+                    rel="noreferrer noopener"
+                    target="_blank"
                 >
                     WPŁAĆ NA WOŚP
                 </StyledButton>
-                <StyledButton as={Link} to="/informacje/program" bgcolor="pink">
+                <StyledButton as={Link} to="/informacje/program" bgcolor="blue">
                     PROGRAM
                 </StyledButton>
             </ButtonsContainer>
@@ -131,7 +131,7 @@ const StyledButton = styled(Button)`
     align-items: center;
 
     background-color: ${({ bgcolor, theme }) =>
-        bgcolor === 'pink' ? theme.color.pink : theme.color.green};
+        bgcolor === 'blue' ? theme.color.blue : theme.color.green};
 
     transition: opacity 0.2s ease-in-out;
     :hover {
@@ -139,7 +139,7 @@ const StyledButton = styled(Button)`
         color: white;
         opacity: 90%;
         background-color: ${({ bgcolor, theme }) =>
-            bgcolor === 'pink' ? theme.color.pink : theme.color.green};
+            bgcolor === 'blue' ? theme.color.blue : theme.color.green};
     }
 
     text-align: center;
